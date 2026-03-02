@@ -156,15 +156,15 @@
     <h2 class="fw-bold mb-5">Proven Results</h2>
     <div class="row g-4">
       <div class="col-md-4">
-        <h3 class="fw-bold">+32%</h3>
+        <h3 class="fw-bold counter" data-target="32">0</h3>
         <p class="text-muted">Increase in booking inquiries</p>
       </div>
       <div class="col-md-4">
-        <h3 class="fw-bold">0.9s</h3>
+        <h3 class="fw-bold counter-decimal" data-target="0.9">0</h3>
         <p class="text-muted">Average page load speed</p>
       </div>
       <div class="col-md-4">
-        <h3 class="fw-bold">3x</h3>
+        <h3 class="fw-bold counter" data-target="3">0</h3>
         <p class="text-muted">Higher engagement vs outdated sites</p>
       </div>
     </div>
@@ -293,20 +293,6 @@
     </p>
   </div>
 </footer>
-<script>
-const sections = document.querySelectorAll("section");
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-    }
-  });
-}, { threshold: 0.1 });
-
-sections.forEach(section => {
-  observer.observe(section);
-});
-</script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
