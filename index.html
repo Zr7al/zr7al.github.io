@@ -15,84 +15,82 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-<body role="document">
-<div class="scroll-progress"></div>
+<body>
+<div class="scroll-progress" aria-hidden="true"></div>
 
-<!-- NAVBAR -->
-<nav class="nav">
-  <div class="nav__inner">
-    <a href="index.html" class="nav__brand">
-      <span class="nav__brand-name">Zaid Rahhal</span>
-    </a>
-    <div class="nav__status">
-      <div class="nav__status-item">
-        <span class="nav__status-dot"></span>
-        <span>System: Active</span>
+<header class="site-header">
+  <!-- NAVBAR -->
+  <nav class="nav" aria-label="Primary">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand">
+        <span class="nav__brand-name">Zaid Rahhal</span>
+      </a>
+      <div class="nav__status">
+        <div class="nav__status-item">
+          <span class="nav__status-dot" aria-hidden="true"></span>
+          <span>System: Active</span>
+        </div>
+        <div class="nav__status-item">
+          <span>Amman</span>
+          <span id="localTime">00:00:00</span>
+        </div>
       </div>
-      <div class="nav__status-item">
-        <span>Amman</span>
-        <span id="localTime">00:00:00</span>
+      <ul class="nav__links">
+        <li><a href="work.html">Work</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="contact.html" class="btn btn-primary">Start Project</a>
+        <button class="nav__hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
-    <ul class="nav__links">
-      <li><a href="work.html">Work</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="nav__actions">
-      <a href="contact.html" class="btn btn-primary">Start Project</a>
-      <button class="nav__hamburger" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+  </nav>
+
+  <div class="nav__mobile-menu" id="mobile-menu" aria-hidden="true">
+    <button class="nav__mobile-close" aria-label="Close menu">&times;</button>
+    <a href="work.html">Work</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary">Start Project</a>
   </div>
-</nav>
+</header>
 
-<div class="nav__mobile-menu" aria-hidden="true">
-  <button class="nav__mobile-close" aria-label="Close menu">&times;</button>
-  <a href="work.html">Work</a>
-  <a href="services.html">Services</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-  <a href="contact.html" class="btn btn-primary">Start Project</a>
-</div>
+<main>
 
-<!-- ===================== HERO ===================== -->
-<section class="hero">
-  <div class="container hero__inner">
-    
-    <div class="hero__main">
-      <h1 class="hero__headline fade-up" id="heroHeadline">
-        <span class="line">WEBSITES THAT</span>
-        <span class="line">TURN VISITORS</span>
-        <span class="line">INTO CLIENTS.</span>
-      </h1>
-    </div>
+<!-- ===================== HERO (RE-ENGINEERED) ===================== -->
+<section class="hero" aria-labelledby="heroHeadline">
+  <div class="container">
+    <div class="hero__layout">
 
-    <div class="hero__bottom">
-      
-      <div class="hero__meta fade-up delay-1">
-        <div class="meta-item">
-          <span class="nav__status-dot"></span> System: Online
-        </div>
-        <div class="meta-item">LOC: 31.9454° N / 35.9284° E</div>
-        <div class="meta-item" style="color: var(--text-dim);">Studio Edition 2026</div>
+      <div class="hero__main">
+        <h1 class="hero__headline reveal" id="heroHeadline">
+          <span class="line"><span>Websites that</span></span>
+          <span class="line"><span>turn visitors</span></span>
+          <span class="line line--dim"><span>into clients</span></span>
+        </h1>
       </div>
 
-      <div class="hero__info fade-up delay-2">
+      <div class="hero__side">
         <p class="hero__sub">
-          Zero Bloat. Pure Execution. High-performance digital flagships engineered for B2B technical leaders.
+          Strategic engineering for B2B companies.<br>
+          I build high-performance websites that convert traffic into real clients.
         </p>
-        <div class="hero__actions">
-          <a href="contact.html" class="btn btn-primary btn--pill">Start Project</a>
-          <a href="work.html" class="btn btn-secondary btn--pill">
-            View Work
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
+
+        <a href="contact.html" class="btn btn-primary btn-pill">
+          Start Project →
+        </a>
+
+        <div class="hero__trust">
+          ★★★★★<br>
+          Trusted by 10+ clients
         </div>
       </div>
-      
+
     </div>
   </div>
 </section>
@@ -189,31 +187,26 @@
   <!-- Project 01 -->
   <article class="work-film fade-up">
     <div class="container">
+      
+      <!-- Project Spec Bar -->
+      <div class="project-specs">
+        <div class="spec-item"><span class="label">Stack</span><span>Vanilla / PHP</span></div>
+        <div class="spec-item"><span class="label">Role</span><span>Lead Engineer</span></div>
+        <div class="spec-item"><span class="label">Year</span><span>2026</span></div>
+        <div class="spec-item"><span class="label">Scope</span><span>Full Launch</span></div>
+      </div>
+
       <div class="work-film__inner">
-        <div class="device-showcase">
-          <div class="device-mac"><img src="assets/images/projects/ejawdah-desktop.jpg" alt="Ejawdah Desktop"></div>
-          <div class="device-phone"><img src="assets/images/projects/ejawdah-mobile.jpg" alt="Ejawdah Mobile"></div>
-        </div>
         <div class="work-film__info">
-          <p class="work-film__num">01 — Web Design &amp; Development</p>
+          <div class="outcome-badge">99/100 LCP Score</div>
           <h2 class="work-film__title">Ejawdah</h2>
           <p class="work-film__desc">Zero-bloat corporate architecture for high-ticket consulting. Engineered for regional authority and frictionless lead acquisition.</p>
-          
-          <div class="tech-spec">
-            <div class="tech-spec__item">
-              <span class="tech-spec__label">Stack</span>
-              <span class="tech-spec__value">Performance Vanilla</span>
-            </div>
-            <div class="tech-spec__item">
-              <span class="tech-spec__label">Core Web Vitals</span>
-              <span class="tech-spec__value">99/100</span>
-            </div>
-          </div>
+          <a href="https://ejawdah.com" target="_blank" class="work-film__link">Launch Platform</a>
+        </div>
 
-          <a href="https://ejawdah.com" target="_blank" rel="noopener" class="work-film__link">
-            Launch Platform
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
+        <div class="device-showcase">
+          <div class="device-mac"><img src="assets/images/projects/ejawdah-desktop.jpg" alt="Ejawdah Desktop" loading="lazy"></div>
+          <div class="device-phone"><img src="assets/images/projects/ejawdah-mobile.jpg" alt="Ejawdah Mobile" loading="lazy"></div>
         </div>
       </div>
     </div>
@@ -222,31 +215,26 @@
   <!-- Project 02 -->
   <article class="work-film fade-up">
     <div class="container">
+      
+      <!-- Project Spec Bar -->
+      <div class="project-specs">
+        <div class="spec-item"><span class="label">Stack</span><span>UI / UX / SEO</span></div>
+        <div class="spec-item"><span class="label">Role</span><span>Product Designer</span></div>
+        <div class="spec-item"><span class="label">Year</span><span>2025</span></div>
+        <div class="spec-item"><span class="label">Scope</span><span>Redesign</span></div>
+      </div>
+
       <div class="work-film__inner">
-        <div class="device-showcase">
-          <div class="device-mac"><img src="assets/images/projects/reflection-desktop.jpg" alt="Reflection Logistics Desktop"></div>
-          <div class="device-phone"><img src="assets/images/projects/reflection-mobile.jpg" alt="Reflection Logistics Mobile"></div>
-        </div>
         <div class="work-film__info">
-          <p class="work-film__num">02 — Website Redesign</p>
+          <div class="outcome-badge">3x Lead Velocity</div>
           <h2 class="work-film__title">Reflection</h2>
           <p class="work-film__desc">Strategic redesign for enterprise logistics. High-performance infrastructure built to elevate brand perception globally.</p>
-          
-          <div class="tech-spec">
-            <div class="tech-spec__item">
-              <span class="tech-spec__label">System</span>
-              <span class="tech-spec__value">Engineered UX</span>
-            </div>
-            <div class="tech-spec__item">
-              <span class="tech-spec__label">Uptime</span>
-              <span class="tech-spec__value">99.9%</span>
-            </div>
-          </div>
+          <a href="https://reflectionlogistics.com" target="_blank" class="work-film__link">Launch Platform</a>
+        </div>
 
-          <a href="https://reflectionlogistics.com" target="_blank" rel="noopener" class="work-film__link">
-            Launch Platform
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
+        <div class="device-showcase">
+          <div class="device-mac"><img src="assets/images/projects/reflection-desktop.jpg" alt="Reflection Desktop"></div>
+          <div class="device-phone"><img src="assets/images/projects/reflection-mobile.jpg" alt="Reflection Mobile"></div>
         </div>
       </div>
     </div>
@@ -314,6 +302,8 @@
 </section>
 
 <!-- ===================== FOOTER ===================== -->
+</main>
+
 <footer class="footer">
   <div class="micro-data micro-data--tl">SYS: ONLINE</div>
   <div class="micro-data micro-data--tr">LOC: 31.9454° N, 35.9284° E</div>
@@ -345,8 +335,8 @@
   </div>
 </footer>
 
-<a href="https://wa.me/962798674825" class="whatsapp-float">WhatsApp</a>
-<div class="mobile-cta-bar">
+<a href="https://wa.me/962798674825" class="whatsapp-float" aria-label="Chat on WhatsApp">WhatsApp</a>
+<div class="mobile-cta-bar" aria-hidden="true">
   <a href="contact.html" class="btn btn-primary">Start a Project</a>
 </div>
 <script src="assets/js/main.js"></script>
