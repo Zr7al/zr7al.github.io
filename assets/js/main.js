@@ -154,12 +154,28 @@ function initFadeUpObserver() {
  * FAQ Toggle
  */
 function initFAQ() {
-  document.querySelectorAll('.faq-item h4').forEach(h4 => {
-    h4.addEventListener('click', () => {
-      const item = h4.closest('.faq-item');
+  const questions = document.querySelectorAll('.faq-question');
+  if (!questions.length) return;
+
+  questions.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const answer = item.querySelector('.faq-answer');
       const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-      if (!isOpen) item.classList.add('open');
+
+      // close others
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        const a = i.querySelector('.faq-answer');
+        if (a) a.style.maxHeight = null;
+      });
+
+      if (!isOpen) {
+        item.classList.add('open');
+        if (answer) {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      }
     });
   });
 }

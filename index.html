@@ -39,6 +39,7 @@
         <li><a href="work.html">Work</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="nav__actions">
@@ -55,6 +56,7 @@
     <a href="work.html">Work</a>
     <a href="services.html">Services</a>
     <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
     <a href="contact.html">Contact</a>
     <a href="contact.html" class="btn btn-primary">Start Project</a>
   </div>
@@ -62,111 +64,167 @@
 
 <main>
 
-<!-- ===================== HERO (RE-ENGINEERED) ===================== -->
-<section class="hero" aria-labelledby="heroHeadline">
-  <div class="container">
-    <div class="hero__layout">
+<!-- ===================== HERO (CENTERED) ===================== -->
+<section class="hero hero--center" aria-labelledby="heroHeadline">
+  <div class="hero-glow"></div>
+  <div class="hero__bg-glow"></div>
 
-      <div class="hero__main">
-        <h1 class="hero__headline reveal" id="heroHeadline">
-          <span class="line"><span>Websites that</span></span>
-          <span class="line"><span>turn visitors</span></span>
-          <span class="line line--dim"><span>into clients</span></span>
-        </h1>
-      </div>
+  <div class="hero__content">
 
-      <div class="hero__side">
-        <p class="hero__sub">
-          Strategic engineering for B2B companies.<br>
-          I build high-performance websites that convert traffic into real clients.
-        </p>
+    <h1 class="hero__title" id="heroHeadline">
+      High‑performance websites<br>
+      for businesses that want results
+    </h1>
 
-        <a href="contact.html" class="btn btn-primary btn-pill">
-          Start Project →
-        </a>
+    <p class="hero__desc">
+      I design and build fast, modern websites for businesses that want a strong online presence.
+      Every site is built to look professional, load quickly, and turn visitors into real customers.
+    </p>
 
-        <div class="hero__trust">
-          ★★★★★<br>
-          Trusted by 10+ clients
-        </div>
-      </div>
+    <p class="hero__desc hero__desc--sub">
+      Helping businesses launch modern, high‑performing websites.
+    </p>
 
+    <div class="hero__actions">
+      <a href="contact.html" class="btn btn-primary btn-pill">Start a Project</a>
+      <a href="#work" class="btn btn-secondary">View Case Studies</a>
     </div>
+
+  </div>
+
+  <div class="hero__float hero__float-left hero-panel hero-panel--left">
+    <h4>Performance</h4>
+    <p>LCP: 0.5s</p>
+    <p>CLS: 0.00</p>
+    <p>SEO: 100</p>
+  </div>
+
+  <div class="hero__float hero__float-right hero-panel hero-panel--right">
+    <h4>Accessibility</h4>
+    <p>WCAG: PASS</p>
+    <p>Score: 100</p>
+    <p>ARIA: OK</p>
+  </div>
+
+</section>
+
+<!-- ===================== TRUST STRIP ===================== -->
+<section class="section">
+  <div class="container">
+    <div class="hero-trust-strip fade-up">
+      <div class="hero-trust-strip__label">Trusted by businesses across multiple industries.</div>
+      <div class="hero-trust-strip__metrics">
+        <span class="trust-metric">10+ projects</span>
+        <span class="trust-metric">3× lead growth</span>
+        <span class="trust-metric">&lt;1s load speed</span>
+        <span class="trust-metric">WCAG‑ready</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VALUE INTRO ===================== -->
+<section class="section">
+  <div class="container">
+    <span class="section-label fade-up"><span class="section-icon">◎</span> Why this matters</span>
+    <h2 class="section-heading fade-up delay-1">When your website stops matching your ambition.</h2>
+    <p class="section-sub fade-up delay-2">
+      Many businesses have great products or services but a weak online presence.
+      A well‑designed website helps build trust, attract customers, and turn visitors into real enquiries.
+    </p>
   </div>
 </section>
 
 <!-- ===================== VALUE PROP (Bento) ===================== -->
 <section class="section section--alt">
   <div class="container">
+    <p class="section-label"><span class="section-icon">↳</span> Case Study</p>
+    <h2 class="section-heading">Ejawdah Redesign</h2>
     <div class="bento-grid">
       
-      <!-- Big Hook -->
+      <!-- Big Technical Hook -->
       <div class="bento-item bento-item--large fade-up">
-        <div class="micro-data micro-data--tr">SRC: 001/ANALYTICS</div>
-        <span class="section-label">The Problem</span>
-        <h2 class="bento-item__title">Most business websites fail because they focus on aesthetics, not results.</h2>
-        <p class="bento-item__desc">I fix slow load times, unclear CTAs, and poor mobile experiences that cost you clients every day.</p>
-        
-        <div class="tech-spec">
-          <div class="tech-spec__item">
-            <span class="tech-spec__label">Metric</span>
-            <span class="tech-spec__value">Bounce Rate</span>
-          </div>
-          <div class="tech-spec__item">
-            <span class="tech-spec__label">Status</span>
-            <span class="tech-spec__value">CRITICAL &gt; 70%</span>
-          </div>
-        </div>
+        <div class="micro-data micro-data--tr">SRC: 001 / CASE STUDY</div>
+        <span class="section-label">Engineering Results</span>
+        <h2 class="bento-item__title">
+          The original Ejawdah website<br>
+          loaded quickly<br>
+          but lacked solid technical foundations.
+        </h2>
+        <p class="bento-item__desc">
+          It didn’t meet accessibility standards, had weak SEO structure, and missed production best practices.
+          The redesign focused on strengthening the technical foundations while maintaining excellent performance.
+          Metrics shown are from a Lighthouse audit on the optimized static build prior to CMS and analytics integration.
+        </p>
       </div>
 
-      <!-- Result 1 -->
+      <!-- Accessibility -->
       <div class="bento-item fade-up delay-1">
         <div class="diagram-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
         </div>
-        <h3 class="bento-item__title">40%</h3>
-        <p class="bento-item__desc">Increase in bookings for healthcare providers.</p>
-        <div class="bento-chart"><div class="bento-chart__fill" style="width: 40%"></div></div>
+        <p class="bento-item__desc"><strong>Accessibility</strong></p>
+        <h3 class="bento-item__title">85 → 100</h3>
+        <p class="bento-item__desc">WCAG compliance issues resolved with improved semantics.</p>
+        <div class="bento-chart"><div class="bento-chart__fill" style="width: 100%"></div></div>
         <div class="tech-spec">
           <div class="tech-spec__item">
-            <span class="tech-spec__label">Sector</span>
-            <span class="tech-spec__value">Healthcare</span>
+            <span class="tech-spec__label">Metric</span>
+            <span class="tech-spec__value">Accessibility 85 → 100</span>
           </div>
         </div>
       </div>
 
-      <!-- Result 2 -->
+      <!-- SEO -->
       <div class="bento-item fade-up delay-2">
         <div class="diagram-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
         </div>
-        <h3 class="bento-item__title">3x</h3>
-        <p class="bento-item__desc">More enquiry leads for consulting firms.</p>
-        <div class="bento-chart"><div class="bento-chart__fill" style="width: 75%"></div></div>
+        <p class="bento-item__desc"><strong>SEO</strong></p>
+        <h3 class="bento-item__title">83 → 100</h3>
+        <p class="bento-item__desc">Metadata and semantic structure improved.</p>
+        <div class="bento-chart"><div class="bento-chart__fill" style="width: 83%"></div></div>
         <div class="tech-spec">
           <div class="tech-spec__item">
-            <span class="tech-spec__label">Conversion</span>
-            <span class="tech-spec__value">OPT_FLOW_v2</span>
+            <span class="tech-spec__label">Metric</span>
+            <span class="tech-spec__value">SEO 83 → 100</span>
           </div>
         </div>
       </div>
 
-      <!-- Result 3 -->
+      <!-- Performance -->
       <div class="bento-item fade-up delay-3">
         <div class="diagram-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
         </div>
-        <h3 class="bento-item__title">0.9s</h3>
-        <p class="bento-item__desc">Average load speed after optimization.</p>
-        <div class="bento-chart"><div class="bento-chart__fill" style="width: 90%"></div></div>
+        <p class="bento-item__desc"><strong>Performance</strong></p>
+        <h3 class="bento-item__title">0.8s → 0.5s LCP</h3>
+        <p class="bento-item__desc">Improved page rendering speed.</p>
+        <div class="bento-chart"><div class="bento-chart__fill" style="width: 95%"></div></div>
         <div class="tech-spec">
           <div class="tech-spec__item">
-            <span class="tech-spec__label">LCP</span>
-            <span class="tech-spec__value">&lt; 1.2s</span>
+            <span class="tech-spec__label">Metric</span>
+            <span class="tech-spec__value">LCP 0.8s → 0.5s</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Best Practices / Security -->
+      <div class="bento-item fade-up delay-4">
+        <div class="diagram-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l7 4v6c0 5-3 8-7 10-4-2-7-5-7-10V6l7-4z"/></svg>
+        </div>
+        <p class="bento-item__desc"><strong>Best Practices</strong></p>
+        <h3 class="bento-item__title">96 → 100</h3>
+        <p class="bento-item__desc">Security headers and browser standards implemented.</p>
+        <div class="tech-spec">
+          <div class="tech-spec__item">
+            <span class="tech-spec__label">Metric</span>
+            <span class="tech-spec__value">Best Practices 96 → 100</span>
           </div>
           <div class="tech-spec__item">
-            <span class="tech-spec__label">TTFB</span>
-            <span class="tech-spec__value">80ms</span>
+            <span class="tech-spec__label">Headers</span>
+            <span class="tech-spec__value">CSP • HSTS • XFO</span>
           </div>
         </div>
       </div>
@@ -180,7 +238,11 @@
   <div class="container">
     <div class="work-cinema__hd">
       <span class="section-label fade-up">Digital Flagships</span>
-      <h2 class="fade-up delay-1">Engineered for Performance</h2>
+      <h2 class="section-heading fade-up delay-1">Engineered for Performance</h2>
+      <p class="section-sub fade-up delay-2">
+        A small set of projects that show how I think about structure, speed, and trust —
+        each one built to solve a clear business problem, not just win a design award.
+      </p>
     </div>
   </div>
 
@@ -200,7 +262,17 @@
         <div class="work-film__info">
           <div class="outcome-badge">99/100 LCP Score</div>
           <h2 class="work-film__title">Ejawdah</h2>
-          <p class="work-film__desc">Zero-bloat corporate architecture for high-ticket consulting. Engineered for regional authority and frictionless lead acquisition.</p>
+          <p class="work-film__desc">
+            Full website redesign including front-end architecture, semantic structure,
+            and performance optimization for a corporate consulting brand.
+          </p>
+          <ul class="work-film__metrics">
+            <li>Accessibility 85→100</li>
+            <li>SEO 83→100</li>
+            <li>Best Practices 96→100</li>
+            <li>LCP 0.8s→0.5s</li>
+            <li>Lighthouse audit on optimized static build prior to CMS and analytics integration</li>
+          </ul>
           <a href="https://ejawdah.com" target="_blank" class="work-film__link">Launch Platform</a>
         </div>
 
@@ -250,19 +322,35 @@
   <div class="container">
     <span class="section-label fade-up">Services</span>
     <h2 class="section-heading fade-up delay-1">How I Help You Grow</h2>
+    <p class="section-sub fade-up delay-2">
+      From first touch to long-term performance — I help you design, build, and ship web experiences
+      that feel premium and move metrics.
+    </p>
     
     <div class="services-grid">
       <div class="service-card fade-up">
-        <h3 class="service-card__title">Design & Development</h3>
+        <h3 class="service-card__title">Conversion Websites</h3>
         <p class="service-card__desc">Custom websites engineered to convert traffic into paying clients.</p>
       </div>
       <div class="service-card fade-up delay-1">
-        <h3 class="service-card__title">Landing Pages</h3>
+        <h3 class="service-card__title">Landing Page Systems</h3>
         <p class="service-card__desc">Focused, high-speed pages designed for specific marketing goals.</p>
       </div>
       <div class="service-card fade-up delay-2">
-        <h3 class="service-card__title">SEO & Optimization</h3>
+        <h3 class="service-card__title">Technical SEO Foundations</h3>
         <p class="service-card__desc">Technical performance boosts that help you rank and load faster.</p>
+      </div>
+      <div class="service-card fade-up delay-3">
+        <h3 class="service-card__title">UX & Conversion Audits</h3>
+        <p class="service-card__desc">Deep reviews of structure, messaging, and flows to uncover friction.</p>
+      </div>
+      <div class="service-card fade-up delay-4">
+        <h3 class="service-card__title">Growth Experiments</h3>
+        <p class="service-card__desc">Iterative A/B testing to systematically improve signups and leads.</p>
+      </div>
+      <div class="service-card fade-up delay-5">
+        <h3 class="service-card__title">Long‑Term Partnerships</h3>
+        <p class="service-card__desc">A long-term design/dev partner that keeps your site sharp over time.</p>
       </div>
     </div>
 
@@ -275,6 +363,45 @@
   </div>
 </section>
 
+<!-- ===================== PROCESS ===================== -->
+<section class="section section--alt">
+  <div class="container">
+    <span class="section-label fade-up">Process</span>
+    <h2 class="section-heading fade-up delay-1">How projects move from idea to live.</h2>
+    <p class="section-sub fade-up delay-2">
+      A clear, lightweight process that keeps momentum high and makes it easy to collaborate —
+      whether you’re a solo founder or an in-house team.
+    </p>
+    <div class="process-grid">
+      <div class="process-step fade-up">
+        <div class="process-step__num">01</div>
+        <h3 class="process-step__title">Discovery</h3>
+        <p class="process-step__desc">Understand goals, constraints, and what success looks like.</p>
+      </div>
+      <div class="process-step fade-up delay-1">
+        <div class="process-step__num">02</div>
+        <h3 class="process-step__title">Strategy</h3>
+        <p class="process-step__desc">Translate goals into structure, messaging, and key flows.</p>
+      </div>
+      <div class="process-step fade-up delay-2">
+        <div class="process-step__num">03</div>
+        <h3 class="process-step__title">Design</h3>
+        <p class="process-step__desc">Design pages and components that feel premium and precise.</p>
+      </div>
+      <div class="process-step fade-up delay-3">
+        <div class="process-step__num">04</div>
+        <h3 class="process-step__title">Development</h3>
+        <p class="process-step__desc">Build fast, responsive pages that reflect the design exactly.</p>
+      </div>
+      <div class="process-step fade-up delay-4">
+        <div class="process-step__num">05</div>
+        <h3 class="process-step__title">Launch</h3>
+        <p class="process-step__desc">Ship, measure, and refine based on real-world behavior.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== TESTIMONIALS (Compact) ===================== -->
 <section class="section">
   <div class="container">
@@ -283,21 +410,40 @@
     
     <div class="testimonials-grid">
       <div class="testimonial-card fade-up">
+        <div class="testimonial-card__rating">★★★★★</div>
         <p class="testimonial-card__quote">"Zaid delivered beyond our expectations. The new website looks incredibly professional."</p>
         <p class="testimonial-card__name">Yaseen R.</p>
-        <p class="testimonial-card__role">CEO, Ejawdah</p>
+        <p class="testimonial-card__role">CEO — Ejawdah</p>
       </div>
+
       <div class="testimonial-card fade-up delay-1">
+        <div class="testimonial-card__rating">★★★★★</div>
         <p class="testimonial-card__quote">"Working with Zaid was seamless. He understood our brand immediately."</p>
         <p class="testimonial-card__name">Mazen A.</p>
-        <p class="testimonial-card__role">Operations, Reflection</p>
+        <p class="testimonial-card__role">Operations — Reflection</p>
       </div>
+
       <div class="testimonial-card fade-up delay-2">
+        <div class="testimonial-card__rating">★★★★★</div>
         <p class="testimonial-card__quote">"The landing page Zaid built completely transformed our patient acquisition."</p>
-        <p class="testimonial-card__name">Dr. Mohhamed R.</p>
-        <p class="testimonial-card__role">Owner, Dental Clinic</p>
+        <p class="testimonial-card__name">Dr. Mohammed R.</p>
+        <p class="testimonial-card__role">Owner — Dental Clinic</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="section section--alt">
+  <div class="container final-cta">
+    <h2 class="section-heading fade-up">Ready to launch your next flagship website?</h2>
+    <p class="section-sub fade-up delay-1">
+      Tell me about your product, your market, and what needs to change.
+      I’ll reply with a clear plan — no fluff, no pressure.
+    </p>
+    <a href="contact.html" class="btn btn-primary btn-pill fade-up delay-2">
+      Start a Project →
+    </a>
   </div>
 </section>
 
@@ -305,39 +451,49 @@
 </main>
 
 <footer class="footer">
-  <div class="micro-data micro-data--tl">SYS: ONLINE</div>
-  <div class="micro-data micro-data--tr">LOC: 31.9454° N, 35.9284° E</div>
-  <div class="micro-data micro-data--bl">VER: 2.0.4</div>
-  <div class="micro-data micro-data--br">ENC: UTF-8</div>
-  <div class="footer__statement">
-    <div class="container">
-      <h2 class="footer__statement-text fade-up">
-        Let's build something<br><span>great together.</span>
-      </h2>
-      <a href="contact.html" class="btn btn-primary fade-up delay-1">
-        Start a Project
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+  <div class="container footer-grid">
+
+    <div class="footer-left">
+      <ul>
+        <li>▸ <a href="services.html">Services</a></li>
+        <li>▸ <a href="work.html">Work</a></li>
+        <li>▸ <a href="about.html">About</a></li>
+        <li>▸ <a href="contact.html">Contact</a></li>
+      </ul>
     </div>
-  </div>
-  <div class="footer__base">
-    <div class="container">
-      <div class="footer__base-inner">
-        <p class="footer__copy">&copy; 2026 Zaid Rahhal. All rights reserved.</p>
-        <ul class="footer__nav-inline">
-          <li><a href="work.html">Work</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+
+    <div class="footer-center">
+      <p>Amman, Jordan</p>
+      <p><a href="mailto:zaidrahhal90@outlook.com">zaidrahhal90@outlook.com</a></p>
+      <p><a href="https://wa.me/962798674825" target="_blank" rel="noopener">+962 79 867 4825</a></p>
+
+      <div class="footer-socials">
+        <a href="#" aria-label="Instagram">◎</a>
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Behance">Bē</a>
+        <a href="#" aria-label="Dribbble">●</a>
       </div>
     </div>
+
+    <div class="footer-right">
+      <div class="footer-cta">
+        <h2>LET'S BEGIN →</h2>
+        <p>
+          Tell me about your project and I'll reply with a clear plan
+          for improving your website.
+        </p>
+        <a href="contact.html" class="btn btn-primary footer-btn">
+          Start a project
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2026 Zaid Rahhal — All rights reserved
   </div>
 </footer>
-
-<a href="https://wa.me/962798674825" class="whatsapp-float" aria-label="Chat on WhatsApp">WhatsApp</a>
-<div class="mobile-cta-bar" aria-hidden="true">
-  <a href="contact.html" class="btn btn-primary">Start a Project</a>
 </div>
 <script src="assets/js/main.js"></script>
 </body>
