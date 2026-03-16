@@ -622,6 +622,9 @@ function initMobileStatCountUp() {
     ran = true;
     observer.disconnect();
 
+    // Fade-in + translateY card reveal
+    container.classList.add('visible');
+
     items.forEach(el => {
       const target = parseInt(el.dataset.target, 10);
       const duration = 1000;
