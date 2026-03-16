@@ -370,6 +370,8 @@ p {
 @media (max-width: 900px) {
   .nav__links    { display: none; }
   .nav__hamburger { display: flex; }
+  /* Hide pill CTA from nav on mobile — use mobile-cta-bar instead */
+  .nav__actions .btn-primary { display: none; }
   /* Pill narrows on mobile — remove extra padding offset */
   .nav__inner { padding: 0 8px 0 16px; }
 }
@@ -615,8 +617,17 @@ p {
 }
 
 @media (max-width: 768px) {
-  .hero { padding: 24px 0; }
-  .hero-actions { flex-direction: column; align-items: center; }
+  .hero {
+    padding: calc(var(--nav-h) + 16px) 0 40px;
+    min-height: 100svh;
+    align-items: flex-start;
+  }
+  .hero__inner { padding: 20px 0 0; gap: 2rem; }
+  .hero__title { font-size: clamp(2.2rem, 9vw, 3rem); }
+  .hero-actions { flex-direction: column; align-items: center; width: 100%; }
+  .hero-actions .btn { width: 100%; justify-content: center; }
+  .hero-trust { gap: 14px; }
+  .hero-product-card { display: none; }
 }
 
 /* Hero stack / floating (legacy, hidden) */
@@ -1643,8 +1654,30 @@ p {
 .work-film:hover .device-phone { transform: translateY(-16px) rotateZ(-2deg); }
 
 @media (max-width: 1024px) {
-  .work-film__inner { grid-template-columns: 1fr; gap: 48px; }
-  .device-phone { display: none; }
+  .work-film__inner { grid-template-columns: 1fr; gap: 40px; }
+  /* Show phone mockup inline below the Mac on tablets/mobile */
+  .device-showcase { padding-bottom: 0; }
+  .device-phone {
+    position: static;
+    width: 120px;
+    margin: 16px auto 0;
+    display: block;
+    border-radius: 20px;
+    border-width: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .work-film { padding: 48px 0; }
+  .work-film__inner { gap: 28px; }
+  .work-film__title { font-size: clamp(1.6rem, 7vw, 2.4rem); }
+  .work-film__desc { font-size: 0.9rem; }
+  .work-film__foot { gap: 20px; }
+  .work-film--next { padding-bottom: 48px; }
+  .device-phone { width: 90px; border-radius: 16px; border-width: 4px; }
+  .work-result-badges { flex-wrap: wrap; }
+  .page-hero h1 { font-size: clamp(2rem, 9vw, 3rem); }
+  .page-hero p { font-size: 0.95rem; }
 }
 
 /* === PROCESS TIMELINE === */
@@ -1834,11 +1867,7 @@ p {
       #0891b2 75%,
       #16a34a 100%
     );
-    transition: height 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .process-timeline.step-visible .process-timeline__fill {
-    height: 100%;
+    transition: height 0.9s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .process-step {
@@ -2487,6 +2516,46 @@ a.contact-detail { cursor: pointer; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .project-specs { flex-wrap: wrap; gap: 20px; }
   .contact-split__inner { gap: 40px; }
+}
+
+/* === TOUCH / MOBILE PERFORMANCE ===
+   Disable heavy GPU effects on devices without precise hover (phones/tablets).
+   This is the biggest single win for mobile smoothness. */
+@media (hover: none) {
+  /* No magnetic button movement */
+  .btn { transform: none !important; }
+
+  /* No card glow radial gradients */
+  .bento-card::before,
+  .testimonial-card::before { display: none; }
+
+  /* No device tilt / parallax transforms */
+  .device-mac,
+  .device-phone { transform: none !important; transition: none !important; }
+
+  /* Simpler fade-up — faster, no compositing overhead */
+  .fade-up {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  /* Reduce bento-card box-shadows */
+  .bento-card {
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+}
+
+/* Promote animated elements to their own compositor layer */
+.fade-up,
+.device-mac,
+.device-phone,
+.process-step,
+.process-timeline__fill {
+  will-change: transform, opacity;
+}
+
+/* Once visible, release will-change to free GPU memory */
+.fade-up.visible {
+  will-change: auto;
 }
 
 @media (max-width: 768px) {

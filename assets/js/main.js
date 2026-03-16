@@ -341,7 +341,7 @@ function initSpotlight() {
 
 /* ─── Magnetic Buttons ─── */
 function initMagneticButtons() {
-  if (window.innerWidth < 1024) return;
+  if (window.innerWidth < 1024 || window.matchMedia('(hover: none)').matches) return;
   document.querySelectorAll('.btn').forEach(btn => {
     btn.addEventListener('mousemove', e => {
       const r = btn.getBoundingClientRect();
@@ -355,7 +355,7 @@ function initMagneticButtons() {
 
 /* ─── 3D Device Tilt on Work Films ─── */
 function initWorkTilt() {
-  if (window.innerWidth < 1024) return;
+  if (window.innerWidth < 1024 || window.matchMedia('(hover: none)').matches) return;
 
   document.querySelectorAll('.device-showcase').forEach(showcase => {
     const mac   = showcase.querySelector('.device-mac');
@@ -390,6 +390,7 @@ function initWorkTilt() {
 
 /* ─── Scroll Parallax on Work Films ─── */
 function initParallax() {
+  if (window.matchMedia('(hover: none)').matches) return;
   const films = document.querySelectorAll('.work-film');
   if (!films.length) return;
 
