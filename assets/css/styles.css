@@ -112,6 +112,32 @@ p {
   background: var(--dim);
 }
 
+/* Section header sequenced reveal:
+   1. line expands scaleX(0→1) immediately
+   2. label text color-fades in after 220ms
+   3. section-heading uses existing fade-up delay-1 (translateY+opacity)
+   Using color:transparent instead of opacity so ::before isn't hidden by parent */
+.section-label.fade-up {
+  opacity: 1;
+  transform: none;
+  color: transparent;
+  transition: color 0.4s var(--ease-out) 0.22s;
+}
+
+.section-label.fade-up.visible {
+  color: var(--dim);
+}
+
+.section-label.fade-up::before {
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s var(--ease-out);
+}
+
+.section-label.fade-up.visible::before {
+  transform: scaleX(1);
+}
+
 .section-heading { margin-bottom: 20px; }
 
 .section-sub {
