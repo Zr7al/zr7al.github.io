@@ -588,10 +588,14 @@ function initMobileStatCountUp() {
       function tick(now) {
         const elapsed = now - startTime;
         const progress = Math.min(elapsed / duration, 1);
-        // Ease-out cubic
         const eased = 1 - Math.pow(1 - progress, 3);
         el.textContent = Math.round(eased * target);
-        if (progress < 1) requestAnimationFrame(tick);
+        if (progress < 1) {
+          requestAnimationFrame(tick);
+        } else {
+          el.classList.add('pop');
+          el.addEventListener('animationend', () => el.classList.remove('pop'), { once: true });
+        }
       }
 
       requestAnimationFrame(tick);

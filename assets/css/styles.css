@@ -736,6 +736,17 @@ p {
     color: var(--text);
     letter-spacing: -0.04em;
     line-height: 1;
+    display: inline-block;
+  }
+
+  .hero-perf-mobile__num.pop {
+    animation: stat-pop 200ms ease-out forwards;
+  }
+
+  @keyframes stat-pop {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.08); }
+    100% { transform: scale(1); }
   }
 
   .hero-perf-mobile__label {
