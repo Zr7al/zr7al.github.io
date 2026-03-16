@@ -432,9 +432,25 @@ p {
 .btn-primary:hover {
   background: var(--text-2);
   border-color: var(--text-2);
-  transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.16);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.20), 0 2px 6px rgba(0,0,0,0.08);
   color: var(--card);
+}
+
+/* Sliding arrow micro-interaction — exclude small pill nav button */
+.btn-primary:not(.btn-pill)::after {
+  content: "→";
+  display: inline-block;
+  font-size: 0.9em;
+  line-height: 1;
+  opacity: 0;
+  transform: translateX(6px);
+  transition: opacity 0.22s var(--ease), transform 0.22s var(--ease);
+}
+
+.btn-primary:not(.btn-pill):hover::after {
+  opacity: 1;
+  transform: translateX(2px);
 }
 
 .btn-secondary {
@@ -2706,6 +2722,12 @@ a.contact-detail { cursor: pointer; }
 @media (hover: none) {
   /* No magnetic button movement */
   .btn { transform: none !important; }
+
+  /* Subtle press lift on touch */
+  .btn-primary:active { transform: translateY(-1px) !important; box-shadow: 0 6px 20px rgba(0,0,0,0.16); }
+
+  /* Arrow not applicable without hover — hide it */
+  .btn-primary:not(.btn-pill)::after { display: none; }
 
   /* No card glow radial gradients */
   .bento-card::before,
