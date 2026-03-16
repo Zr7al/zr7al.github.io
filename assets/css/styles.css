@@ -379,13 +379,7 @@ p {
 
 @media (max-width: 768px) {
   .nav__inner { padding: 0 10px 0 16px; }
-  /* Compact pill on small screens */
-  .nav__actions .btn-primary {
-    padding: 8px 14px;
-    font-size: 12px;
-    height: 32px;
-    border-radius: 100px;
-  }
+  .nav__actions .btn-primary { display: none; }
 }
 
 /* === BUTTONS === */
