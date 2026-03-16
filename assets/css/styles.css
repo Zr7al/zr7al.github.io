@@ -624,68 +624,77 @@ p {
 }
 
 @media (max-width: 768px) {
+  /* ── Hero shell ── */
   .hero {
-    padding: calc(var(--nav-h) + 8px) 0 56px;
+    padding: calc(var(--nav-h) + 12px) 0 64px;
     min-height: auto;
     align-items: flex-start;
   }
   .hero__inner {
-    padding: 16px 0 0;
-    gap: 2.5rem;
+    grid-template-columns: 1fr;
+    padding: 12px 0 0;
+    gap: 0; /* controlled by individual margins below */
   }
+
+  /* ── Content block ── */
   .hero-content {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 100%;
   }
-  .hero-badge { justify-content: center; }
+
+  .hero-badge {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  /* Clean 3-line break: "Websites that turn / visitors into / clients." */
   .hero__title {
-    font-size: clamp(2.4rem, 10.5vw, 3.2rem);
-    max-width: 10em;
+    font-size: clamp(2.2rem, 9.5vw, 2.75rem);
+    max-width: 9em;
     text-align: center;
+    line-height: 1.0;
   }
+
   .hero__desc {
-    font-size: 1rem;
-    max-width: 38ch;
+    font-size: 0.975rem;
+    line-height: 1.65;
+    max-width: 36ch;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 14px;
+    margin-top: 16px;
   }
+
+  /* ── Buttons ── */
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
     width: 100%;
-    max-width: 340px;
-    gap: 10px;
-    margin-top: 24px;
+    max-width: 360px;
+    gap: 12px;
+    margin-top: 28px;
   }
   .hero-actions .btn {
     width: 100%;
     justify-content: center;
-    padding: 14px 22px;
+    padding: 15px 22px;
+    font-size: 15px;
   }
+
+  /* ── Trust row ── */
   .hero-trust {
-    gap: 14px;
+    gap: 12px 20px;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px;
-    padding-top: 16px;
+    margin-top: 24px;
+    padding-top: 18px;
   }
-  /* Show hero card below content on mobile, centered */
-  .hero-product-card {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 0 4px;
-  }
-  .hero-product-card .terminal-widget {
-    max-width: 100%;
-    max-height: 320px;
-    font-size: 11px;
-  }
-  .terminal-widget .terminal-body { padding: 14px 16px; }
+
+  /* ── Terminal / product card: hidden on mobile ── */
+  .hero-product-card { display: none; }
 }
 
 /* Hero stack / floating (legacy, hidden) */
@@ -2641,3 +2650,10 @@ a.contact-detail { cursor: pointer; }
   .tech-spec__item { border-right: none; border-bottom: 1px solid var(--border); }
   .tech-spec__item:last-child { border-bottom: none; }
 }
+@media (max-width: 768px){
+
+  .hero-product-card{
+  display:none;
+  }
+  
+  }
