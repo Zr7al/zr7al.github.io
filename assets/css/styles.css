@@ -2696,6 +2696,12 @@ a.contact-detail { cursor: pointer; }
   .form-row { grid-template-columns: 1fr; }
 }
 
+/* Desktop: collapse controls never shown, expandable always visible */
+@media (min-width: 769px) {
+  .work-film__expand-btn  { display: none; }
+  .work-film__expandable  { max-height: none !important; overflow: visible; }
+}
+
 /* === ANIMATIONS === */
 .fade-up {
   opacity: 0;
@@ -2812,6 +2818,9 @@ a.contact-detail { cursor: pointer; }
   .tech-spec__item { border-right: none; border-bottom: 1px solid var(--border); }
   .tech-spec__item:last-child { border-bottom: none; }
 
+  /* ── Project-specs row — hidden on mobile ── */
+  .project-specs { display: none; }
+
   /* ── Work page: clean card layout ── */
   .work-film { padding: 12px 0; }
   .work-film__inner {
@@ -2850,6 +2859,62 @@ a.contact-detail { cursor: pointer; }
     border: 1px solid var(--border);
     border-radius: 16px;
     padding: 28px 20px;
+  }
+
+  /* ── Image-first: index.html cards have info before image in HTML ── */
+  .work-film .device-showcase { order: -1; }
+
+  /* ── Reorder .work-film__info children (work.html) ── */
+  .work-film__info {
+    display: flex;
+    flex-direction: column;
+  }
+  .work-film__num          { order: 0; }
+  .work-film__title        { order: 1; }
+  .work-result-badges,
+  .outcome-badge           { order: 2; }
+  .work-film__desc         { order: 3; }
+  .work-film__link         { order: 4; }
+  .work-film__expand-btn   { order: 5; }
+  .work-film__expandable   { order: 6; }
+
+  /* ── Expand toggle button ── */
+  .work-film__expand-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    padding: 10px 0 0;
+    background: none;
+    border: none;
+    border-top: 1px solid var(--border);
+    margin-top: 14px;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    cursor: pointer;
+  }
+
+  .work-film__expand-btn .chevron {
+    transition: transform 0.25s ease;
+  }
+
+  .work-film__expand-btn[aria-expanded="true"] .chevron {
+    transform: rotate(180deg);
+  }
+
+  /* ── Expandable panel ── */
+  .work-film__expandable {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .work-film__expandable.open {
+    max-height: 400px;
   }
 }
 @media (max-width: 768px){

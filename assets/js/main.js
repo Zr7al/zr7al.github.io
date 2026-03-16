@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTerminalWidget();
   initProcessTimeline();
   initMobileStatCountUp();
+  initWorkCardExpand();
 });
 
 /* ─── Easing helpers ─── */
@@ -395,6 +396,21 @@ function initWorkTilt() {
 }
 
 /* ─── Scroll Parallax on Work Films ─── */
+/* ─── Work Card Expand / Collapse (mobile) ─── */
+function initWorkCardExpand() {
+  if (!window.matchMedia('(max-width: 768px)').matches) return;
+
+  document.querySelectorAll('.work-film__expand-btn').forEach(btn => {
+    const panel = btn.nextElementSibling;
+    if (!panel || !panel.classList.contains('work-film__expandable')) return;
+
+    btn.addEventListener('click', () => {
+      const open = panel.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+  });
+}
+
 /* ─── Hero Grid Parallax ─── */
 function initHeroGridParallax() {
   if (window.matchMedia('(max-width: 768px)').matches) return;
