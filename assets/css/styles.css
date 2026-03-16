@@ -705,11 +705,9 @@ p {
   .hero__desc {
     font-size: 0.9375rem;
     line-height: 1.65;
-    max-width: 34ch;
+    max-width: 32ch;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 14px;
+    margin: 14px auto 0;
   }
 
   /* ── Buttons ── */
