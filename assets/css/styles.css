@@ -563,7 +563,7 @@ p {
   position: relative;
 }
 
-/* Underline-style accent on 'clients' */
+/* Underline-style accent on 'clients' — animates on load */
 .hero__title em::after {
   content: "";
   position: absolute;
@@ -572,6 +572,13 @@ p {
   background: var(--text);
   border-radius: 2px;
   opacity: 0.2;
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: underline-reveal 0.6s var(--ease-out) 0.5s forwards;
+}
+
+@keyframes underline-reveal {
+  to { transform: scaleX(1); }
 }
 
 .hero__desc {
