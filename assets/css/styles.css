@@ -492,11 +492,11 @@ p {
   z-index: 0;
 }
 
-/* Animated grid — slow breathe */
+/* Animated grid — slow breathe + mouse parallax */
 .hero::after {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: -24px; /* extended so parallax shift never reveals a gap */
   background-image:
     linear-gradient(rgba(0,0,0,0.045) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0,0,0,0.045) 1px, transparent 1px);
@@ -504,6 +504,8 @@ p {
   animation: grid-breathe 12s ease-in-out infinite;
   pointer-events: none;
   z-index: 0;
+  transform: translate(var(--grid-tx, 0px), var(--grid-ty, 0px));
+  will-change: transform;
 }
 
 @keyframes grid-breathe {

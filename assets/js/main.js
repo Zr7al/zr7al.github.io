@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMagneticButtons();
   initWorkTilt();
   initParallax();
+  initHeroGridParallax();
   initTerminalWidget();
   initProcessTimeline();
   initMobileStatCountUp();
@@ -394,6 +395,43 @@ function initWorkTilt() {
 }
 
 /* ─── Scroll Parallax on Work Films ─── */
+/* ─── Hero Grid Parallax ─── */
+function initHeroGridParallax() {
+  if (window.matchMedia('(max-width: 768px)').matches) return;
+  if (window.matchMedia('(hover: none)').matches) return;
+
+  const hero = document.querySelector('.hero');
+  if (!hero) return;
+
+  let targetX = 0, targetY = 0;
+  let currentX = 0, currentY = 0;
+  let ticking = false;
+
+  function tick() {
+    ticking = false;
+    currentX += (targetX - currentX) * 0.07;
+    currentY += (targetY - currentY) * 0.07;
+    hero.style.setProperty('--grid-tx', `${currentX.toFixed(2)}px`);
+    hero.style.setProperty('--grid-ty', `${currentY.toFixed(2)}px`);
+    if (Math.abs(targetX - currentX) > 0.1 || Math.abs(targetY - currentY) > 0.1) {
+      ticking = true;
+      requestAnimationFrame(tick);
+    }
+  }
+
+  document.addEventListener('mousemove', (e) => {
+    const rect = hero.getBoundingClientRect();
+    if (rect.bottom < 0) return; // hero scrolled past viewport
+    const cx = rect.left + rect.width  / 2;
+    const cy = rect.top  + rect.height / 2;
+    const nx = Math.max(-1, Math.min(1, (e.clientX - cx) / (rect.width  / 2)));
+    const ny = Math.max(-1, Math.min(1, (e.clientY - cy) / (rect.height / 2)));
+    targetX = nx * 15;
+    targetY = ny * 10;
+    if (!ticking) { ticking = true; requestAnimationFrame(tick); }
+  }, { passive: true });
+}
+
 function initParallax() {
   if (window.matchMedia('(hover: none)').matches) return;
   const films = document.querySelectorAll('.work-film');
