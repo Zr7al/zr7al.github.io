@@ -2831,7 +2831,12 @@ a.contact-detail { cursor: pointer; }
     border-bottom: 1px solid var(--border);
     box-shadow: none;
   }
-  .device-mac img { border-radius: 0; width: 100%; height: auto; }
+  .device-mac {
+    max-height: 220px;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+  }
+  .device-mac img { border-radius: 0; width: 100%; height: 100%; object-fit: cover; }
   .device-phone { display: none; }
   /* Info as card body */
   .work-film__info { padding: 20px; }
