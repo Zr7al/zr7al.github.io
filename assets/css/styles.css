@@ -2508,7 +2508,8 @@ p {
 .mobile-cta-bar.visible { transform: translateY(0); }
 .mobile-cta-bar .btn { width: 100%; justify-content: center; }
 
-@media (max-width: 768px) { .mobile-cta-bar { display: flex; } }
+/* Sticky mobile CTA removed — navbar already carries the primary CTA */
+@media (max-width: 768px) { .mobile-cta-bar { display: none !important; } }
 
 /* === CONTACT PAGE — two-column split === */
 .contact-split {
@@ -2814,12 +2815,34 @@ a.contact-detail { cursor: pointer; }
   .contact-split__inner { grid-template-columns: 1fr; gap: 36px; }
   .contact-split__desc { max-width: none; }
   .contact-form { padding: 22px; }
-  .tech-spec { flex-direction: column; }
-  .tech-spec__item { border-right: none; border-bottom: 1px solid var(--border); }
+  /* Simplified text rows — no heavy background blocks */
+  .tech-spec {
+    flex-direction: column;
+    border: none;
+    border-radius: 0;
+    margin-top: 12px;
+    margin-bottom: 0;
+    gap: 0;
+  }
+  .tech-spec__item {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 6px;
+    padding: 5px 0;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    background: none;
+  }
   .tech-spec__item:last-child { border-bottom: none; }
+  .tech-spec__label::after { content: ":"; }
+  .tech-spec__value { font-size: 0.75rem; }
 
   /* ── Project-specs row — hidden on mobile ── */
   .project-specs { display: none; }
+
+  /* ── REF labels: offset to sit 16px inside the visual card ── */
+  .micro-data--tr { top: 28px;    right: 36px; }
+  .micro-data--bl { bottom: 28px; left:  36px; }
 
   /* ── Work page: clean card layout ── */
   .work-film { padding: 12px 0; }
@@ -2860,6 +2883,10 @@ a.contact-detail { cursor: pointer; }
     border-radius: 16px;
     padding: 28px 20px;
   }
+
+  /* ── Preview image respects card border-radius ── */
+  .work-film__inner { overflow: hidden; }
+  .device-showcase  { overflow: hidden; border-radius: 12px 12px 0 0; }
 
   /* ── Image-first: index.html cards have info before image in HTML ── */
   .work-film .device-showcase { order: -1; }
