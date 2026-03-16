@@ -703,15 +703,6 @@ p {
     font-size: 14.5px;
   }
 
-  /* ── Trust row ── */
-  .hero-trust {
-    gap: 10px 18px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
-    padding-top: 16px;
-  }
-
   /* ── Terminal / product card: hidden on mobile ── */
   .hero-product-card { display: none; }
 
