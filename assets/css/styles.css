@@ -310,19 +310,40 @@ p {
   background: var(--text);
 }
 
-.nav__mobile-menu {
+/* Backdrop overlay */
+.nav__mobile-overlay {
+  display: none;
   position: fixed;
   inset: 0;
+  background: rgba(0,0,0,0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1090;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.nav__mobile-overlay.open {
+  display: block;
+  opacity: 1;
+}
+
+/* Slide-in panel */
+.nav__mobile-menu {
+  position: fixed;
+  top: 0; right: 0; bottom: 0;
+  width: min(80vw, 320px);
   background: var(--card);
   transform: translateX(100%);
-  transition: transform 0.4s var(--ease-out);
+  transition: transform 0.35s var(--ease-out);
   display: flex;
   flex-direction: column;
-  padding: 84px 28px 36px;
+  padding: 80px 28px 36px;
   gap: 4px;
   z-index: 1100;
   border-left: 1px solid var(--border);
   overflow-y: auto;
+  box-shadow: -8px 0 40px rgba(0,0,0,0.10);
 }
 
 .nav__mobile-menu.open { transform: translateX(0); }
@@ -379,7 +400,11 @@ p {
 
 @media (max-width: 768px) {
   .nav__inner { padding: 0 10px 0 16px; }
-  .nav__actions .btn-primary { display: none; }
+  .nav__actions .btn-primary {
+    padding: 8px 14px;
+    font-size: 12px;
+    height: 32px;
+  }
 }
 
 /* === BUTTONS === */

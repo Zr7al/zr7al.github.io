@@ -273,17 +273,21 @@ function initBentoMetrics() {
 function initMobileMenu() {
   const hamburger = document.querySelector('.nav__hamburger');
   const menu      = document.querySelector('.nav__mobile-menu');
+  const overlay   = document.querySelector('.nav__mobile-overlay');
   const closeBtn  = document.querySelector('.nav__mobile-close');
   if (!hamburger || !menu) return;
 
   const toggle = open => {
     menu.classList.toggle('open', open);
+    if (overlay) overlay.classList.toggle('open', open);
     document.body.style.overflow = open ? 'hidden' : '';
     hamburger.setAttribute('aria-expanded', open);
+    menu.setAttribute('aria-hidden', !open);
   };
 
   hamburger.addEventListener('click', () => toggle(true));
   if (closeBtn) closeBtn.addEventListener('click', () => toggle(false));
+  if (overlay) overlay.addEventListener('click', () => toggle(false));
   menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggle(false)));
   document.addEventListener('keydown', e => { if (e.key === 'Escape') toggle(false); });
 }
