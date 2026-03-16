@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initParallax();
   initTerminalWidget();
   initProcessTimeline();
+  initMobileStatCountUp();
 });
 
 /* ─── Easing helpers ─── */
@@ -559,6 +560,45 @@ function initTerminalWidget() {
       if (e.key === 'Enter') runScan();
     });
   }
+}
+
+/* ─── Mobile Stat Count-Up ─── */
+function initMobileStatCountUp() {
+  const container = document.querySelector('.hero-perf-mobile');
+  if (!container) return;
+
+  // Only run on mobile — avoids unnecessary work on desktop
+  if (!window.matchMedia('(max-width: 768px)').matches) return;
+
+  const items = container.querySelectorAll('.hero-perf-mobile__num');
+  if (!items.length) return;
+
+  let ran = false;
+
+  const observer = new IntersectionObserver((entries) => {
+    if (!entries[0].isIntersecting || ran) return;
+    ran = true;
+    observer.disconnect();
+
+    items.forEach(el => {
+      const target = parseInt(el.dataset.target, 10);
+      const duration = 1000;
+      const startTime = performance.now();
+
+      function tick(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        // Ease-out cubic
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(eased * target);
+        if (progress < 1) requestAnimationFrame(tick);
+      }
+
+      requestAnimationFrame(tick);
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(container);
 }
 
 /* ─── Process Timeline — sequential reveal + fill line ─── */
