@@ -248,7 +248,7 @@ function initCardGlow() {
   });
 }
 
-/* ─── Bento Metrics — animate Lighthouse bars when dev card enters view ─── */
+/* ─── Bento Metrics — animate Lighthouse bars + score count-up ─── */
 function initBentoMetrics() {
   const devCard = document.querySelector('.bento-card--dev');
   if (!devCard) return;
@@ -256,14 +256,47 @@ function initBentoMetrics() {
   const bars = devCard.querySelectorAll('.bento-metric__bar');
   if (!bars.length) return;
 
+  // Zero out score text so count-up starts from 0
+  devCard.querySelectorAll('.bento-metric__score').forEach(el => {
+    el.dataset.target = el.textContent.trim();
+    el.textContent = '0';
+  });
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
+
       bars.forEach((bar, i) => {
-        setTimeout(() => {
-          bar.style.width = (bar.dataset.w ?? '0') + '%';
-        }, i * 120);
+        const delay = i * 120;
+        // Slide in the row
+        const row = bar.closest('.bento-metric');
+        if (row) setTimeout(() => row.classList.add('metric-visible'), delay);
+        // Animate bar width
+        setTimeout(() => { bar.style.width = (bar.dataset.w ?? '0') + '%'; }, delay);
+
+        // Count up the score number
+        const scoreEl = bar.closest('.bento-metric')?.querySelector('.bento-metric__score');
+        if (!scoreEl) return;
+        const target = parseInt(scoreEl.dataset.target ?? '0', 10);
+        const duration = 800;
+        const startTime = performance.now() + delay;
+        function tick(now) {
+          const elapsed = Math.max(0, now - startTime);
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          scoreEl.textContent = Math.round(eased * target);
+          if (progress < 1) {
+            requestAnimationFrame(tick);
+          } else {
+            // Pop scale on completion
+            scoreEl.style.transition = 'transform 0.18s var(--ease-out)';
+            scoreEl.style.transform = 'scale(1.2)';
+            setTimeout(() => { scoreEl.style.transform = 'scale(1)'; }, 180);
+          }
+        }
+        setTimeout(() => requestAnimationFrame(tick), delay);
       });
+
       observer.unobserve(entry.target);
     });
   }, { threshold: 0.3 });
