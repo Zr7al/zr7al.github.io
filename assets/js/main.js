@@ -611,8 +611,6 @@ function initTerminalWidget() {
 function initMobileStatCountUp() {
   const container = document.querySelector('.hero-perf-mobile');
   if (!container) return;
-
-  // Only run on mobile — avoids unnecessary work on desktop
   if (!window.matchMedia('(max-width: 768px)').matches) return;
 
   const items = container.querySelectorAll('.hero-perf-mobile__num');
@@ -620,19 +618,12 @@ function initMobileStatCountUp() {
 
   let ran = false;
 
-  const observer = new IntersectionObserver((entries) => {
-    if (!entries[0].isIntersecting || ran) return;
-    ran = true;
-    observer.disconnect();
-
-    // Fade-in + translateY card reveal
+  function runAnimation() {
     container.classList.add('visible');
-
     items.forEach(el => {
       const target = parseInt(el.dataset.target, 10);
       const duration = 1000;
       const startTime = performance.now();
-
       function tick(now) {
         const elapsed = now - startTime;
         const progress = Math.min(elapsed / duration, 1);
@@ -645,12 +636,30 @@ function initMobileStatCountUp() {
           el.addEventListener('animationend', () => el.classList.remove('pop'), { once: true });
         }
       }
-
       requestAnimationFrame(tick);
     });
-  }, { threshold: 0.5 });
+  }
+
+  // Low threshold so even partially-visible card on small phones triggers it
+  const observer = new IntersectionObserver((entries) => {
+    if (!entries[0].isIntersecting || ran) return;
+    ran = true;
+    observer.disconnect();
+    runAnimation();
+  }, { threshold: 0.1 });
 
   observer.observe(container);
+
+  // Fallback: card is in the hero (always above fold) — fire after load if observer missed it
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      if (!ran) {
+        ran = true;
+        observer.disconnect();
+        runAnimation();
+      }
+    }, 300);
+  }, { once: true });
 }
 
 /* ─── Process Timeline — sequential reveal + fill line ─── */
