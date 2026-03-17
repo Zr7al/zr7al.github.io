@@ -386,7 +386,7 @@ function initWorkTilt() {
 /* ─── Scroll Parallax on Work Films ─── */
 /* ─── Project Metrics Animation ─── */
 function initMetricsAnimation() {
-  document.querySelectorAll('.work-film__metrics').forEach(list => {
+  document.querySelectorAll('.metric-chips').forEach(chips => {
     let ran = false;
 
     const observer = new IntersectionObserver(([entry]) => {
@@ -394,20 +394,13 @@ function initMetricsAnimation() {
       ran = true;
       observer.disconnect();
 
-      list.querySelectorAll('.metric-row[data-value]').forEach((row, i) => {
-        const target = parseInt(row.dataset.value, 10);
-        const fill   = row.querySelector('.metric-row__fill');
-        const num    = row.querySelector('.metric-row__num');
-        const delay  = i * 120;
-
-        // Bar: CSS transition handles the fill, just set width after a staggered delay
-        setTimeout(() => {
-          if (fill) fill.style.width = target + '%';
-        }, delay);
-
-        // Number count-up
+      chips.querySelectorAll('.metric-chip[data-value]').forEach((chip, i) => {
+        const target = parseInt(chip.dataset.value, 10);
+        const num    = chip.querySelector('.metric-chip__num');
         if (!num) return;
-        const duration  = 700;
+
+        const duration  = 650;
+        const delay     = i * 100;
         const startTime = performance.now() + delay;
 
         function tick(now) {
@@ -422,7 +415,7 @@ function initMetricsAnimation() {
       });
     }, { threshold: 0.2 });
 
-    observer.observe(list);
+    observer.observe(chips);
   });
 }
 
