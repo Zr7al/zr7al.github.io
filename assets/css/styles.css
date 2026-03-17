@@ -1866,6 +1866,67 @@ p {
   .page-hero p { font-size: 0.95rem; }
 }
 
+/* ── Expand / collapse (mobile only) ── */
+
+/* Desktop: button never shown, expandable always visible */
+.work-film__expand-btn  { display: none; }
+.work-film__expandable  { display: block; }
+
+@media (max-width: 768px) {
+  /* Reorder .work-film__info children */
+  .work-film__info {
+    display: flex;
+    flex-direction: column;
+  }
+  .work-film__num          { order: 0; }
+  .work-film__title        { order: 1; }
+  .work-result-badges,
+  .outcome-badge           { order: 2; }
+  .work-film__desc         { order: 3; }
+  .work-film__link         { order: 4; }
+  .work-film__expand-btn   { order: 5; }
+  .work-film__expandable   { order: 6; }
+
+  /* Show toggle button */
+  .work-film__expand-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    padding: 10px 0 0;
+    background: none;
+    border: none;
+    border-top: 1px solid var(--border);
+    margin-top: 14px;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    cursor: pointer;
+  }
+
+  .work-film__expand-btn .chevron {
+    transition: transform 0.25s ease;
+  }
+
+  .work-film__expand-btn[aria-expanded="true"] .chevron {
+    transform: rotate(180deg);
+  }
+
+  /* Collapse panel by default */
+  .work-film__expandable {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .work-film__expandable.open {
+    max-height: 400px;
+  }
+}
+
 /* === PROCESS TIMELINE === */
 .process-timeline {
   position: relative;
