@@ -946,6 +946,30 @@ p {
 .terminal-widget .scan-btn:hover { background: #1d4ed8; }
 .terminal-widget .scan-loading   { margin-top: 4px; }
 
+/* URL validation error */
+.terminal-widget .url-input.invalid {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 2px rgba(239,68,68,0.12);
+}
+
+.terminal-widget .url-error {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: #ef4444;
+  margin-top: 6px;
+  letter-spacing: 0.04em;
+  min-height: 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.2s ease, opacity 0.2s ease;
+}
+
+.terminal-widget .url-error.visible {
+  max-height: 24px;
+  opacity: 1;
+}
+
 .terminal-widget .scan-line {
   font-size: 12px;
   margin-bottom: 5px;

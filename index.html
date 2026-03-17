@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Zaid Rahhal — Freelance Web Developer. Websites that turn visitors into clients." />
   <meta property="og:title" content="Zaid Rahhal — Web Developer">
-  <meta property="og:description" content="Websites that turn visitors into clients">
+  <meta property="og:description" content="Freelance web developer building fast modern websites that turn visitors into customers. Performance focused design development and SEO optimization.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/images/preview.jpg">
-  <title>Zaid Rahhal — Web Developer</title>
+  <title>Web Developer for Business Websites — Zaid Rahhal</title>
   <link rel="icon" href="favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -63,12 +63,8 @@
           Websites that turn<br>visitors into <em>clients.</em>
         </h1>
         <p class="hero__desc">
-          I design and build fast modern websites for businesses that want a professional online presence and more customers.
+          I design and build fast high converting websites for businesses that want more customers not just more traffic.
         </p>
-        <div class="hero-actions">
-          <a href="contact.html" class="btn btn-primary">Start a Project</a>
-          <a href="#work" class="btn btn-secondary">View Case Studies</a>
-        </div>
       </div>
 
       <div class="hero-product-card">
@@ -127,9 +123,10 @@
                 <div id="analyze-input" class="analyze-input">
                   <div class="prompt-line">&gt; enter your site URL</div>
                   <div class="input-row">
-                    <input id="url-input" type="text" placeholder="https://yoursite.com" class="url-input" />
+                    <input id="url-input" type="url" placeholder="https://yoursite.com" class="url-input" autocomplete="off" spellcheck="false" />
                     <button type="button" id="scan-btn" class="scan-btn">SCAN</button>
                   </div>
+                  <div id="url-error" class="url-error" aria-live="polite"></div>
                 </div>
                 <div id="scan-loading" class="scan-loading" style="display:none;">
                   <div class="scan-line" id="scan-line-1"></div>

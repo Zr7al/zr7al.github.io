@@ -542,6 +542,32 @@ function initTerminalWidget() {
     }, delay);
   });
 
+  function isValidUrl(raw) {
+    const s = raw.trim();
+    if (!s) return false;
+    // Auto-prepend https:// if no protocol given
+    const withProto = /^https?:\/\//i.test(s) ? s : 'https://' + s;
+    try {
+      const u = new URL(withProto);
+      // Must have a hostname with at least one dot (e.g. example.com)
+      return /\.[a-z]{2,}$/i.test(u.hostname);
+    } catch { return false; }
+  }
+
+  function showUrlError(msg) {
+    const el = document.getElementById('url-error');
+    const input = document.getElementById('url-input');
+    if (el) { el.textContent = '! ' + msg; el.classList.add('visible'); }
+    if (input) { input.classList.add('invalid'); }
+  }
+
+  function clearUrlError() {
+    const el = document.getElementById('url-error');
+    const input = document.getElementById('url-input');
+    if (el) { el.textContent = ''; el.classList.remove('visible'); }
+    if (input) { input.classList.remove('invalid'); }
+  }
+
   function runScan() {
     const urlInput     = document.getElementById('url-input');
     const analyzeInput = document.getElementById('analyze-input');
@@ -549,7 +575,20 @@ function initTerminalWidget() {
     const scanCursor   = document.getElementById('scan-cursor');
     const ctaBlock     = document.getElementById('cta-block');
     const resultScores = document.getElementById('result-scores');
-    if (!urlInput?.value.trim()) return;
+
+    const raw = urlInput?.value.trim() ?? '';
+    clearUrlError();
+
+    if (!raw) {
+      showUrlError('please enter a URL');
+      urlInput?.focus();
+      return;
+    }
+    if (!isValidUrl(raw)) {
+      showUrlError('invalid URL — try https://yoursite.com');
+      urlInput?.focus();
+      return;
+    }
 
     const url = urlInput.value.trim();
     analyzeInput.style.display = 'none';
@@ -601,9 +640,9 @@ function initTerminalWidget() {
 
   if (scanBtn) {
     scanBtn.addEventListener('click', runScan);
-    document.getElementById('url-input')?.addEventListener('keydown', e => {
-      if (e.key === 'Enter') runScan();
-    });
+    const urlInput = document.getElementById('url-input');
+    urlInput?.addEventListener('keydown', e => { if (e.key === 'Enter') runScan(); });
+    urlInput?.addEventListener('input', clearUrlError);
   }
 }
 
