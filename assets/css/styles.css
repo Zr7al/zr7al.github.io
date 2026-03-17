@@ -1789,6 +1789,52 @@ p {
   flex-shrink: 0;
 }
 
+/* ── Animated metric rows ── */
+.metric-row { flex-direction: column; align-items: stretch; gap: 6px; }
+.metric-row::before { display: none; }
+
+.metric-row__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.metric-row__name {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.metric-row__num {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.metric-row__track {
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.metric-row__fill {
+  height: 100%;
+  width: 0%;
+  background: var(--text);
+  border-radius: 2px;
+  transition: width 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0.75;
+}
+
+/* Text-only variant keeps the dot bullet */
+.metric-row--text { flex-direction: row; align-items: center; }
+.metric-row--text::before { display: block; }
+
 .work-film__link {
   display: inline-flex;
   align-items: center;

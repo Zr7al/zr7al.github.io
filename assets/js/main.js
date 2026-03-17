@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProcessTimeline();
   initMobileStatCountUp();
   initWorkCardExpand();
+  initMetricsAnimation();
 });
 
 /* ─── Easing helpers ─── */
@@ -383,6 +384,48 @@ function initWorkTilt() {
 }
 
 /* ─── Scroll Parallax on Work Films ─── */
+/* ─── Project Metrics Animation ─── */
+function initMetricsAnimation() {
+  document.querySelectorAll('.work-film__metrics').forEach(list => {
+    let ran = false;
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting || ran) return;
+      ran = true;
+      observer.disconnect();
+
+      list.querySelectorAll('.metric-row[data-value]').forEach((row, i) => {
+        const target = parseInt(row.dataset.value, 10);
+        const fill   = row.querySelector('.metric-row__fill');
+        const num    = row.querySelector('.metric-row__num');
+        const delay  = i * 120;
+
+        // Bar: CSS transition handles the fill, just set width after a staggered delay
+        setTimeout(() => {
+          if (fill) fill.style.width = target + '%';
+        }, delay);
+
+        // Number count-up
+        if (!num) return;
+        const duration  = 700;
+        const startTime = performance.now() + delay;
+
+        function tick(now) {
+          const elapsed  = Math.max(0, now - startTime);
+          const progress = Math.min(elapsed / duration, 1);
+          const eased    = 1 - Math.pow(1 - progress, 3);
+          num.textContent = Math.round(eased * target);
+          if (progress < 1) requestAnimationFrame(tick);
+        }
+
+        setTimeout(() => requestAnimationFrame(tick), delay);
+      });
+    }, { threshold: 0.2 });
+
+    observer.observe(list);
+  });
+}
+
 /* ─── Work Card Expand / Collapse (mobile) ─── */
 function initWorkCardExpand() {
   if (!window.matchMedia('(max-width: 768px)').matches) return;
