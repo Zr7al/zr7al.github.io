@@ -603,6 +603,23 @@ p {
   align-items: stretch;
   justify-content: center;
   padding: 4px;
+  animation: card-float 6s ease-in-out infinite;
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
+  will-change: transform;
+}
+
+@keyframes card-float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+.hero-product-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 28px 70px -10px rgba(0,0,0,0.16),
+    0 0 0 1px rgba(0,0,0,0.06),
+    0 0 32px -4px rgba(0,0,0,0.06);
+  animation-play-state: paused;
 }
 
 .hero-product-card__inner {
