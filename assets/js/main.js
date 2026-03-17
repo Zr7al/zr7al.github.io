@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initMobileMenu();
   initFAQ();
-  initTime();
 
   initHeroEntrance();
   initScrollAnimations();
@@ -317,18 +316,6 @@ function initFAQ() {
 }
 
 /* ─── Amman Local Time ─── */
-function initTime() {
-  const el = document.getElementById('localTime');
-  if (!el) return;
-  const fmt = new Intl.DateTimeFormat('en-GB', {
-    timeZone: 'Asia/Amman',
-    hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false,
-  });
-  const tick = () => { el.textContent = fmt.format(new Date()); };
-  setInterval(tick, 1000);
-  tick();
-}
-
 /* ─── Card Spotlight (mouse gradient on hover) ─── */
 function initSpotlight() {
   const cards = document.querySelectorAll('.testimonial-card, .bento-card');

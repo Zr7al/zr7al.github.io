@@ -247,34 +247,6 @@ p {
 
 .nav__brand:hover .nav__brand-name { opacity: 0.65; }
 
-.nav__status {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  font-family: var(--font-mono);
-  font-size: 9.5px;
-  color: var(--dim);
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  padding: 0 14px;
-  border-left: 1px solid var(--border);
-  border-right: 1px solid var(--border);
-}
-
-.nav__status-item { display: flex; align-items: center; gap: 8px; }
-
-.nav__status-dot {
-  width: 5px; height: 5px;
-  border-radius: 50%;
-  background: #34c759;
-  box-shadow: 0 0 0 0 rgba(52,199,89,0);
-  animation: blink 2.5s ease-in-out infinite;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(52,199,89,0.4); }
-  50%       { opacity: 0.4; box-shadow: 0 0 0 4px rgba(52,199,89,0); }
-}
 
 /* ── Nav links with animated underline ── */
 .nav__links {
@@ -414,9 +386,6 @@ p {
 
 .nav__mobile-close:hover { background: var(--bg); }
 
-@media (max-width: 1080px) {
-  .nav__status { display: none; }
-}
 
 @media (max-width: 900px) {
   .nav__links     { display: none; }
