@@ -611,7 +611,7 @@ function initTerminalWidget() {
 function initMobileStatCountUp() {
   const container = document.querySelector('.hero-perf-mobile');
   if (!container) return;
-  if (!window.matchMedia('(max-width: 768px)').matches) return;
+  if (!window.matchMedia('(max-width: 900px)').matches) return;
 
   const items = container.querySelectorAll('.hero-perf-mobile__num');
   if (!items.length) return;
