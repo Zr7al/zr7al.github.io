@@ -50,13 +50,34 @@
 </div>
 
 <!-- PAGE HERO -->
-<section class="page-hero">
+<section class="page-hero page-hero--work">
+  <div class="hero-deco" aria-hidden="true">
+    <svg class="hero-deco__svg" viewBox="0 0 600 300" fill="none" preserveAspectRatio="xMidYMid slice">
+      <line x1="0" y1="75" x2="600" y2="75" stroke="rgba(0,0,0,0.09)" stroke-width="1"/>
+      <line x1="0" y1="150" x2="600" y2="150" stroke="rgba(0,0,0,0.09)" stroke-width="1"/>
+      <line x1="0" y1="225" x2="600" y2="225" stroke="rgba(0,0,0,0.09)" stroke-width="1"/>
+      <line x1="100" y1="0" x2="100" y2="300" stroke="rgba(0,0,0,0.09)" stroke-width="1"/>
+      <line x1="200" y1="0" x2="200" y2="300" stroke="rgba(0,0,0,0.09)" stroke-width="1"/>
+      <line x1="300" y1="0" x2="300" y2="300" stroke="rgba(0,0,0,0.09)" stroke-width="1"/>
+      <line x1="400" y1="0" x2="400" y2="300" stroke="rgba(0,0,0,0.09)" stroke-width="1"/>
+      <line x1="500" y1="0" x2="500" y2="300" stroke="rgba(0,0,0,0.09)" stroke-width="1"/>
+      <circle cx="300" cy="150" r="3" fill="rgba(0,0,0,0.30)"/>
+      <circle cx="400" cy="75" r="3" fill="rgba(0,0,0,0.22)"/>
+      <circle cx="500" cy="225" r="2" fill="rgba(0,0,0,0.18)"/>
+      <rect x="370" y="55" width="60" height="40" rx="3" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="1" stroke-dasharray="5 3"/>
+    </svg>
+  </div>
   <div class="container">
     <span class="page-hero__label fade-up">Portfolio</span>
     <h1 class="fade-up delay-1">Selected Work</h1>
     <p class="fade-up delay-2">
       A collection of projects built to solve real business problems — each one designed with purpose and built for performance.
     </p>
+    <div class="page-hero__stats fade-up delay-3">
+      <div class="page-hero__stat"><span class="page-hero__stat-num">3</span><span class="page-hero__stat-label">Projects</span></div>
+      <div class="page-hero__stat"><span class="page-hero__stat-num">98</span><span class="page-hero__stat-label">Avg Score</span></div>
+      <div class="page-hero__stat"><span class="page-hero__stat-num">100%</span><span class="page-hero__stat-label">Satisfaction</span></div>
+    </div>
   </div>
 </section>
 
@@ -225,18 +246,34 @@
   </article>
 
   <!-- Next — Your Project -->
-  <article class="work-film work-film--next fade-up delay-1">
-    <div class="micro-data micro-data--tr">REF: YOUR_PROJECT</div>
-    <div class="micro-data micro-data--bl">STATUS: AWAITING_START</div>
+  <article class="work-film work-film--next work-film--dark fade-up delay-1">
+    <!-- Geometric decoration -->
+    <div class="work-film--dark__deco" aria-hidden="true">
+      <svg viewBox="0 0 400 200" fill="none" preserveAspectRatio="xMidYMid slice">
+        <line x1="0" y1="50" x2="400" y2="50" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+        <line x1="0" y1="100" x2="400" y2="100" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+        <line x1="0" y1="150" x2="400" y2="150" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+        <line x1="80" y1="0" x2="80" y2="200" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+        <line x1="160" y1="0" x2="160" y2="200" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+        <line x1="240" y1="0" x2="240" y2="200" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+        <line x1="320" y1="0" x2="320" y2="200" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+        <circle cx="240" cy="100" r="3.5" fill="rgba(255,255,255,0.20)" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+        <circle cx="320" cy="50" r="3.5" fill="rgba(255,255,255,0.40)" stroke="rgba(255,255,255,0.70)" stroke-width="1"/>
+        <circle cx="160" cy="150" r="3.5" fill="rgba(255,255,255,0.30)" stroke="rgba(255,255,255,0.55)" stroke-width="1"/>
+        <line x1="160" y1="150" x2="240" y2="100" stroke="rgba(255,255,255,0.10)" stroke-width="1.5"/>
+        <line x1="240" y1="100" x2="320" y2="50" stroke="rgba(255,255,255,0.10)" stroke-width="1.5"/>
+        <rect x="304" y="34" width="32" height="32" rx="4" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+      </svg>
+    </div>
     <div class="container">
       <div class="work-film__inner">
         <div class="work-film__foot">
           <div>
-            <p class="work-film__num">Next — Your Business</p>
+            <span class="work-next__label">Next Up</span>
             <h2 class="work-film__title">Your business<br>could be next.</h2>
             <p class="work-film__desc">Let's build a website that brings real customers to your door — designed for your business, built to perform.</p>
           </div>
-          <a href="contact.html" class="btn btn-primary">
+          <a href="contact.html" class="btn btn-primary work-film--dark__btn">
             Start a Project
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>

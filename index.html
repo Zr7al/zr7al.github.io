@@ -56,15 +56,62 @@
 
 <!-- ===================== HERO ===================== -->
 <section class="hero" aria-labelledby="heroHeadline">
+  <!-- Decorative isometric grid -->
+  <div class="hero-deco" aria-hidden="true">
+    <svg class="hero-deco__svg" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <!-- Isometric grid lines -->
+      <line x1="0" y1="100" x2="600" y2="100" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+      <line x1="0" y1="200" x2="600" y2="200" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+      <line x1="0" y1="300" x2="600" y2="300" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+      <line x1="0" y1="400" x2="600" y2="400" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+      <line x1="100" y1="0" x2="100" y2="500" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+      <line x1="200" y1="0" x2="200" y2="500" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+      <line x1="300" y1="0" x2="300" y2="500" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+      <line x1="400" y1="0" x2="400" y2="500" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+      <line x1="500" y1="0" x2="500" y2="500" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+      <!-- Diagonal accents -->
+      <line x1="200" y1="0" x2="600" y2="400" stroke="rgba(0,0,0,0.10)" stroke-width="1"/>
+      <line x1="300" y1="0" x2="600" y2="300" stroke="rgba(0,0,0,0.07)" stroke-width="1"/>
+      <line x1="100" y1="0" x2="600" y2="500" stroke="rgba(0,0,0,0.07)" stroke-width="1"/>
+      <!-- Highlighted nodes at intersections -->
+      <circle cx="300" cy="200" r="3" fill="rgba(0,0,0,0.25)"/>
+      <circle cx="400" cy="100" r="3" fill="rgba(0,0,0,0.20)"/>
+      <circle cx="500" cy="300" r="3" fill="rgba(0,0,0,0.18)"/>
+      <circle cx="200" cy="300" r="2" fill="rgba(0,0,0,0.15)"/>
+      <circle cx="400" cy="400" r="2" fill="rgba(0,0,0,0.12)"/>
+      <!-- Featured rectangle highlight -->
+      <rect x="280" y="80" width="120" height="80" rx="4" fill="none" stroke="rgba(0,0,0,0.14)" stroke-width="1" stroke-dasharray="6 3"/>
+      <rect x="380" y="260" width="160" height="100" rx="4" fill="none" stroke="rgba(0,0,0,0.10)" stroke-width="1" stroke-dasharray="6 3"/>
+    </svg>
+  </div>
   <div class="container">
     <div class="hero__inner">
       <div class="hero-content">
+        <div class="hero-badge">Available for new projects</div>
         <h1 class="hero__title" id="heroHeadline">
           Websites that turn<br>visitors into <em>clients.</em>
         </h1>
         <p class="hero__desc">
           I design and build fast high converting websites for businesses that want more customers not just more traffic.
         </p>
+        <div class="hero-actions">
+          <a href="contact.html" class="btn btn-primary">Start a Project</a>
+          <a href="work.html" class="btn btn-secondary">View Work →</a>
+        </div>
+        <div class="hero-trust">
+          <span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            5+ Projects
+          </span>
+          <span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Top Rated
+          </span>
+          <span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            Remote Friendly
+          </span>
+        </div>
       </div>
 
       <div class="hero-product-card">
@@ -170,32 +217,91 @@
   </div>
 </section>
 
+<!-- ===================== STATS STRIP ===================== -->
+<div class="stats-strip">
+  <div class="container">
+    <div class="stats-strip__inner">
+      <div class="stats-strip__item fade-up">
+        <span class="stats-strip__num">98</span>
+        <span class="stats-strip__label">Avg Lighthouse Score</span>
+      </div>
+      <div class="stats-strip__sep" aria-hidden="true"></div>
+      <div class="stats-strip__item fade-up delay-1">
+        <span class="stats-strip__num">5+</span>
+        <span class="stats-strip__label">Projects Delivered</span>
+      </div>
+      <div class="stats-strip__sep" aria-hidden="true"></div>
+      <div class="stats-strip__item fade-up delay-2">
+        <span class="stats-strip__num">100%</span>
+        <span class="stats-strip__label">Client Satisfaction</span>
+      </div>
+      <div class="stats-strip__sep" aria-hidden="true"></div>
+      <div class="stats-strip__item fade-up delay-3">
+        <span class="stats-strip__num">2×</span>
+        <span class="stats-strip__label">Faster Load Times</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== LOGOS BAND ===================== -->
+<div class="logos-band">
+  <div class="container">
+    <div class="logos-band__inner">
+      <span class="logos-band__label">Trusted by</span>
+      <div class="logos-band__logos">
+        <img src="assets/images/logos/e-jawdahlogo.png" alt="Ejawdah" class="logos-band__logo" loading="lazy">
+        <img src="assets/images/logos/rff-logo.png" alt="RFF Logistics" class="logos-band__logo" loading="lazy">
+        <img src="assets/images/logos/doctor-logo.webp" alt="Dental Clinic" class="logos-band__logo" loading="lazy">
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- ===================== SOCIAL PROOF ===================== -->
-<section class="section">
+<section class="section section--proof">
   <div class="container">
     <span class="section-label fade-up">Proof</span>
     <h2 class="section-heading fade-up delay-1">What Clients Say</h2>
-    
+
     <div class="testimonials-grid">
       <div class="testimonial-card fade-up">
+        <div class="testimonial-card__deco" aria-hidden="true">"</div>
         <div class="testimonial-card__rating">★★★★★</div>
         <p class="testimonial-card__quote">"Zaid delivered beyond our expectations. The new website looks incredibly professional."</p>
-        <p class="testimonial-card__name">Yaseen R.</p>
-        <p class="testimonial-card__role">CEO — Ejawdah</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar" style="--av-bg:#e8e8ed;--av-fg:#1d1d1f">Y</div>
+          <div>
+            <p class="testimonial-card__name">Yaseen R.</p>
+            <p class="testimonial-card__role">CEO — Ejawdah</p>
+          </div>
+        </div>
       </div>
 
       <div class="testimonial-card fade-up delay-1">
+        <div class="testimonial-card__deco" aria-hidden="true">"</div>
         <div class="testimonial-card__rating">★★★★★</div>
         <p class="testimonial-card__quote">"Working with Zaid was seamless. He understood our brand immediately."</p>
-        <p class="testimonial-card__name">Mazen O.</p>
-        <p class="testimonial-card__role">Founder — Reflection</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar" style="--av-bg:#e8e8ed;--av-fg:#1d1d1f">M</div>
+          <div>
+            <p class="testimonial-card__name">Mazen O.</p>
+            <p class="testimonial-card__role">Founder — Reflection</p>
+          </div>
+        </div>
       </div>
 
       <div class="testimonial-card fade-up delay-2">
+        <div class="testimonial-card__deco" aria-hidden="true">"</div>
         <div class="testimonial-card__rating">★★★★★</div>
         <p class="testimonial-card__quote">"The landing page Zaid built completely transformed our patient acquisition."</p>
-        <p class="testimonial-card__name">Dr. Mohammed R.</p>
-        <p class="testimonial-card__role">Owner — Dental Clinic</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar" style="--av-bg:#e8e8ed;--av-fg:#1d1d1f">DR</div>
+          <div>
+            <p class="testimonial-card__name">Dr. Mohammed R.</p>
+            <p class="testimonial-card__role">Owner — Dental Clinic</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -278,18 +384,18 @@
         <!-- Landing page wireframe illustration -->
         <div class="bento-card__art">
           <svg width="130" height="96" viewBox="0 0 130 96" fill="none" aria-hidden="true">
-            <rect x="1" y="1" width="128" height="94" rx="7" fill="rgba(22,163,74,0.05)" stroke="rgba(22,163,74,0.18)" stroke-width="1"/>
-            <rect x="1" y="1" width="128" height="17" rx="7" fill="rgba(22,163,74,0.1)"/>
-            <circle cx="12" cy="9.5" r="3" fill="rgba(22,163,74,0.35)"/>
-            <circle cx="21" cy="9.5" r="3" fill="rgba(22,163,74,0.2)"/>
-            <circle cx="30" cy="9.5" r="3" fill="rgba(22,163,74,0.12)"/>
-            <rect x="10" y="24" width="70" height="6" rx="3" fill="rgba(22,163,74,0.28)"/>
-            <rect x="10" y="33" width="50" height="4" rx="2" fill="rgba(22,163,74,0.15)"/>
-            <rect x="10" y="41" width="40" height="11" rx="5.5" fill="rgba(22,163,74,0.45)"/>
-            <line x1="10" y1="60" x2="120" y2="60" stroke="rgba(22,163,74,0.1)" stroke-width="1"/>
-            <rect x="10" y="66" width="32" height="22" rx="4" fill="rgba(22,163,74,0.07)"/>
-            <rect x="48" y="66" width="32" height="22" rx="4" fill="rgba(22,163,74,0.07)"/>
-            <rect x="86" y="66" width="34" height="22" rx="4" fill="rgba(22,163,74,0.07)"/>
+            <rect x="1" y="1" width="128" height="94" rx="7" fill="rgba(0,0,0,0.05)" stroke="rgba(0,0,0,0.18)" stroke-width="1"/>
+            <rect x="1" y="1" width="128" height="17" rx="7" fill="rgba(0,0,0,0.1)"/>
+            <circle cx="12" cy="9.5" r="3" fill="rgba(0,0,0,0.35)"/>
+            <circle cx="21" cy="9.5" r="3" fill="rgba(0,0,0,0.2)"/>
+            <circle cx="30" cy="9.5" r="3" fill="rgba(0,0,0,0.12)"/>
+            <rect x="10" y="24" width="70" height="6" rx="3" fill="rgba(0,0,0,0.28)"/>
+            <rect x="10" y="33" width="50" height="4" rx="2" fill="rgba(0,0,0,0.15)"/>
+            <rect x="10" y="41" width="40" height="11" rx="5.5" fill="rgba(0,0,0,0.45)"/>
+            <line x1="10" y1="60" x2="120" y2="60" stroke="rgba(0,0,0,0.1)" stroke-width="1"/>
+            <rect x="10" y="66" width="32" height="22" rx="4" fill="rgba(0,0,0,0.07)"/>
+            <rect x="48" y="66" width="32" height="22" rx="4" fill="rgba(0,0,0,0.07)"/>
+            <rect x="86" y="66" width="34" height="22" rx="4" fill="rgba(0,0,0,0.07)"/>
           </svg>
         </div>
         <span class="bento-card__link">Get a landing page →</span>
@@ -308,23 +414,23 @@
         <div class="bento-card__art">
           <svg width="140" height="80" viewBox="0 0 140 80" fill="none" aria-hidden="true">
             <!-- Before: old / messy -->
-            <rect x="1" y="8" width="58" height="66" rx="5" fill="rgba(147,51,234,0.04)" stroke="rgba(147,51,234,0.14)" stroke-width="1"/>
-            <rect x="1" y="8" width="58" height="13" rx="5" fill="rgba(147,51,234,0.09)"/>
-            <rect x="6" y="27" width="48" height="3" rx="1.5" fill="rgba(147,51,234,0.12)"/>
-            <rect x="6" y="33" width="34" height="3" rx="1.5" fill="rgba(147,51,234,0.08)"/>
-            <rect x="6" y="39" width="48" height="14" rx="3" fill="rgba(147,51,234,0.05)"/>
-            <rect x="6" y="57" width="22" height="3" rx="1.5" fill="rgba(147,51,234,0.08)"/>
-            <rect x="6" y="63" width="38" height="3" rx="1.5" fill="rgba(147,51,234,0.06)"/>
+            <rect x="1" y="8" width="58" height="66" rx="5" fill="rgba(0,0,0,0.04)" stroke="rgba(0,0,0,0.14)" stroke-width="1"/>
+            <rect x="1" y="8" width="58" height="13" rx="5" fill="rgba(0,0,0,0.09)"/>
+            <rect x="6" y="27" width="48" height="3" rx="1.5" fill="rgba(0,0,0,0.12)"/>
+            <rect x="6" y="33" width="34" height="3" rx="1.5" fill="rgba(0,0,0,0.08)"/>
+            <rect x="6" y="39" width="48" height="14" rx="3" fill="rgba(0,0,0,0.05)"/>
+            <rect x="6" y="57" width="22" height="3" rx="1.5" fill="rgba(0,0,0,0.08)"/>
+            <rect x="6" y="63" width="38" height="3" rx="1.5" fill="rgba(0,0,0,0.06)"/>
             <!-- Arrow -->
-            <path d="M65 40 L75 40" stroke="rgba(147,51,234,0.45)" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M72 37 L75 40 L72 43" stroke="rgba(147,51,234,0.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M65 40 L75 40" stroke="rgba(0,0,0,0.45)" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M72 37 L75 40 L72 43" stroke="rgba(0,0,0,0.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             <!-- After: clean / modern -->
-            <rect x="81" y="8" width="58" height="66" rx="5" fill="rgba(147,51,234,0.07)" stroke="rgba(147,51,234,0.22)" stroke-width="1"/>
-            <rect x="81" y="8" width="58" height="13" rx="5" fill="rgba(147,51,234,0.14)"/>
-            <rect x="86" y="27" width="48" height="5" rx="2.5" fill="rgba(147,51,234,0.22)"/>
-            <rect x="86" y="35" width="32" height="3" rx="1.5" fill="rgba(147,51,234,0.13)"/>
-            <rect x="86" y="42" width="22" height="9" rx="4.5" fill="rgba(147,51,234,0.35)"/>
-            <rect x="86" y="56" width="48" height="10" rx="3" fill="rgba(147,51,234,0.06)"/>
+            <rect x="81" y="8" width="58" height="66" rx="5" fill="rgba(0,0,0,0.07)" stroke="rgba(0,0,0,0.22)" stroke-width="1"/>
+            <rect x="81" y="8" width="58" height="13" rx="5" fill="rgba(0,0,0,0.14)"/>
+            <rect x="86" y="27" width="48" height="5" rx="2.5" fill="rgba(0,0,0,0.22)"/>
+            <rect x="86" y="35" width="32" height="3" rx="1.5" fill="rgba(0,0,0,0.13)"/>
+            <rect x="86" y="42" width="22" height="9" rx="4.5" fill="rgba(0,0,0,0.35)"/>
+            <rect x="86" y="56" width="48" height="10" rx="3" fill="rgba(0,0,0,0.06)"/>
           </svg>
         </div>
         <span class="bento-card__link">Redesign my site →</span>
@@ -342,19 +448,19 @@
         <!-- Rising bar chart illustration -->
         <div class="bento-card__art">
           <svg width="130" height="72" viewBox="0 0 130 72" fill="none" aria-hidden="true">
-            <line x1="8" y1="8" x2="8" y2="62" stroke="rgba(2,132,199,0.12)" stroke-width="1"/>
-            <line x1="8" y1="62" x2="125" y2="62" stroke="rgba(2,132,199,0.12)" stroke-width="1"/>
-            <line x1="8" y1="46" x2="125" y2="46" stroke="rgba(2,132,199,0.07)" stroke-width="0.75" stroke-dasharray="3 3"/>
-            <line x1="8" y1="30" x2="125" y2="30" stroke="rgba(2,132,199,0.07)" stroke-width="0.75" stroke-dasharray="3 3"/>
-            <line x1="8" y1="14" x2="125" y2="14" stroke="rgba(2,132,199,0.07)" stroke-width="0.75" stroke-dasharray="3 3"/>
-            <rect x="14" y="50" width="13" height="12" rx="2" fill="rgba(2,132,199,0.18)"/>
-            <rect x="33" y="42" width="13" height="20" rx="2" fill="rgba(2,132,199,0.24)"/>
-            <rect x="52" y="35" width="13" height="27" rx="2" fill="rgba(2,132,199,0.30)"/>
-            <rect x="71" y="26" width="13" height="36" rx="2" fill="rgba(2,132,199,0.38)"/>
-            <rect x="90" y="18" width="13" height="44" rx="2" fill="rgba(2,132,199,0.46)"/>
-            <rect x="109" y="10" width="13" height="52" rx="2" fill="rgba(2,132,199,0.58)"/>
-            <polyline points="20.5,49 39.5,41 58.5,34 77.5,25 96.5,17 115.5,9" stroke="rgba(2,132,199,0.75)" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="115.5" cy="9" r="3" fill="rgba(2,132,199,0.85)"/>
+            <line x1="8" y1="8" x2="8" y2="62" stroke="rgba(0,0,0,0.12)" stroke-width="1"/>
+            <line x1="8" y1="62" x2="125" y2="62" stroke="rgba(0,0,0,0.12)" stroke-width="1"/>
+            <line x1="8" y1="46" x2="125" y2="46" stroke="rgba(0,0,0,0.07)" stroke-width="0.75" stroke-dasharray="3 3"/>
+            <line x1="8" y1="30" x2="125" y2="30" stroke="rgba(0,0,0,0.07)" stroke-width="0.75" stroke-dasharray="3 3"/>
+            <line x1="8" y1="14" x2="125" y2="14" stroke="rgba(0,0,0,0.07)" stroke-width="0.75" stroke-dasharray="3 3"/>
+            <rect x="14" y="50" width="13" height="12" rx="2" fill="rgba(0,0,0,0.18)"/>
+            <rect x="33" y="42" width="13" height="20" rx="2" fill="rgba(0,0,0,0.24)"/>
+            <rect x="52" y="35" width="13" height="27" rx="2" fill="rgba(0,0,0,0.30)"/>
+            <rect x="71" y="26" width="13" height="36" rx="2" fill="rgba(0,0,0,0.38)"/>
+            <rect x="90" y="18" width="13" height="44" rx="2" fill="rgba(0,0,0,0.46)"/>
+            <rect x="109" y="10" width="13" height="52" rx="2" fill="rgba(0,0,0,0.58)"/>
+            <polyline points="20.5,49 39.5,41 58.5,34 77.5,25 96.5,17 115.5,9" stroke="rgba(0,0,0,0.75)" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="115.5" cy="9" r="3" fill="rgba(0,0,0,0.85)"/>
           </svg>
         </div>
         <span class="bento-card__link">Improve my rankings →</span>
@@ -535,7 +641,7 @@
       </div>
 
       <!-- Step 01 — Discovery -->
-      <div class="process-step" data-step="01" style="--step-color: #2563eb">
+      <div class="process-step" data-step="01" style="--step-color: #1d1d1f">
         <div class="process-step__marker">
           <div class="process-step__dot"></div>
         </div>
@@ -546,11 +652,14 @@
           </div>
           <h3 class="process-step__title">Discovery</h3>
           <p class="process-step__desc">Understand goals, constraints, and what success looks like for your market.</p>
+          <div class="process-step__bg-art" aria-hidden="true">
+            <svg width="64" height="54" viewBox="0 0 64 54" fill="none"><circle cx="26" cy="26" r="16" stroke="currentColor" stroke-width="1.5" opacity="0.14"/><circle cx="26" cy="26" r="10" stroke="currentColor" stroke-width="1.5" opacity="0.18"/><circle cx="26" cy="26" r="4" stroke="currentColor" stroke-width="1.5" opacity="0.24"/><line x1="37" y1="37" x2="56" y2="51" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.18"/></svg>
+          </div>
         </div>
       </div>
 
       <!-- Step 02 — Strategy -->
-      <div class="process-step" data-step="02" style="--step-color: #7c3aed">
+      <div class="process-step" data-step="02" style="--step-color: #3d3d40">
         <div class="process-step__marker">
           <div class="process-step__dot"></div>
         </div>
@@ -561,11 +670,14 @@
           </div>
           <h3 class="process-step__title">Strategy</h3>
           <p class="process-step__desc">Translate goals into structure, messaging, and high-conversion flows.</p>
+          <div class="process-step__bg-art" aria-hidden="true">
+            <svg width="64" height="54" viewBox="0 0 64 54" fill="none"><circle cx="32" cy="8" r="4.5" stroke="currentColor" stroke-width="1.5" opacity="0.22"/><circle cx="8" cy="40" r="4.5" stroke="currentColor" stroke-width="1.5" opacity="0.22"/><circle cx="56" cy="40" r="4.5" stroke="currentColor" stroke-width="1.5" opacity="0.22"/><line x1="32" y1="12" x2="8" y2="36" stroke="currentColor" stroke-width="1.2" opacity="0.14"/><line x1="32" y1="12" x2="56" y2="36" stroke="currentColor" stroke-width="1.2" opacity="0.14"/><line x1="12" y1="40" x2="52" y2="40" stroke="currentColor" stroke-width="1.2" opacity="0.12" stroke-dasharray="3 2"/></svg>
+          </div>
         </div>
       </div>
 
       <!-- Step 03 — Design -->
-      <div class="process-step" data-step="03" style="--step-color: #db2777">
+      <div class="process-step" data-step="03" style="--step-color: #6e6e73">
         <div class="process-step__marker">
           <div class="process-step__dot"></div>
         </div>
@@ -576,11 +688,14 @@
           </div>
           <h3 class="process-step__title">Design</h3>
           <p class="process-step__desc">Design pages and components that feel premium, precise, and interactive.</p>
+          <div class="process-step__bg-art" aria-hidden="true">
+            <svg width="64" height="54" viewBox="0 0 64 54" fill="none"><rect x="4" y="4" width="28" height="22" rx="4" stroke="currentColor" stroke-width="1.5" opacity="0.16"/><rect x="20" y="16" width="28" height="22" rx="4" stroke="currentColor" stroke-width="1.5" opacity="0.20"/><rect x="36" y="28" width="24" height="18" rx="4" stroke="currentColor" stroke-width="1.5" opacity="0.14"/><circle cx="10" cy="10" r="2" fill="currentColor" opacity="0.18"/></svg>
+          </div>
         </div>
       </div>
 
       <!-- Step 04 — Development -->
-      <div class="process-step" data-step="04" style="--step-color: #0891b2">
+      <div class="process-step" data-step="04" style="--step-color: #3d3d40">
         <div class="process-step__marker">
           <div class="process-step__dot"></div>
         </div>
@@ -591,11 +706,14 @@
           </div>
           <h3 class="process-step__title">Development</h3>
           <p class="process-step__desc">Build fast, responsive pages with clean code and technical SEO foundations.</p>
+          <div class="process-step__bg-art" aria-hidden="true">
+            <svg width="64" height="54" viewBox="0 0 64 54" fill="none"><polyline points="18,10 4,27 18,44" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.18"/><polyline points="46,10 60,27 46,44" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.18"/><line x1="38" y1="6" x2="26" y2="48" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.13"/></svg>
+          </div>
         </div>
       </div>
 
       <!-- Step 05 — Launch -->
-      <div class="process-step" data-step="05" style="--step-color: #16a34a">
+      <div class="process-step" data-step="05" style="--step-color: #1d1d1f">
         <div class="process-step__marker">
           <div class="process-step__dot"></div>
         </div>
@@ -606,6 +724,9 @@
           </div>
           <h3 class="process-step__title">Launch</h3>
           <p class="process-step__desc">Ship, measure, and refine based on real-world behavior and performance.</p>
+          <div class="process-step__bg-art" aria-hidden="true">
+            <svg width="64" height="54" viewBox="0 0 64 54" fill="none"><path d="M6 48 Q18 26 34 14 Q48 4 58 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 3" opacity="0.20"/><circle cx="58" cy="8" r="4.5" fill="currentColor" opacity="0.20"/><circle cx="58" cy="8" r="8" stroke="currentColor" stroke-width="1" opacity="0.10"/><path d="M6 48 Q28 44 52 34" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.09" stroke-dasharray="2 4"/></svg>
+          </div>
         </div>
       </div>
 
@@ -650,6 +771,20 @@
         </div>
       </div>
       <div class="faq-cta fade-up delay-2">
+        <div class="faq-cta__art" aria-hidden="true">
+          <svg width="100%" viewBox="0 0 200 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Incoming bubble -->
+            <rect x="10" y="8" width="118" height="42" rx="14" fill="rgba(0,0,0,0.07)" stroke="rgba(0,0,0,0.16)" stroke-width="1.2"/>
+            <path d="M10 46 L4 62 L26 50" fill="rgba(0,0,0,0.07)" stroke="rgba(0,0,0,0.16)" stroke-width="1.2" stroke-linejoin="round"/>
+            <rect x="22" y="20" width="64" height="5" rx="2.5" fill="rgba(0,0,0,0.22)"/>
+            <rect x="22" y="31" width="88" height="5" rx="2.5" fill="rgba(0,0,0,0.13)"/>
+            <!-- Reply bubble -->
+            <rect x="72" y="64" width="118" height="38" rx="14" fill="rgba(0,0,0,0.04)" stroke="rgba(0,0,0,0.10)" stroke-width="1.2"/>
+            <path d="M190 98 L196 112 L174 104" fill="rgba(0,0,0,0.04)" stroke="rgba(0,0,0,0.10)" stroke-width="1.2" stroke-linejoin="round"/>
+            <rect x="84" y="75" width="74" height="5" rx="2.5" fill="rgba(0,0,0,0.10)"/>
+            <rect x="84" y="87" width="52" height="5" rx="2.5" fill="rgba(0,0,0,0.07)"/>
+          </svg>
+        </div>
         <div class="faq-logo" aria-hidden="true">ZR</div>
         <h3>More questions?</h3>
         <p>Get in touch for timelines, pricing, or to start a project.</p>
@@ -665,6 +800,35 @@
 <footer class="footer">
   <!-- CTA band -->
   <div class="footer__cta">
+    <!-- Decorative circuit illustration -->
+    <div class="footer-cta-deco" aria-hidden="true">
+      <svg viewBox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <!-- Horizontal rails -->
+        <line x1="0" y1="60" x2="800" y2="60" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+        <line x1="0" y1="140" x2="800" y2="140" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+        <!-- Vertical connectors -->
+        <line x1="120" y1="0" x2="120" y2="200" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+        <line x1="280" y1="0" x2="280" y2="200" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+        <line x1="520" y1="0" x2="520" y2="200" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+        <line x1="680" y1="0" x2="680" y2="200" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+        <!-- Junction nodes -->
+        <circle cx="120" cy="60" r="4" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+        <circle cx="280" cy="60" r="4" fill="rgba(255,255,255,0.35)" stroke="rgba(255,255,255,0.60)" stroke-width="1"/>
+        <circle cx="520" cy="60" r="4" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+        <circle cx="680" cy="60" r="4" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.45)" stroke-width="1"/>
+        <circle cx="120" cy="140" r="4" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.45)" stroke-width="1"/>
+        <circle cx="280" cy="140" r="4" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+        <circle cx="520" cy="140" r="4" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+        <circle cx="680" cy="140" r="4" fill="rgba(255,255,255,0.35)" stroke="rgba(255,255,255,0.60)" stroke-width="1"/>
+        <!-- Angled connectors -->
+        <line x1="280" y1="60" x2="520" y2="140" stroke="rgba(255,255,255,0.10)" stroke-width="1.5"/>
+        <line x1="120" y1="140" x2="280" y2="60" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+        <line x1="520" y1="60" x2="680" y2="140" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+        <!-- Small squares at some nodes -->
+        <rect x="276" y="56" width="8" height="8" rx="1" fill="none" stroke="rgba(255,255,255,0.40)" stroke-width="1.5"/>
+        <rect x="676" y="136" width="8" height="8" rx="1" fill="none" stroke="rgba(255,255,255,0.32)" stroke-width="1.5"/>
+      </svg>
+    </div>
     <div class="container">
       <div class="footer__cta-inner fade-up">
         <div>
