@@ -16,7 +16,7 @@
 
   --border:      rgba(0,0,0,0.09);
   --border-hi:   rgba(0,0,0,0.18);
-  --accent:      #1d1d1f;
+  --accent:      #c0392b;
 
   --font-display: "Syne", sans-serif;
   --font-body:    "DM Sans", system-ui, -apple-system, sans-serif;
@@ -1093,26 +1093,6 @@ p {
   transform: translateY(-5px);
 }
 
-/* Spotlight */
-.testimonial-card::before,
-.service-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    480px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(0,0,0,0.03),
-    transparent 40%
-  );
-  opacity: 0;
-  transition: opacity 0.3s var(--ease);
-  pointer-events: none;
-  z-index: 0;
-  border-radius: inherit;
-}
-
-.testimonial-card:hover::before,
-.service-card:hover::before { opacity: 1; }
 
 .testimonial-card > *,
 .service-card > * { position: relative; z-index: 1; }
@@ -1218,23 +1198,6 @@ p {
   z-index: 0;
 }
 
-/* Radial glow — position tracked by JS */
-.bento-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle 180px at var(--glow-x) var(--glow-y),
-    var(--glow-color),
-    transparent 70%
-  );
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s ease;
-  z-index: 0;
-  border-radius: 16px;
-}
-
 .bento-card > *,
 .bento-card .bento-card__inner,
 .bento-card .bento-card__inner > *,
@@ -1245,8 +1208,6 @@ p {
   border-color: rgba(0,0,0,0.09);
   box-shadow: 0 4px 8px rgba(0,0,0,0.05), 0 16px 40px rgba(0,0,0,0.08);
 }
-
-.bento-card:hover::before { opacity: 1; }
 
 /* ─── Per-card grid placement + color tokens ─── */
 .bento-card--dev {
@@ -2819,22 +2780,6 @@ a.contact-detail { cursor: pointer; }
   overflow: hidden;
 }
 
-.bento-item::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    480px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(0,0,0,0.03),
-    transparent 40%
-  );
-  opacity: 0;
-  transition: opacity 0.3s var(--ease);
-  pointer-events: none;
-  z-index: 1;
-}
-
-.bento-item:hover::before { opacity: 1; }
 
 /* === GENERAL RESPONSIVE === */
 @media (max-width: 1024px) {

@@ -15,8 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroEntrance();
   initScrollAnimations();
   initBentoMetrics();
-  initCardGlow();
-  initSpotlight();
   initMagneticButtons();
   initWorkTilt();
   initParallax();
@@ -224,29 +222,6 @@ function initScrollAnimations() {
   items.forEach(el => observer.observe(el));
 }
 
-/* ─── Card Glow — track mouse position for radial gradient highlight ─── */
-function initCardGlow() {
-  document.querySelectorAll('.bento-card').forEach(card => {
-    let frame = null;
-
-    card.addEventListener('mousemove', e => {
-      if (frame) return;
-      frame = requestAnimationFrame(() => {
-        const r = card.getBoundingClientRect();
-        const x = ((e.clientX - r.left) / r.width)  * 100;
-        const y = ((e.clientY - r.top)  / r.height) * 100;
-        card.style.setProperty('--glow-x', x.toFixed(1) + '%');
-        card.style.setProperty('--glow-y', y.toFixed(1) + '%');
-        frame = null;
-      });
-    });
-
-    card.addEventListener('mouseleave', () => {
-      card.style.setProperty('--glow-x', '82%');
-      card.style.setProperty('--glow-y', '10%');
-    });
-  });
-}
 
 /* ─── Bento Metrics — animate Lighthouse bars + score count-up ─── */
 function initBentoMetrics() {
@@ -349,23 +324,6 @@ function initFAQ() {
   });
 }
 
-/* ─── Amman Local Time ─── */
-/* ─── Card Spotlight (mouse gradient on hover) ─── */
-function initSpotlight() {
-  const cards = document.querySelectorAll('.testimonial-card, .bento-card');
-  cards.forEach(card => {
-    let frame = null;
-    card.addEventListener('mousemove', e => {
-      if (frame) return;
-      frame = requestAnimationFrame(() => {
-        const r = card.getBoundingClientRect();
-        card.style.setProperty('--mouse-x', `${e.clientX - r.left}px`);
-        card.style.setProperty('--mouse-y', `${e.clientY - r.top}px`);
-        frame = null;
-      });
-    });
-  });
-}
 
 /* ─── Magnetic Buttons ─── */
 function initMagneticButtons() {
