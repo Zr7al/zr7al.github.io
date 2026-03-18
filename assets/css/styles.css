@@ -109,7 +109,7 @@ p {
   content: "";
   width: 20px;
   height: 1px;
-  background: var(--dim);
+  background: var(--accent);
 }
 
 .section-heading { margin-bottom: 20px; }
@@ -221,7 +221,7 @@ p {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--text);
+  color: var(--accent);
   transition: opacity 0.2s var(--ease);
 }
 
@@ -285,16 +285,16 @@ p {
   left: 11px;
   width: 0;
   height: 1.5px;
-  background: var(--text);
+  background: var(--accent);
   border-radius: 2px;
   transition: width 0.28s var(--ease-out);
 }
 
-.nav__links a:hover { color: var(--text); }
+.nav__links a:hover { color: var(--accent); }
 
 .nav__links a:hover::after { width: calc(100% - 22px); }
 
-.nav__links a.nav-link--active { color: var(--text); }
+.nav__links a.nav-link--active { color: var(--accent); }
 .nav__links a.nav-link--active::after { width: calc(100% - 22px); }
 
 .nav__actions { display: flex; align-items: center; gap: 12px; }
@@ -524,7 +524,7 @@ p {
 
 .hero__title em {
   font-style: normal;
-  color: var(--text);
+  color: var(--accent);
   position: relative;
 }
 
@@ -534,9 +534,9 @@ p {
   position: absolute;
   bottom: 2px; left: 0; right: 0;
   height: 3px;
-  background: var(--text);
+  background: var(--accent);
   border-radius: 2px;
-  opacity: 0.2;
+  opacity: 0.35;
   transform: scaleX(0);
   transform-origin: left center;
   animation: underline-reveal 0.6s var(--ease-out) 0.5s forwards;
@@ -2253,7 +2253,7 @@ p {
 .faq-logo {
   width: 42px; height: 42px;
   border-radius: 10px;
-  background: var(--text);
+  background: var(--accent);
   color: var(--card);
   display: flex;
   align-items: center;
@@ -2445,8 +2445,11 @@ p {
 .page-hero__label::before {
   content: "";
   width: 20px; height: 1px;
-  background: var(--dim);
+  background: var(--accent);
 }
+
+/* Footer statement heading — accent the second line */
+.footer__statement-text span { color: var(--accent); }
 
 .page-hero h1 { font-size: clamp(2.4rem, 5.5vw, 5rem); margin-bottom: 20px; }
 .page-hero p  { max-width: 52ch; font-size: 1.1rem; color: var(--muted); }
@@ -3330,7 +3333,7 @@ a.contact-detail { cursor: pointer; }
   font-family: var(--font-display);
   font-size: 2rem;
   font-weight: 800;
-  color: var(--text);
+  color: var(--accent);
   line-height: 1;
   margin-bottom: 4px;
 }
@@ -3444,7 +3447,7 @@ a.contact-detail { cursor: pointer; }
   font-family: var(--font-display);
   font-size: clamp(2.2rem, 4vw, 3.6rem);
   font-weight: 800;
-  color: #ffffff;
+  color: var(--accent);
   letter-spacing: -0.04em;
   line-height: 1;
   margin-bottom: 8px;
@@ -3623,7 +3626,7 @@ a.contact-detail { cursor: pointer; }
   font-family: var(--font-display);
   font-size: 1.8rem;
   font-weight: 800;
-  color: var(--text);
+  color: var(--accent);
   line-height: 1;
   letter-spacing: -0.04em;
 }
