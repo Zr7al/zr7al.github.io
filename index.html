@@ -15,12 +15,20 @@
 <body>
   <div class="noise" aria-hidden="true"></div>
   <div class="floating-hearts" id="floating-hearts" aria-hidden="true"></div>
+  <div class="floral-field" id="floral-field" aria-hidden="true">
+    <div class="rose-float rose-float--pink rose-float--1"><svg viewBox="0 0 100 120"><use href="#rose-pink"></use></svg></div>
+    <div class="rose-float rose-float--white rose-float--2"><svg viewBox="0 0 100 120"><use href="#rose-white"></use></svg></div>
+    <div class="rose-float rose-float--pink rose-float--3"><svg viewBox="0 0 100 120"><use href="#rose-pink"></use></svg></div>
+    <div class="rose-float rose-float--white rose-float--4"><svg viewBox="0 0 100 120"><use href="#rose-white"></use></svg></div>
+    <div class="rose-float rose-float--pink rose-float--5"><svg viewBox="0 0 100 120"><use href="#rose-pink"></use></svg></div>
+    <div class="rose-float rose-float--white rose-float--6"><svg viewBox="0 0 100 120"><use href="#rose-white"></use></svg></div>
+  </div>
+  <div class="sparkle-layer" id="sparkle-layer" aria-hidden="true"></div>
 
   <nav class="topbar">
     <a class="brand" href="#top" aria-label="Back to top">z + r <span>♡</span></a>
     <div class="nav-pill">
       <a href="#letter">a note</a>
-      <a href="#moments">moments</a>
       <a href="#gallery">memories</a>
     </div>
   </nav>
@@ -96,52 +104,11 @@
       </div>
     </section>
 
-    <section class="moments section-shell reveal" id="moments">
-      <div class="section-heading">
-        <div>
-          <div class="section-kicker">02 / little things</div>
-          <h2>the things that make this <em>us</em></h2>
-        </div>
-        <p class="section-side-note">the best memories usually look ordinary from the outside.</p>
-      </div>
-
-      <div class="moment-grid">
-        <article class="moment-card moment-card--rose">
-          <div class="moment-top"><span>01</span><span>♡</span></div>
-          <div class="moment-icon">✿</div>
-          <h3>the beginning</h3>
-          <p>Somewhere between a normal day and everything changing, there was us.</p>
-          <div class="scribble">remember this</div>
-        </article>
-
-        <article class="moment-card moment-card--cream">
-          <div class="moment-top"><span>02</span><span>♡</span></div>
-          <div class="moment-icon">☻</div>
-          <h3>the dumb stuff</h3>
-          <p>The jokes nobody else gets. The faces. The tiny arguments. The screenshots that would be embarrassing to explain.</p>
-          <div class="scribble">our favourite chaos</div>
-        </article>
-
-        <article class="moment-card moment-card--lilac">
-          <div class="moment-top"><span>03</span><span>♡</span></div>
-          <div class="moment-icon">☼</div>
-          <h3>right now</h3>
-          <p>Whatever life looks like today, I still want the ordinary days to have your face in them.</p>
-          <div class="scribble">more of this</div>
-        </article>
-      </div>
-
-      <div class="quote-card">
-        <span class="quote-mark">“</span>
-        <p>i'd still choose the random little moments. every single time.</p>
-        <span class="quote-heart">♡</span>
-      </div>
-    </section>
 
     <section class="gallery section-shell reveal" id="gallery">
       <div class="section-heading gallery-heading">
         <div>
-          <div class="section-kicker">03 / our archive</div>
+          <div class="section-kicker">02 / our archive</div>
           <h2>39 little <em>proofs</em></h2>
         </div>
         <p class="section-side-note">scroll. smile. click the ones you want to keep staring at.</p>
@@ -153,7 +120,7 @@
 
     <section class="closing reveal">
       <div class="closing-orbit" aria-hidden="true"><span>♡</span><span>♡</span><span>♡</span></div>
-      <div class="section-kicker">04 / for later</div>
+      <div class="section-kicker">03 / for later</div>
       <h2>more photos.<br><em>more stupid stories.</em><br>more us.</h2>
       <p>Whatever comes next, I want the ordinary days with you too.</p>
       <div class="closing-date">april 29 is still circled ♡ · november 21 is forever ours</div>
@@ -177,6 +144,22 @@
     <button class="lightbox-nav lightbox-nav--next" id="lightbox-next" type="button" aria-label="Next photo">›</button>
   </div>
 
+  <svg class="svg-defs" width="0" height="0" aria-hidden="true">
+    <defs>
+      <g id="rose-pink">
+        <path d="M50 12 C36 4 19 13 21 30 C23 48 40 56 50 70 C60 56 77 48 79 30 C81 13 64 4 50 12Z" fill="#f28fa6"/>
+        <path d="M50 22 C44 16 34 21 36 31 C38 40 46 45 50 53 C54 45 62 40 64 31 C66 21 56 16 50 22Z" fill="#d96580"/>
+        <path d="M50 66 Q45 88 50 112" stroke="#9fb897" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M49 84 Q39 82 34 90" stroke="#9fb897" stroke-width="3" fill="none" stroke-linecap="round"/>
+      </g>
+      <g id="rose-white">
+        <path d="M50 12 C36 4 19 13 21 30 C23 48 40 56 50 70 C60 56 77 48 79 30 C81 13 64 4 50 12Z" fill="#fffafa" stroke="#e8c8d1" stroke-width="1.5"/>
+        <path d="M50 22 C44 16 34 21 36 31 C38 40 46 45 50 53 C54 45 62 40 64 31 C66 21 56 16 50 22Z" fill="#f5dfe5"/>
+        <path d="M50 66 Q45 88 50 112" stroke="#9fb897" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M49 84 Q39 82 34 90" stroke="#9fb897" stroke-width="3" fill="none" stroke-linecap="round"/>
+      </g>
+    </defs>
+  </svg>
   <script src="script.js"></script>
 </body>
 </html>

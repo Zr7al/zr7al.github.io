@@ -146,6 +146,7 @@ function pickClass(index) {
 function buildMediaItem(item, index) {
   const wrap = document.createElement("figure");
   wrap.className = `media-item ${pickClass(index)}`;
+  wrap.style.setProperty("--i", index);
   wrap.tabIndex = 0;
   wrap.setAttribute("role", "button");
   wrap.setAttribute("aria-label", `Open memory ${index + 1}`);
@@ -268,12 +269,65 @@ function setupLightboxGestures() {
   }, { passive: true });
 }
 
+function spawnAmbientHeart() {
+  const holder = $("#floating-hearts");
+  if (!holder) return;
+  const heart = document.createElement("span");
+  heart.className = "heart-float heart-float--ambient";
+  heart.textContent = Math.random() > 0.35 ? "♡" : "♥";
+  heart.style.left = `${8 + Math.random() * 84}vw`;
+  heart.style.bottom = `${-20 + Math.random() * 10}px`;
+  heart.style.setProperty("--size", `${10 + Math.random() * 14}px`);
+  heart.style.setProperty("--drift", `${Math.random() * 140 - 70}px`);
+  heart.style.animationDuration = `${4.5 + Math.random() * 3}s`;
+  holder.appendChild(heart);
+  heart.addEventListener("animationend", () => heart.remove(), { once: true });
+}
+
+function spawnSparkle() {
+  const layer = $("#sparkle-layer");
+  if (!layer) return;
+  const sparkle = document.createElement("span");
+  sparkle.className = "sparkle";
+  sparkle.textContent = Math.random() > .45 ? "✦" : "·";
+  sparkle.style.left = `${Math.random() * 100}vw`;
+  sparkle.style.top = `${Math.random() * 100}vh`;
+  sparkle.style.setProperty("--delay", `${Math.random() * 1.4}s`);
+  sparkle.style.setProperty("--size", `${6 + Math.random() * 10}px`);
+  layer.appendChild(sparkle);
+  setTimeout(() => sparkle.remove(), 3200);
+}
+
+function setupRomanticMotion() {
+  const glows = $$(".hero-glow");
+  let ticking = false;
+  window.addEventListener("scroll", () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const y = window.scrollY;
+      glows.forEach((glow, index) => {
+        glow.style.transform = `translate3d(${index ? y * -.025 : y * .018}px, ${y * (index ? .03 : -.018)}px, 0)`;
+      });
+      ticking = false;
+    });
+  }, { passive: true });
+
+  const prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!prefersReduced) {
+    setInterval(spawnAmbientHeart, 1700);
+    setInterval(spawnSparkle, 900);
+    for (let i = 0; i < 4; i++) setTimeout(spawnSparkle, i * 500);
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   renderCounter();
   renderCountdowns();
   renderGallery();
   setupReveal();
   setupLightboxGestures();
+  setupRomanticMotion();
 
   $("#heart-button").addEventListener("click", (event) => {
     event.currentTarget.classList.remove("is-pulsing");
