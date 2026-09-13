@@ -1,875 +1,114 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Zaid Rahhal — Freelance Web Developer. Websites that turn visitors into clients." />
-  <meta property="og:title" content="Zaid Rahhal — Web Developer">
-  <meta property="og:description" content="Freelance web developer building fast modern websites that turn visitors into customers. Performance focused design development and SEO optimization.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/images/preview.jpg">
-  <title>Web Developer for Business Websites — Zaid Rahhal</title>
-  <link rel="icon" href="favicon.ico" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zaid &amp; Rama</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="scroll-progress" aria-hidden="true"></div>
 
-<header class="site-header">
-  <!-- NAVBAR -->
-  <nav class="nav" aria-label="Primary">
-    <div class="nav__inner">
-      <a href="index.html" class="nav__brand">
-        <span class="nav__brand-name">Zaid Rahhal</span>
-      </a>
-      <ul class="nav__links">
-        <li><a href="work.html">Work</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="nav__actions">
-        <a href="contact.html" class="btn btn-primary">Start Project</a>
-        <button class="nav__hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </nav>
+<svg class="rose-corner rose-corner--top" viewBox="0 0 200 200" aria-hidden="true">
+  <use href="#rose-white"></use>
+</svg>
 
-  <div class="nav__mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
-  <div class="nav__mobile-menu" id="mobile-menu" aria-hidden="true">
-    <button class="nav__mobile-close" aria-label="Close menu">&times;</button>
-    <a href="work.html">Work</a>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#faq">FAQ</a>
-    <a href="contact.html">Contact</a>
+<header class="hero">
+  <p class="hero-kicker">a page for the two of us</p>
+  <h1 class="hero-title">Zaid <span class="amp">&amp;</span> Rama</h1>
+  <div class="counter" id="counter">
+    <span class="counter-number" id="counter-number">0</span>
+    <span class="counter-label">days, and counting, since November 21, 2023</span>
   </div>
 </header>
 
 <main>
 
-<!-- ===================== HERO ===================== -->
-<section class="hero" aria-labelledby="heroHeadline">
-  <!-- Decorative isometric grid -->
-  <div class="hero-deco" aria-hidden="true">
-    <svg class="hero-deco__svg" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-      <!-- Isometric grid lines -->
-      <line x1="0" y1="100" x2="600" y2="100" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
-      <line x1="0" y1="200" x2="600" y2="200" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
-      <line x1="0" y1="300" x2="600" y2="300" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
-      <line x1="0" y1="400" x2="600" y2="400" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
-      <line x1="100" y1="0" x2="100" y2="500" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
-      <line x1="200" y1="0" x2="200" y2="500" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
-      <line x1="300" y1="0" x2="300" y2="500" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
-      <line x1="400" y1="0" x2="400" y2="500" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
-      <line x1="500" y1="0" x2="500" y2="500" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
-      <!-- Diagonal accents -->
-      <line x1="200" y1="0" x2="600" y2="400" stroke="rgba(0,0,0,0.10)" stroke-width="1"/>
-      <line x1="300" y1="0" x2="600" y2="300" stroke="rgba(0,0,0,0.07)" stroke-width="1"/>
-      <line x1="100" y1="0" x2="600" y2="500" stroke="rgba(0,0,0,0.07)" stroke-width="1"/>
-      <!-- Highlighted nodes at intersections -->
-      <circle cx="300" cy="200" r="3" fill="rgba(0,0,0,0.25)"/>
-      <circle cx="400" cy="100" r="3" fill="rgba(0,0,0,0.20)"/>
-      <circle cx="500" cy="300" r="3" fill="rgba(0,0,0,0.18)"/>
-      <circle cx="200" cy="300" r="2" fill="rgba(0,0,0,0.15)"/>
-      <circle cx="400" cy="400" r="2" fill="rgba(0,0,0,0.12)"/>
-      <!-- Featured rectangle highlight -->
-      <rect x="280" y="80" width="120" height="80" rx="4" fill="none" stroke="rgba(0,0,0,0.14)" stroke-width="1" stroke-dasharray="6 3"/>
-      <rect x="380" y="260" width="160" height="100" rx="4" fill="none" stroke="rgba(0,0,0,0.10)" stroke-width="1" stroke-dasharray="6 3"/>
-    </svg>
-  </div>
-  <div class="container">
-    <div class="hero__inner">
-      <div class="hero-content">
-        <div class="hero-badge">Available for new projects</div>
-        <h1 class="hero__title" id="heroHeadline">
-          Websites that turn<br>visitors into <em>clients.</em>
-        </h1>
-        <p class="hero__desc">
-          I design and build fast high converting websites for businesses that want more customers not just more traffic.
-        </p>
-        <div class="hero-actions">
-          <a href="contact.html" class="btn btn-primary">Start a Project</a>
-          <a href="work.html" class="btn btn-secondary">View Work →</a>
-        </div>
-        <div class="hero-trust">
-          <span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            5+ Projects
-          </span>
-          <span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            Top Rated
-          </span>
-          <span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            Remote Friendly
-          </span>
-        </div>
-      </div>
+  <section class="letter">
+    <svg class="rose-inline" viewBox="0 0 100 100" aria-hidden="true"><use href="#rose-pink"></use></svg>
+    <!-- EDIT ME: write your own opening note to her here. Keep it short, keep it yours. -->
+    <p class="letter-line">This is the part where I'd usually write something clever. Instead I'll just say the truth —</p>
+    <p class="letter-line">every version of this page I tried felt too generic until I remembered it's not for everyone, it's for you.</p>
+    <p class="letter-signoff">— Zaid</p>
+  </section>
 
-      <div class="hero-product-card">
-        <div class="terminal-widget">
-          <div class="terminal-titlebar">
-            <div class="terminal-dots">
-              <span class="dot dot-red"></span>
-              <span class="dot dot-yellow"></span>
-              <span class="dot dot-green"></span>
-            </div>
-            <span class="terminal-tab" id="tab-title">lighthouse ~ ejawdah.com</span>
-          </div>
-          <div class="terminal-body">
+  <section class="moments">
+    <h2 class="section-title">moments</h2>
+    <p class="section-note">EDIT: replace these three with real ones — how you met, a trip, an inside joke, whatever actually matters.</p>
 
-            <!-- Phase 1: Lighthouse audit with score meters -->
-            <div id="build-phase">
-              <div class="terminal-section-label">— LIGHTHOUSE AUDIT —</div>
-              <div id="build-lines"></div>
-              <span class="terminal-cursor" id="build-cursor">█</span>
-              <div id="score-grid" class="score-grid" style="display:none;">
-                <div class="score-item">
-                  <div class="score-item__header">
-                    <span class="score-item__label">Performance</span>
-                    <span class="score-item__val" data-score="98">98</span>
-                  </div>
-                  <div class="score-bar"><div class="score-bar__fill" data-w="98"></div></div>
-                </div>
-                <div class="score-item">
-                  <div class="score-item__header">
-                    <span class="score-item__label">SEO</span>
-                    <span class="score-item__val" data-score="100">100</span>
-                  </div>
-                  <div class="score-bar"><div class="score-bar__fill" data-w="100"></div></div>
-                </div>
-                <div class="score-item">
-                  <div class="score-item__header">
-                    <span class="score-item__label">Accessibility</span>
-                    <span class="score-item__val" data-score="95">95</span>
-                  </div>
-                  <div class="score-bar"><div class="score-bar__fill" data-w="95"></div></div>
-                </div>
-                <div class="score-item">
-                  <div class="score-item__header">
-                    <span class="score-item__label">Best Practices</span>
-                    <span class="score-item__val" data-score="100">100</span>
-                  </div>
-                  <div class="score-bar"><div class="score-bar__fill" data-w="100"></div></div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Phase 2: Audit your own site -->
-            <div id="analyze-phase" style="display:none;">
-              <div class="terminal-section-label">— AUDIT YOUR SITE —</div>
-              <div id="analyze-slot" class="analyze-slot">
-                <div id="analyze-input" class="analyze-input">
-                  <div class="prompt-line">&gt; enter your site URL</div>
-                  <div class="input-row">
-                    <input id="url-input" type="url" placeholder="https://yoursite.com" class="url-input" autocomplete="off" spellcheck="false" />
-                    <button type="button" id="scan-btn" class="scan-btn">SCAN</button>
-                  </div>
-                  <div id="url-error" class="url-error" aria-live="polite"></div>
-                </div>
-                <div id="scan-loading" class="scan-loading" style="display:none;">
-                  <div class="scan-line" id="scan-line-1"></div>
-                  <div class="scan-line" id="scan-line-2"></div>
-                  <div class="scan-line" id="scan-line-3"></div>
-                  <span class="terminal-cursor" id="scan-cursor">█</span>
-                </div>
-                <div id="cta-block" class="cta-block" style="display:none;">
-                  <div id="result-scores" class="score-grid"></div>
-                  <div class="cta-footer">
-                    <p class="cta-text">These issues are costing you customers.</p>
-                    <a href="contact.html" class="cta-link">Let's fix it →</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- Mobile-only: animated performance stats (replaces terminal on small screens) -->
-      <div class="hero-perf-mobile" aria-label="Performance metrics">
-        <div class="hero-perf-mobile__item">
-          <span class="hero-perf-mobile__num" data-target="98">0</span>
-          <span class="hero-perf-mobile__label">Performance</span>
-        </div>
-        <div class="hero-perf-mobile__divider"></div>
-        <div class="hero-perf-mobile__item">
-          <span class="hero-perf-mobile__num" data-target="100">0</span>
-          <span class="hero-perf-mobile__label">SEO</span>
-        </div>
-        <div class="hero-perf-mobile__divider"></div>
-        <div class="hero-perf-mobile__item">
-          <span class="hero-perf-mobile__num" data-target="95">0</span>
-          <span class="hero-perf-mobile__label">Accessibility</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===================== STATS STRIP ===================== -->
-<div class="stats-strip">
-  <div class="container">
-    <div class="stats-strip__inner">
-      <div class="stats-strip__item fade-up">
-        <span class="stats-strip__num">98</span>
-        <span class="stats-strip__label">Avg Lighthouse Score</span>
-      </div>
-      <div class="stats-strip__sep" aria-hidden="true"></div>
-      <div class="stats-strip__item fade-up delay-1">
-        <span class="stats-strip__num">5+</span>
-        <span class="stats-strip__label">Projects Delivered</span>
-      </div>
-      <div class="stats-strip__sep" aria-hidden="true"></div>
-      <div class="stats-strip__item fade-up delay-2">
-        <span class="stats-strip__num">100%</span>
-        <span class="stats-strip__label">Client Satisfaction</span>
-      </div>
-      <div class="stats-strip__sep" aria-hidden="true"></div>
-      <div class="stats-strip__item fade-up delay-3">
-        <span class="stats-strip__num">2×</span>
-        <span class="stats-strip__label">Faster Load Times</span>
+    <div class="moment-row">
+      <div class="moment-mark">one</div>
+      <div class="moment-body">
+        <h3>How it started</h3>
+        <p>Swap this for the real story. Where were you, what was said, who made the first move.</p>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- ===================== LOGOS BAND ===================== -->
-<div class="logos-band">
-  <div class="container">
-    <div class="logos-band__inner">
-      <span class="logos-band__label">Trusted by</span>
-      <div class="logos-band__logos">
-        <img src="assets/images/logos/e-jawdahlogo.png" alt="Ejawdah" class="logos-band__logo" loading="lazy">
-        <img src="assets/images/logos/rff-logo.png" alt="RFF Logistics" class="logos-band__logo" loading="lazy">
-        <img src="assets/images/logos/doctor-logo.webp" alt="Dental Clinic" class="logos-band__logo" loading="lazy">
+    <div class="moment-row">
+      <div class="moment-mark">two</div>
+      <div class="moment-body">
+        <h3>A day worth keeping</h3>
+        <p>A specific memory. The more specific, the better it'll read — a place, a smell, a stupid argument you both laugh about now.</p>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- ===================== SOCIAL PROOF ===================== -->
-<section class="section section--proof">
-  <div class="container">
-    <span class="section-label fade-up">Proof</span>
-    <h2 class="section-heading fade-up delay-1">What Clients Say</h2>
-
-    <div class="testimonials-grid">
-      <div class="testimonial-card fade-up">
-        <div class="testimonial-card__deco" aria-hidden="true">"</div>
-        <div class="testimonial-card__rating">★★★★★</div>
-        <p class="testimonial-card__quote">"Zaid delivered beyond our expectations. The new website looks incredibly professional."</p>
-        <div class="testimonial-card__author">
-          <div class="testimonial-card__avatar" style="--av-bg:#e8e8ed;--av-fg:#1d1d1f">Y</div>
-          <div>
-            <p class="testimonial-card__name">Yaseen R.</p>
-            <p class="testimonial-card__role">CEO — Ejawdah</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card fade-up delay-1">
-        <div class="testimonial-card__deco" aria-hidden="true">"</div>
-        <div class="testimonial-card__rating">★★★★★</div>
-        <p class="testimonial-card__quote">"Working with Zaid was seamless. He understood our brand immediately."</p>
-        <div class="testimonial-card__author">
-          <div class="testimonial-card__avatar" style="--av-bg:#e8e8ed;--av-fg:#1d1d1f">M</div>
-          <div>
-            <p class="testimonial-card__name">Mazen O.</p>
-            <p class="testimonial-card__role">Founder — Reflection</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card fade-up delay-2">
-        <div class="testimonial-card__deco" aria-hidden="true">"</div>
-        <div class="testimonial-card__rating">★★★★★</div>
-        <p class="testimonial-card__quote">"The landing page Zaid built completely transformed our patient acquisition."</p>
-        <div class="testimonial-card__author">
-          <div class="testimonial-card__avatar" style="--av-bg:#e8e8ed;--av-fg:#1d1d1f">DR</div>
-          <div>
-            <p class="testimonial-card__name">Dr. Mohammed R.</p>
-            <p class="testimonial-card__role">Owner — Dental Clinic</p>
-          </div>
-        </div>
+    <div class="moment-row">
+      <div class="moment-mark">three</div>
+      <div class="moment-body">
+        <h3>Right now</h3>
+        <p>Where things stand today. What you're building, planning, or just enjoying.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===================== SERVICES (SaaS-style grid) ===================== -->
-<section class="section section--alt services-section" id="services" aria-labelledby="services-heading">
-  <div class="container">
-    <header class="services-header">
-      <div class="services-header__left">
-        <span class="services-label" id="services-label">Services</span>
-        <h2 class="services-title" id="services-heading">How I Help You Grow</h2>
-        <p class="services-desc">Core build work, optimization, and support — structured so you get the right level of help.</p>
-      </div>
-      <div class="services-header__right">
-        <a href="contact.html" class="btn btn-primary services-cta">Start Project</a>
-      </div>
-    </header>
-
-    <div class="bento-grid">
-
-      <!-- 01 — Website Development (wide hero card) -->
-      <a href="contact.html" class="bento-card bento-card--dev fade-up">
-        <div class="bento-card__inner">
-          <div class="bento-card__body">
-            <div class="bento-card__icon">
-              <!-- Monitor / browser icon -->
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            </div>
-            <span class="bento-card__num">01</span>
-            <h3 class="bento-card__title">Website<br>Development</h3>
-            <p class="bento-card__desc">Full business websites built from scratch — fast, accessible, and engineered to convert visitors into customers.</p>
-            <span class="bento-card__link">Start a project →</span>
-          </div>
-          <div class="bento-metrics">
-            <div class="bento-metrics__header">
-              <span class="bento-metrics__label">Lighthouse Scores</span>
-              <span class="bento-metrics__badge">ejawdah.com</span>
-            </div>
-            <div class="bento-metric">
-              <span class="bento-metric__label">Performance</span>
-              <div class="bento-metric__bar-wrap"><div class="bento-metric__bar" data-w="98"></div></div>
-              <span class="bento-metric__score">98</span>
-            </div>
-            <div class="bento-metric">
-              <span class="bento-metric__label">SEO</span>
-              <div class="bento-metric__bar-wrap"><div class="bento-metric__bar" data-w="100"></div></div>
-              <span class="bento-metric__score">100</span>
-            </div>
-            <div class="bento-metric">
-              <span class="bento-metric__label">Accessibility</span>
-              <div class="bento-metric__bar-wrap"><div class="bento-metric__bar" data-w="95"></div></div>
-              <span class="bento-metric__score">95</span>
-            </div>
-            <div class="bento-metric">
-              <span class="bento-metric__label">Best Practices</span>
-              <div class="bento-metric__bar-wrap"><div class="bento-metric__bar" data-w="100"></div></div>
-              <span class="bento-metric__score">100</span>
-            </div>
-          </div>
-        </div>
-      </a>
-
-      <!-- 02 — Landing Pages (tall card) -->
-      <a href="contact.html" class="bento-card bento-card--landing fade-up delay-1">
-        <div class="bento-card__icon">
-          <!-- Cursor / target icon -->
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3l14 9-14 9V3z"/></svg>
-        </div>
-        <span class="bento-card__num">02</span>
-        <h3 class="bento-card__title">Landing Pages</h3>
-        <p class="bento-card__desc">Conversion-focused pages built around a single goal — leads, bookings, or sales.</p>
-        <ul class="bento-list">
-          <li>Product launches</li>
-          <li>Lead generation</li>
-          <li>Service promotion</li>
-          <li>Campaign pages</li>
-          <li>Event registrations</li>
-        </ul>
-        <!-- Landing page wireframe illustration -->
-        <div class="bento-card__art">
-          <svg width="130" height="96" viewBox="0 0 130 96" fill="none" aria-hidden="true">
-            <rect x="1" y="1" width="128" height="94" rx="7" fill="rgba(22,163,74,0.05)" stroke="rgba(22,163,74,0.18)" stroke-width="1"/>
-            <rect x="1" y="1" width="128" height="17" rx="7" fill="rgba(22,163,74,0.1)"/>
-            <circle cx="12" cy="9.5" r="3" fill="rgba(22,163,74,0.35)"/>
-            <circle cx="21" cy="9.5" r="3" fill="rgba(22,163,74,0.2)"/>
-            <circle cx="30" cy="9.5" r="3" fill="rgba(22,163,74,0.12)"/>
-            <rect x="10" y="24" width="70" height="6" rx="3" fill="rgba(22,163,74,0.28)"/>
-            <rect x="10" y="33" width="50" height="4" rx="2" fill="rgba(22,163,74,0.15)"/>
-            <rect x="10" y="41" width="40" height="11" rx="5.5" fill="rgba(22,163,74,0.45)"/>
-            <line x1="10" y1="60" x2="120" y2="60" stroke="rgba(22,163,74,0.1)" stroke-width="1"/>
-            <rect x="10" y="66" width="32" height="22" rx="4" fill="rgba(22,163,74,0.07)"/>
-            <rect x="48" y="66" width="32" height="22" rx="4" fill="rgba(22,163,74,0.07)"/>
-            <rect x="86" y="66" width="34" height="22" rx="4" fill="rgba(22,163,74,0.07)"/>
-          </svg>
-        </div>
-        <span class="bento-card__link">Get a landing page →</span>
-      </a>
-
-      <!-- 03 — Website Redesign -->
-      <a href="contact.html" class="bento-card bento-card--redesign fade-up delay-2">
-        <div class="bento-card__icon">
-          <!-- Refresh / transform icon -->
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
-        </div>
-        <span class="bento-card__num">03</span>
-        <h3 class="bento-card__title">Website Redesign</h3>
-        <p class="bento-card__desc">Modernise an outdated or underperforming site — new design, same domain. Zero disruption to existing traffic.</p>
-        <!-- Before / after browser illustration -->
-        <div class="bento-card__art">
-          <svg width="140" height="80" viewBox="0 0 140 80" fill="none" aria-hidden="true">
-            <!-- Before: old / messy -->
-            <rect x="1" y="8" width="58" height="66" rx="5" fill="rgba(147,51,234,0.04)" stroke="rgba(147,51,234,0.14)" stroke-width="1"/>
-            <rect x="1" y="8" width="58" height="13" rx="5" fill="rgba(147,51,234,0.09)"/>
-            <rect x="6" y="27" width="48" height="3" rx="1.5" fill="rgba(147,51,234,0.12)"/>
-            <rect x="6" y="33" width="34" height="3" rx="1.5" fill="rgba(147,51,234,0.08)"/>
-            <rect x="6" y="39" width="48" height="14" rx="3" fill="rgba(147,51,234,0.05)"/>
-            <rect x="6" y="57" width="22" height="3" rx="1.5" fill="rgba(147,51,234,0.08)"/>
-            <rect x="6" y="63" width="38" height="3" rx="1.5" fill="rgba(147,51,234,0.06)"/>
-            <!-- Arrow -->
-            <path d="M65 40 L75 40" stroke="rgba(147,51,234,0.45)" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M72 37 L75 40 L72 43" stroke="rgba(147,51,234,0.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <!-- After: clean / modern -->
-            <rect x="81" y="8" width="58" height="66" rx="5" fill="rgba(147,51,234,0.07)" stroke="rgba(147,51,234,0.22)" stroke-width="1"/>
-            <rect x="81" y="8" width="58" height="13" rx="5" fill="rgba(147,51,234,0.14)"/>
-            <rect x="86" y="27" width="48" height="5" rx="2.5" fill="rgba(147,51,234,0.22)"/>
-            <rect x="86" y="35" width="32" height="3" rx="1.5" fill="rgba(147,51,234,0.13)"/>
-            <rect x="86" y="42" width="22" height="9" rx="4.5" fill="rgba(147,51,234,0.35)"/>
-            <rect x="86" y="56" width="48" height="10" rx="3" fill="rgba(147,51,234,0.06)"/>
-          </svg>
-        </div>
-        <span class="bento-card__link">Redesign my site →</span>
-      </a>
-
-      <!-- 04 — SEO Optimization -->
-      <a href="contact.html" class="bento-card bento-card--seo fade-up delay-3">
-        <div class="bento-card__icon">
-          <!-- Trending up / chart icon -->
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-        </div>
-        <span class="bento-card__num">04</span>
-        <h3 class="bento-card__title">SEO Optimization</h3>
-        <p class="bento-card__desc">Technical SEO and Core Web Vitals improvements to rank higher, load faster, and reach more customers.</p>
-        <!-- Rising bar chart illustration -->
-        <div class="bento-card__art">
-          <svg width="130" height="72" viewBox="0 0 130 72" fill="none" aria-hidden="true">
-            <line x1="8" y1="8" x2="8" y2="62" stroke="rgba(2,132,199,0.12)" stroke-width="1"/>
-            <line x1="8" y1="62" x2="125" y2="62" stroke="rgba(2,132,199,0.12)" stroke-width="1"/>
-            <line x1="8" y1="46" x2="125" y2="46" stroke="rgba(2,132,199,0.07)" stroke-width="0.75" stroke-dasharray="3 3"/>
-            <line x1="8" y1="30" x2="125" y2="30" stroke="rgba(2,132,199,0.07)" stroke-width="0.75" stroke-dasharray="3 3"/>
-            <line x1="8" y1="14" x2="125" y2="14" stroke="rgba(2,132,199,0.07)" stroke-width="0.75" stroke-dasharray="3 3"/>
-            <rect x="14" y="50" width="13" height="12" rx="2" fill="rgba(2,132,199,0.18)"/>
-            <rect x="33" y="42" width="13" height="20" rx="2" fill="rgba(2,132,199,0.24)"/>
-            <rect x="52" y="35" width="13" height="27" rx="2" fill="rgba(2,132,199,0.30)"/>
-            <rect x="71" y="26" width="13" height="36" rx="2" fill="rgba(2,132,199,0.38)"/>
-            <rect x="90" y="18" width="13" height="44" rx="2" fill="rgba(2,132,199,0.46)"/>
-            <rect x="109" y="10" width="13" height="52" rx="2" fill="rgba(2,132,199,0.58)"/>
-            <polyline points="20.5,49 39.5,41 58.5,34 77.5,25 96.5,17 115.5,9" stroke="rgba(2,132,199,0.75)" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="115.5" cy="9" r="3" fill="rgba(2,132,199,0.85)"/>
-          </svg>
-        </div>
-        <span class="bento-card__link">Improve my rankings →</span>
-      </a>
-
-      <!-- 05 — Maintenance (wide card) -->
-      <a href="contact.html" class="bento-card bento-card--maintenance fade-up">
-        <div class="bento-card__inner">
-          <div class="bento-card__body">
-            <div class="bento-card__icon">
-              <!-- Settings / gear icon -->
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-            </div>
-            <span class="bento-card__num">05</span>
-            <h3 class="bento-card__title">Maintenance</h3>
-            <p class="bento-card__desc">Ongoing support to keep your site updated, secure, and performing — without lifting a finger.</p>
-            <span class="bento-card__link">Get a care plan →</span>
-          </div>
-          <div class="bento-maintenance-aside">
-            <!-- System status monitor illustration -->
-            <div class="bento-card__art bento-maintenance-art" aria-hidden="true">
-              <svg width="124" height="92" viewBox="0 0 124 92" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Panel -->
-                <rect x="0.5" y="0.5" width="123" height="91" rx="7" fill="rgba(100,116,139,0.05)" stroke="rgba(100,116,139,0.18)" stroke-width="1"/>
-                <!-- Header -->
-                <rect x="0.5" y="0.5" width="123" height="18" rx="7" fill="rgba(100,116,139,0.10)"/>
-                <!-- Live dot -->
-                <circle cx="11" cy="9.5" r="3" fill="#22c55e"/>
-                <circle cx="11" cy="9.5" r="5" fill="rgba(34,197,94,0.18)"/>
-                <!-- Header label -->
-                <rect x="19" y="6.5" width="28" height="6" rx="3" fill="rgba(100,116,139,0.22)"/>
-                <!-- LIVE badge -->
-                <rect x="90" y="5" width="26" height="10" rx="5" fill="rgba(34,197,94,0.18)" stroke="rgba(34,197,94,0.30)" stroke-width="0.75"/>
-                <rect x="95" y="8.5" width="3" height="3" rx="1.5" fill="#22c55e"/>
-                <rect x="100" y="8" width="12" height="4" rx="2" fill="rgba(34,197,94,0.45)"/>
-                <!-- Separator -->
-                <line x1="8" y1="25" x2="116" y2="25" stroke="rgba(100,116,139,0.10)" stroke-width="0.75"/>
-                <!-- Row 1 -->
-                <circle cx="13" cy="35" r="3" fill="#22c55e"/>
-                <rect x="21" y="32" width="52" height="6" rx="3" fill="rgba(100,116,139,0.12)"/>
-                <rect x="95" y="32" width="20" height="6" rx="3" fill="rgba(34,197,94,0.20)"/>
-                <!-- Row 2 -->
-                <circle cx="13" cy="49" r="3" fill="#22c55e"/>
-                <rect x="21" y="46" width="40" height="6" rx="3" fill="rgba(100,116,139,0.12)"/>
-                <rect x="95" y="46" width="20" height="6" rx="3" fill="rgba(34,197,94,0.20)"/>
-                <!-- Row 3 -->
-                <circle cx="13" cy="63" r="3" fill="#22c55e"/>
-                <rect x="21" y="60" width="60" height="6" rx="3" fill="rgba(100,116,139,0.12)"/>
-                <rect x="95" y="60" width="20" height="6" rx="3" fill="rgba(34,197,94,0.20)"/>
-                <!-- Footer: uptime bar -->
-                <rect x="8" y="77" width="108" height="3" rx="1.5" fill="rgba(100,116,139,0.10)"/>
-                <rect x="8" y="77" width="100" height="3" rx="1.5" fill="rgba(34,197,94,0.40)"/>
-                <!-- Uptime label -->
-                <rect x="8" y="83" width="28" height="4" rx="2" fill="rgba(100,116,139,0.10)"/>
-                <rect x="90" y="83" width="26" height="4" rx="2" fill="rgba(34,197,94,0.15)"/>
-              </svg>
-            </div>
-            <ul class="maintenance-list">
-              <li>Content Updates</li>
-              <li>Security Patches</li>
-              <li>Performance Checks</li>
-              <li>Analytics Setup</li>
-              <li>Bug Fixes</li>
-              <li>Hosting Support</li>
-            </ul>
-          </div>
-        </div>
-      </a>
-
+  <section class="gallery">
+    <h2 class="section-title">us, in pictures and video</h2>
+    <p class="section-note">EDIT: this whole grid is built from one list in script.js. Open it, add a line per photo or video, save. You don't need to touch this HTML file at all.</p>
+    <div class="gallery-grid" id="gallery-grid">
+      <!-- filled in by script.js from the MEDIA array -->
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===================== FEATURED WORK ===================== -->
-<section class="section" id="work">
-  <div class="container">
-    <span class="section-label fade-up">Digital Flagships</span>
-    <h2 class="section-heading fade-up delay-1">Engineered for Performance</h2>
-  </div>
+  <section class="closing">
+    <svg class="rose-inline rose-inline--closing" viewBox="0 0 100 100" aria-hidden="true"><use href="#rose-white"></use></svg>
+    <h2 class="section-title">for later</h2>
+    <p class="closing-text">
+      <!-- EDIT ME: last line, whatever you want it to say -->
+      Whatever comes next, I want it with you.
+    </p>
+    <p class="closing-date">April 29 is circled on my calendar too.</p>
+  </section>
 
-  <!-- Project 01: Ejawdah -->
-  <article class="work-film fade-up">
-    <div class="container">
-      <div class="project-specs">
-        <div class="spec-item"><span class="label">Stack</span><span>Vanilla / PHP</span></div>
-        <div class="spec-item"><span class="label">Role</span><span>Lead Engineer</span></div>
-        <div class="spec-item"><span class="label">Year</span><span>2026</span></div>
-        <div class="spec-item"><span class="label">Scope</span><span>Case Study</span></div>
-      </div>
-
-      <div class="work-film__inner">
-        <div class="work-film__info">
-          <div class="outcome-badge">99/100 LCP Score</div>
-          <h2 class="work-film__title">Ejawdah</h2>
-          <p class="work-film__desc">
-            Full website redesign including front-end architecture, semantic structure, and performance optimization for a corporate consulting brand.
-          </p>
-          
-          <a href="https://ejawdah.com" target="_blank" class="work-film__link">Launch Platform</a>
-
-          <button class="work-film__expand-btn" aria-expanded="false">
-            Details
-            <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="work-film__expandable">
-            <div class="metric-chips">
-              <span class="metric-chip" data-value="100"><span class="metric-chip__num">0</span> Accessibility</span>
-              <span class="metric-chip" data-value="100"><span class="metric-chip__num">0</span> SEO</span>
-              <span class="metric-chip" data-value="98"><span class="metric-chip__num">0</span> Performance</span>
-              <span class="metric-chip metric-chip--text">CSP &amp; HSTS</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="device-showcase">
-          <div class="device-mac"><img src="assets/images/projects/ejawdah-desktop.jpg" alt="Ejawdah Desktop" loading="lazy"></div>
-          <div class="device-phone"><img src="assets/images/projects/ejawdah-mobile.jpg" alt="Ejawdah Mobile" loading="lazy"></div>
-        </div>
-      </div>
-    </div>
-  </article>
-
-  <!-- Project 02: Reflection -->
-  <article class="work-film fade-up">
-    <div class="container">
-      <div class="project-specs">
-        <div class="spec-item"><span class="label">Stack</span><span>UI / UX / SEO</span></div>
-        <div class="spec-item"><span class="label">Role</span><span>Product Designer</span></div>
-        <div class="spec-item"><span class="label">Year</span><span>2025</span></div>
-        <div class="spec-item"><span class="label">Scope</span><span>Full Launch</span></div>
-      </div>
-
-      <div class="work-film__inner">
-        <div class="work-film__info">
-          <div class="outcome-badge">3x Lead Velocity</div>
-          <h2 class="work-film__title">Reflection</h2>
-          <p class="work-film__desc">Strategic redesign for enterprise logistics. High-performance infrastructure built to elevate brand perception globally.</p>
-          
-          <a href="https://reflectionlogistics.com" target="_blank" class="work-film__link">Launch Platform</a>
-
-          <button class="work-film__expand-btn" aria-expanded="false">
-            Details
-            <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="work-film__expandable">
-            <div class="metric-chips">
-              <span class="metric-chip" data-value="92"><span class="metric-chip__num">0</span> Performance</span>
-              <span class="metric-chip" data-value="99"><span class="metric-chip__num">0</span> Speed Score</span>
-              <span class="metric-chip metric-chip--text">3× Lead Velocity</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="device-showcase">
-          <div class="device-mac"><img src="assets/images/projects/reflection-desktop.jpg" alt="Reflection Desktop" loading="lazy"></div>
-          <div class="device-phone"><img src="assets/images/projects/reflection-mobile.jpg" alt="Reflection Mobile" loading="lazy"></div>
-        </div>
-      </div>
-    </div>
-  </article>
-
-  <div class="container" style="text-align: center; padding-top: 2rem;">
-    <a href="work.html" class="btn btn-secondary fade-up">View Full Archive</a>
-  </div>
-</section>
-
-<!-- ===================== PROCESS (About) ===================== -->
-<section class="section section--alt" id="about">
-  <div class="container">
-    <span class="section-label fade-up">Process</span>
-    <h2 class="section-heading fade-up delay-1">How we move from idea to live.</h2>
-
-    <div class="process-timeline" id="processTimeline">
-
-      <!-- connecting rail -->
-      <div class="process-timeline__rail" aria-hidden="true">
-        <div class="process-timeline__fill"></div>
-      </div>
-
-      <!-- Step 01 — Discovery -->
-      <div class="process-step" data-step="01" style="--step-color: #2563eb">
-        <div class="process-step__marker">
-          <div class="process-step__dot"></div>
-        </div>
-        <div class="process-step__card">
-          <span class="process-step__num">01</span>
-          <div class="process-step__icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          </div>
-          <h3 class="process-step__title">Discovery</h3>
-          <p class="process-step__desc">Understand goals, constraints, and what success looks like for your market.</p>
-          <div class="process-step__bg-art" aria-hidden="true">
-            <svg width="64" height="54" viewBox="0 0 64 54" fill="none"><circle cx="26" cy="26" r="16" stroke="currentColor" stroke-width="1.5" opacity="0.14"/><circle cx="26" cy="26" r="10" stroke="currentColor" stroke-width="1.5" opacity="0.18"/><circle cx="26" cy="26" r="4" stroke="currentColor" stroke-width="1.5" opacity="0.24"/><line x1="37" y1="37" x2="56" y2="51" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.18"/></svg>
-          </div>
-        </div>
-      </div>
-
-      <!-- Step 02 — Strategy -->
-      <div class="process-step" data-step="02" style="--step-color: #7c3aed">
-        <div class="process-step__marker">
-          <div class="process-step__dot"></div>
-        </div>
-        <div class="process-step__card">
-          <span class="process-step__num">02</span>
-          <div class="process-step__icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 3 20 10 16 17 20 21 16 21 4 17 8 10 4 3 6"/><line x1="10" y1="4" x2="10" y2="16"/><line x1="17" y1="8" x2="17" y2="20"/></svg>
-          </div>
-          <h3 class="process-step__title">Strategy</h3>
-          <p class="process-step__desc">Translate goals into structure, messaging, and high-conversion flows.</p>
-          <div class="process-step__bg-art" aria-hidden="true">
-            <svg width="64" height="54" viewBox="0 0 64 54" fill="none"><circle cx="32" cy="8" r="4.5" stroke="currentColor" stroke-width="1.5" opacity="0.22"/><circle cx="8" cy="40" r="4.5" stroke="currentColor" stroke-width="1.5" opacity="0.22"/><circle cx="56" cy="40" r="4.5" stroke="currentColor" stroke-width="1.5" opacity="0.22"/><line x1="32" y1="12" x2="8" y2="36" stroke="currentColor" stroke-width="1.2" opacity="0.14"/><line x1="32" y1="12" x2="56" y2="36" stroke="currentColor" stroke-width="1.2" opacity="0.14"/><line x1="12" y1="40" x2="52" y2="40" stroke="currentColor" stroke-width="1.2" opacity="0.12" stroke-dasharray="3 2"/></svg>
-          </div>
-        </div>
-      </div>
-
-      <!-- Step 03 — Design -->
-      <div class="process-step" data-step="03" style="--step-color: #db2777">
-        <div class="process-step__marker">
-          <div class="process-step__dot"></div>
-        </div>
-        <div class="process-step__card">
-          <span class="process-step__num">03</span>
-          <div class="process-step__icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
-          </div>
-          <h3 class="process-step__title">Design</h3>
-          <p class="process-step__desc">Design pages and components that feel premium, precise, and interactive.</p>
-          <div class="process-step__bg-art" aria-hidden="true">
-            <svg width="64" height="54" viewBox="0 0 64 54" fill="none"><rect x="4" y="4" width="28" height="22" rx="4" stroke="currentColor" stroke-width="1.5" opacity="0.16"/><rect x="20" y="16" width="28" height="22" rx="4" stroke="currentColor" stroke-width="1.5" opacity="0.20"/><rect x="36" y="28" width="24" height="18" rx="4" stroke="currentColor" stroke-width="1.5" opacity="0.14"/><circle cx="10" cy="10" r="2" fill="currentColor" opacity="0.18"/></svg>
-          </div>
-        </div>
-      </div>
-
-      <!-- Step 04 — Development -->
-      <div class="process-step" data-step="04" style="--step-color: #0891b2">
-        <div class="process-step__marker">
-          <div class="process-step__dot"></div>
-        </div>
-        <div class="process-step__card">
-          <span class="process-step__num">04</span>
-          <div class="process-step__icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-          </div>
-          <h3 class="process-step__title">Development</h3>
-          <p class="process-step__desc">Build fast, responsive pages with clean code and technical SEO foundations.</p>
-          <div class="process-step__bg-art" aria-hidden="true">
-            <svg width="64" height="54" viewBox="0 0 64 54" fill="none"><polyline points="18,10 4,27 18,44" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.18"/><polyline points="46,10 60,27 46,44" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.18"/><line x1="38" y1="6" x2="26" y2="48" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.13"/></svg>
-          </div>
-        </div>
-      </div>
-
-      <!-- Step 05 — Launch -->
-      <div class="process-step" data-step="05" style="--step-color: #16a34a">
-        <div class="process-step__marker">
-          <div class="process-step__dot"></div>
-        </div>
-        <div class="process-step__card">
-          <span class="process-step__num">05</span>
-          <div class="process-step__icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
-          </div>
-          <h3 class="process-step__title">Launch</h3>
-          <p class="process-step__desc">Ship, measure, and refine based on real-world behavior and performance.</p>
-          <div class="process-step__bg-art" aria-hidden="true">
-            <svg width="64" height="54" viewBox="0 0 64 54" fill="none"><path d="M6 48 Q18 26 34 14 Q48 4 58 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 3" opacity="0.20"/><circle cx="58" cy="8" r="4.5" fill="currentColor" opacity="0.20"/><circle cx="58" cy="8" r="8" stroke="currentColor" stroke-width="1" opacity="0.10"/><path d="M6 48 Q28 44 52 34" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.09" stroke-dasharray="2 4"/></svg>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===================== FAQ ===================== -->
-<section class="section" id="faq">
-  <div class="container">
-    <span class="section-label fade-up">FAQ</span>
-    <h2 class="section-heading fade-up delay-1">Common Questions</h2>
-    
-    <div class="faq-layout">
-      <div class="faq-list">
-        <div class="faq-item fade-up">
-          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">
-            How long does a typical project take?
-            <span class="faq-arrow" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
-            <p>Most website projects run 4–8 weeks from kickoff to launch, depending on scope. Landing pages and audits can be delivered in 1–2 weeks.</p>
-          </div>
-        </div>
-        <div class="faq-item fade-up delay-1">
-          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">
-            What's included in the project investment?
-            <span class="faq-arrow" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
-            <p>Discovery, strategy, design, development, and launch support. Technical SEO and accessibility are built in. Copy and imagery can be included or supplied by you.</p>
-          </div>
-        </div>
-        <div class="faq-item fade-up delay-2">
-          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">
-            Do you work with clients outside Jordan?
-            <span class="faq-arrow" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
-            <p>Yes. I work remotely with teams globally — we coordinate over video calls and async tools.</p>
-          </div>
-        </div>
-      </div>
-      <div class="faq-cta fade-up delay-2">
-        <div class="faq-cta__art" aria-hidden="true">
-          <svg width="100%" viewBox="0 0 200 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Incoming bubble -->
-            <rect x="10" y="8" width="118" height="42" rx="14" fill="rgba(0,0,0,0.07)" stroke="rgba(0,0,0,0.16)" stroke-width="1.2"/>
-            <path d="M10 46 L4 62 L26 50" fill="rgba(0,0,0,0.07)" stroke="rgba(0,0,0,0.16)" stroke-width="1.2" stroke-linejoin="round"/>
-            <rect x="22" y="20" width="64" height="5" rx="2.5" fill="rgba(0,0,0,0.22)"/>
-            <rect x="22" y="31" width="88" height="5" rx="2.5" fill="rgba(0,0,0,0.13)"/>
-            <!-- Reply bubble -->
-            <rect x="72" y="64" width="118" height="38" rx="14" fill="rgba(0,0,0,0.04)" stroke="rgba(0,0,0,0.10)" stroke-width="1.2"/>
-            <path d="M190 98 L196 112 L174 104" fill="rgba(0,0,0,0.04)" stroke="rgba(0,0,0,0.10)" stroke-width="1.2" stroke-linejoin="round"/>
-            <rect x="84" y="75" width="74" height="5" rx="2.5" fill="rgba(0,0,0,0.10)"/>
-            <rect x="84" y="87" width="52" height="5" rx="2.5" fill="rgba(0,0,0,0.07)"/>
-          </svg>
-        </div>
-        <div class="faq-logo" aria-hidden="true">ZR</div>
-        <h3>More questions?</h3>
-        <p>Get in touch for timelines, pricing, or to start a project.</p>
-        <a href="contact.html" class="btn btn-secondary">Get in touch</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== FOOTER ===================== -->
 </main>
 
-<footer class="footer">
-  <!-- CTA band -->
-  <div class="footer__cta">
-    <!-- Decorative circuit illustration -->
-    <div class="footer-cta-deco" aria-hidden="true">
-      <svg viewBox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-        <!-- Horizontal rails -->
-        <line x1="0" y1="60" x2="800" y2="60" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-        <line x1="0" y1="140" x2="800" y2="140" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-        <!-- Vertical connectors -->
-        <line x1="120" y1="0" x2="120" y2="200" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-        <line x1="280" y1="0" x2="280" y2="200" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-        <line x1="520" y1="0" x2="520" y2="200" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-        <line x1="680" y1="0" x2="680" y2="200" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-        <!-- Junction nodes -->
-        <circle cx="120" cy="60" r="4" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
-        <circle cx="280" cy="60" r="4" fill="rgba(255,255,255,0.35)" stroke="rgba(255,255,255,0.60)" stroke-width="1"/>
-        <circle cx="520" cy="60" r="4" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
-        <circle cx="680" cy="60" r="4" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.45)" stroke-width="1"/>
-        <circle cx="120" cy="140" r="4" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.45)" stroke-width="1"/>
-        <circle cx="280" cy="140" r="4" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
-        <circle cx="520" cy="140" r="4" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
-        <circle cx="680" cy="140" r="4" fill="rgba(255,255,255,0.35)" stroke="rgba(255,255,255,0.60)" stroke-width="1"/>
-        <!-- Angled connectors -->
-        <line x1="280" y1="60" x2="520" y2="140" stroke="rgba(255,255,255,0.10)" stroke-width="1.5"/>
-        <line x1="120" y1="140" x2="280" y2="60" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
-        <line x1="520" y1="60" x2="680" y2="140" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
-        <!-- Small squares at some nodes -->
-        <rect x="276" y="56" width="8" height="8" rx="1" fill="none" stroke="rgba(255,255,255,0.40)" stroke-width="1.5"/>
-        <rect x="676" y="136" width="8" height="8" rx="1" fill="none" stroke="rgba(255,255,255,0.32)" stroke-width="1.5"/>
-      </svg>
-    </div>
-    <div class="container">
-      <div class="footer__cta-inner fade-up">
-        <div>
-          <h2 class="footer__cta-heading">Ready to start a project?</h2>
-          <p class="footer__cta-sub">Let's build something that works for your business.</p>
-        </div>
-        <a href="contact.html" class="btn btn-primary">
-          Start a Project
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-    </div>
-  </div>
-  <!-- Base row -->
-  <div class="footer__base">
-    <div class="container">
-      <div class="footer__base-inner">
-        <p class="footer__copy">&copy; 2026 Zaid Rahhal. All rights reserved.</p>
-        <ul class="footer__nav-inline">
-          <li><a href="#services">Services</a></li>
-          <li><a href="work.html">Work</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="footer__socials">
-          <a href="#" aria-label="GitHub">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.604-3.369-1.341-3.369-1.341-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
-          </a>
-          <a href="#" aria-label="Instagram">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-          <a href="#" aria-label="LinkedIn">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+<footer>
+  <p>made by Zaid, not a template</p>
 </footer>
-<script src="assets/js/main.js"></script>
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">close</button>
+  <div class="lightbox-content" id="lightbox-content"></div>
+</div>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <g id="rose-pink">
+      <path d="M50 20 C40 10, 20 15, 22 32 C24 48, 40 55, 50 68 C60 55, 76 48, 78 32 C80 15, 60 10, 50 20 Z" fill="#E8A0AE"/>
+      <path d="M50 30 C46 26, 38 28, 39 36 C40 44, 46 47, 50 54 C54 47, 60 44, 61 36 C62 28, 54 26, 50 30 Z" fill="#C46B7E"/>
+      <path d="M48 66 Q44 82 50 96" stroke="#A9BCA0" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M48 78 Q40 78 36 84" stroke="#A9BCA0" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </g>
+    <g id="rose-white">
+      <path d="M50 20 C40 10, 20 15, 22 32 C24 48, 40 55, 50 68 C60 55, 76 48, 78 32 C80 15, 60 10, 50 20 Z" fill="#FDF3F5" stroke="#EBC9D1" stroke-width="1.5"/>
+      <path d="M50 30 C46 26, 38 28, 39 36 C40 44, 46 47, 50 54 C54 47, 60 44, 61 36 C62 28, 54 26, 50 30 Z" fill="#F3D8DE"/>
+      <path d="M48 66 Q44 82 50 96" stroke="#A9BCA0" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M48 78 Q40 78 36 84" stroke="#A9BCA0" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </g>
+  </defs>
+</svg>
+
+<script src="script.js"></script>
 </body>
 </html>

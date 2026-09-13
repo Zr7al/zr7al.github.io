@@ -1,0 +1,344 @@
+:root {
+  --blush: #FDF3F5;
+  --paper: #FFFFFF;
+  --rose: #E8A0AE;
+  --rose-deep: #C46B7E;
+  --sage: #A9BCA0;
+  --ink: #3B2A2E;
+  --muted: #9C7E85;
+  --line: #F0DCE1;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--blush);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+main, header, footer { position: relative; z-index: 2; }
+
+/* ---------- decorative roses ---------- */
+
+.rose-corner {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 160px;
+  height: 160px;
+  opacity: 0.9;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.rose-inline {
+  width: 46px;
+  height: 46px;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.rose-inline--closing { margin-bottom: 1.2rem; }
+
+/* ---------- Hero ---------- */
+
+.hero {
+  min-height: 82vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8vh 8vw 6vh;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+
+.hero-kicker {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--rose-deep);
+  font-size: 1.05rem;
+  margin: 0 0 1.2rem;
+}
+
+.hero-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: clamp(3rem, 10vw, 7rem);
+  line-height: 0.98;
+  margin: 0 0 3rem;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.hero-title .amp {
+  color: var(--rose-deep);
+  font-style: italic;
+  font-weight: 400;
+  padding: 0 0.15em;
+}
+
+.counter {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+  max-width: 42ch;
+}
+
+.counter-number {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 2.4rem;
+  color: var(--rose-deep);
+  font-variant-numeric: tabular-nums;
+}
+
+.counter-label {
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+/* ---------- Letter ---------- */
+
+.letter {
+  max-width: 62ch;
+  margin: 0 auto;
+  padding: 12vh 8vw 10vh;
+  border-bottom: 1px solid var(--line);
+}
+
+.letter-line {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 0 0 1.4rem;
+}
+
+.letter-signoff {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: 2rem;
+}
+
+/* ---------- Moments ---------- */
+
+.moments {
+  padding: 10vh 8vw;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin: 0 0 0.5rem;
+  color: var(--ink);
+}
+
+.section-note {
+  color: var(--muted);
+  font-size: 0.88rem;
+  margin: 0 0 4rem;
+  max-width: 60ch;
+  border-left: 2px solid var(--rose);
+  padding-left: 0.8rem;
+}
+
+.moment-row {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 2rem;
+  padding: 2.4rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.moment-row:last-child { border-bottom: 1px solid var(--line); }
+
+.moment-mark {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  color: var(--rose-deep);
+  font-size: 1.1rem;
+}
+
+.moment-body h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin: 0 0 0.6rem;
+  color: var(--ink);
+}
+
+.moment-body p {
+  color: var(--muted);
+  max-width: 60ch;
+  margin: 0;
+}
+
+/* ---------- Gallery ---------- */
+
+.gallery {
+  padding: 10vh 8vw;
+  border-bottom: 1px solid var(--line);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.media-item {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  aspect-ratio: 4 / 5;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(196, 107, 126, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.media-item:hover { transform: translateY(-3px); }
+.media-item:focus-visible { outline: 3px solid var(--rose-deep); outline-offset: 2px; }
+
+.media-item img,
+.media-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.media-item .video-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(59, 42, 46, 0.55);
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.media-item figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.8rem;
+  color: #fff;
+  background: linear-gradient(to top, rgba(59,42,46,0.75), transparent);
+}
+
+.media-item--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.media-item--empty::before {
+  content: attr(data-placeholder-label);
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-style: italic;
+  font-family: 'Fraunces', serif;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ---------- Lightbox ---------- */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(59, 42, 46, 0.88);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 5vh 5vw;
+}
+
+.lightbox.is-open { display: flex; }
+
+.lightbox-content {
+  max-width: 90vw;
+  max-height: 85vh;
+}
+
+.lightbox-content img,
+.lightbox-content video {
+  max-width: 90vw;
+  max-height: 85vh;
+  border-radius: 6px;
+  display: block;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  background: none;
+  border: 1px solid rgba(255,255,255,0.5);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.lightbox-close:hover { background: rgba(255,255,255,0.12); }
+
+/* ---------- Closing ---------- */
+
+.closing {
+  padding: 16vh 8vw;
+  text-align: left;
+  max-width: 62ch;
+}
+
+.closing-text {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.35;
+  margin: 0 0 1.5rem;
+  color: var(--rose-deep);
+}
+
+.closing-date {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  padding: 3rem 8vw 4rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  border-top: 1px solid var(--line);
+}
