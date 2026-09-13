@@ -26,10 +26,10 @@
   <div class="sparkle-layer" id="sparkle-layer" aria-hidden="true"></div>
 
   <nav class="topbar">
-    <a class="brand" href="#top" aria-label="Back to top">z + r <span>♡</span></a>
+    <a class="brand" id="brand-easter" href="#top" aria-label="Back to top">z + r <span>♡</span></a>
     <div class="nav-pill">
-      <a href="#letter">a note</a>
       <a href="#gallery">memories</a>
+      <a href="#open-when">open when</a>
     </div>
   </nav>
 
@@ -37,110 +37,162 @@
     <div class="hero-glow hero-glow--one"></div>
     <div class="hero-glow hero-glow--two"></div>
     <div class="hero-inner reveal">
-      <div class="eyebrow"><span></span> this little corner of the internet belongs to us <span></span></div>
-      <p class="hero-script">for my favourite person</p>
-      <h1 class="hero-title"><span>Zaid</span><i>&amp;</i><span>Ramroomti</span></h1>
-      <p class="hero-subtitle">not perfect. not polished. just ours.</p>
-
+      <p class="hero-script">for my ramroomti ♡</p>
+      <h1 class="hero-opening">I don't need a perfect story<br><em>I just want ours</em></h1>
+      <p class="hero-poem">every version of you<br>every version of me<br>and everything we're still becoming</p>
       <div class="hero-actions">
-        <a class="primary-button" href="#letter">read the note <span>↓</span></a>
-        <button class="heart-button" id="heart-button" type="button" aria-label="Send hearts">tap the heart <span>♡</span></button>
+        <a class="primary-button" href="#gallery">our little memories <span>↓</span></a>
+        <button class="heart-button" id="heart-button" type="button" aria-label="Send hearts">send love <span>♡</span></button>
       </div>
-
       <div class="days-card">
         <div class="days-number" id="counter-number">0</div>
-        <div class="days-copy">
-          <strong>days of us</strong>
-          <span>since november 21, 2023</span>
-        </div>
+        <div class="days-copy"><strong>days of us</strong><span>since november 21, 2023</span></div>
         <div class="days-heart">♥</div>
       </div>
-
       <div class="countdown-grid reveal" id="countdowns">
         <article class="countdown-card countdown-card--birthday">
           <div class="countdown-label"><span>♡</span> ramroomti's birthday</div>
           <div class="countdown-date">april 29</div>
-          <div class="countdown-values" data-countdown="birthday">
-            <div><strong id="birthday-days">0</strong><span>days</span></div>
-            <div><strong id="birthday-hours">0</strong><span>hrs</span></div>
-            <div><strong id="birthday-minutes">0</strong><span>min</span></div>
-            <div><strong id="birthday-seconds">0</strong><span>sec</span></div>
-          </div>
-          <div class="countdown-caption" id="birthday-caption">counting down to your next april 29 ♡</div>
+          <div class="countdown-values"><div><strong id="birthday-days">0</strong><span>days</span></div><div><strong id="birthday-hours">0</strong><span>hrs</span></div><div><strong id="birthday-minutes">0</strong><span>min</span></div><div><strong id="birthday-seconds">0</strong><span>sec</span></div></div>
         </article>
-
         <article class="countdown-card countdown-card--anniversary">
-          <div class="countdown-label"><span>∞</span> your anniversary</div>
+          <div class="countdown-label"><span>♡</span> our day</div>
           <div class="countdown-date">november 21</div>
           <div class="countdown-origin">since 2023</div>
-          <div class="countdown-values" data-countdown="anniversary">
-            <div><strong id="anniversary-days">0</strong><span>days</span></div>
-            <div><strong id="anniversary-hours">0</strong><span>hrs</span></div>
-            <div><strong id="anniversary-minutes">0</strong><span>min</span></div>
-            <div><strong id="anniversary-seconds">0</strong><span>sec</span></div>
-          </div>
-          <div class="countdown-caption" id="anniversary-caption">counting down to your next november 21 ♡</div>
+          <div class="countdown-values"><div><strong id="anniversary-days">0</strong><span>days</span></div><div><strong id="anniversary-hours">0</strong><span>hrs</span></div><div><strong id="anniversary-minutes">0</strong><span>min</span></div><div><strong id="anniversary-seconds">0</strong><span>sec</span></div></div>
         </article>
       </div>
-
       <div class="scroll-hint"><span>keep going</span><i></i></div>
     </div>
   </header>
 
   <main>
-    <section class="letter section-shell reveal" id="letter">
-      <div class="section-kicker">a little note</div>
-      <div class="letter-card">
-        <div class="paper-tape tape-left" aria-hidden="true"></div>
-        <div class="paper-tape tape-right" aria-hidden="true"></div>
-        <div class="tiny-stamp">just us</div>
-        <p class="letter-script">dear ramroomti,</p>
-        <div class="letter-copy">
-          <p>This is the part where I could try to make everything sound perfect.</p>
-          <p>But honestly, I like us better when it feels real. The stupid moments. The soft ones. The random pictures. The nights that become mornings. All the little things that somehow became <em>ours</em>.</p>
-          <p>So this page isn't trying to be fancy. It's just a place to keep a little piece of us in one spot.</p>
+    <section class="soft-section section-shell reveal" id="letter">
+      <div class="note-wrap">
+        <div class="tiny-rose"><svg viewBox="0 0 100 120"><use href="#rose-pink"></use></svg></div>
+        <p class="section-kicker">just a little thing i wanted you to have</p>
+        <h2>you don't have to be perfect with me</h2>
+        <div class="reassurance">
+          <p>you don't have to be okay all the time</p>
+          <p>You don't have to hide when you're scared</p>
+          <p>You don't have to pretend you're not overthinking</p>
+          <p>You don't have to be the perfect version of yourself around me</p>
+          <p class="strong-line">I want you as you are<br>not just when everything is easy</p>
         </div>
-        <p class="letter-signoff">love, zaid <span>♡</span></p>
+        <p class="hand-sign">love, zaid ♡</p>
       </div>
     </section>
 
-
     <section class="gallery section-shell reveal" id="gallery">
       <div class="section-heading gallery-heading">
-        <div>
-          <div class="section-kicker">our little archive</div>
-          <h2>39 little <em>proofs</em></h2>
-        </div>
-        <p class="section-side-note">scroll. smile. click the ones you want to keep staring at.</p>
+        <div><div class="section-kicker">little pieces of us</div><h2>39 memories<br><em>one journey</em></h2></div>
+        <p class="section-side-note">scroll slowly. the pictures can do most of the talking.</p>
       </div>
-
+      <div class="journey-line"><span></span><span>nov 21, 2023 → now</span><span></span></div>
       <div class="gallery-grid" id="gallery-grid"></div>
-      <button class="memory-button" id="memory-button" type="button">show me a random memory <span>✦</span></button>
+      <button class="memory-button" id="memory-button" type="button">give me a random memory <span>✦</span></button>
+    </section>
+
+    <section class="love-list section-shell reveal" id="things">
+      <div class="section-kicker">things i love about you</div>
+      <h2>the weirdly specific ones</h2>
+      <p class="section-side-note love-intro">tap the hearts. i could keep going.</p>
+      <div class="love-heart-grid" id="love-heart-grid">
+        <button class="love-heart-card" data-love="the way you say my name"><span>♡</span><b>tap me</b></button>
+        <button class="love-heart-card" data-love="your random moods"><span>♡</span><b>tap me</b></button>
+        <button class="love-heart-card" data-love="the way you can completely change the vibe of my day"><span>♡</span><b>tap me</b></button>
+        <button class="love-heart-card" data-love="your little messages"><span>♡</span><b>tap me</b></button>
+        <button class="love-heart-card" data-love="when you randomly become affectionate"><span>♡</span><b>tap me</b></button>
+        <button class="love-heart-card" data-love="the way you make me miss you even when we literally just talked"><span>♡</span><b>tap me</b></button>
+      </div>
+      <div class="love-reveal" id="love-reveal">tap one ♡</div>
+    </section>
+
+    <section class="open-when section-shell reveal" id="open-when">
+      <div class="section-kicker">for the days in between</div>
+      <h2>open when...</h2>
+      <p class="section-side-note">pick one. no pressure to be anything else right now.</p>
+      <div class="envelope-grid" id="envelope-grid">
+        <button class="envelope" data-title="you're missing me" data-message="i'm probably missing you too. take a breath, come back to this page and remember that distance doesn't erase what is ours. ♡"><span>♡</span><b>you’re missing me</b></button>
+        <button class="envelope" data-title="you're overthinking" data-message="you don't have to solve every thought tonight. slow down. breathe. you are allowed to feel things without figuring all of them out at once. ♡"><span>♡</span><b>you’re overthinking</b></button>
+        <button class="envelope" data-title="you feel like you're bothering me" data-message="you are not a burden for needing reassurance. tell me what you need. i'd rather know than have you sit there alone with it. ♡"><span>♡</span><b>you feel like you’re bothering me</b></button>
+        <button class="envelope" data-title="you're mad at me" data-message="okay. be mad. we'll talk when we're ready. i care more about understanding you than winning an argument. ♡"><span>♡</span><b>you’re mad at me</b></button>
+        <button class="envelope" data-title="you can't sleep" data-message="pretend i'm sitting beside you for a minute. unclench your jaw. put your phone down after this. tomorrow can wait. ♡"><span>♡</span><b>you can’t sleep</b></button>
+        <button class="envelope" data-title="you need reassurance" data-message="you are loved here. you don't have to earn it by being easy all the time. ♡"><span>♡</span><b>you need reassurance</b></button>
+        <button class="envelope" data-title="you want to smile" data-message="look at us. look at the stupid pictures. look at how much life somehow ended up with your face in it 😭♡"><span>♡</span><b>you want to smile</b></button>
+      </div>
+    </section>
+
+    <section class="promises section-shell reveal">
+      <div class="promise-paper">
+        <div class="section-kicker">what i promise</div>
+        <h2>nothing impossible.<br>just real things.</h2>
+        <ul>
+          <li>I promise I'll keep trying</li>
+          <li>I promise I'll listen when you tell me something hurts</li>
+          <li>I promise I won't stop choosing communication when things get difficult</li>
+          <li>I promise I'll keep learning how to love you better</li>
+          <li>I promise I won't only love the easy versions of you</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="us-section section-shell reveal">
+      <div class="us-glow"></div>
+      <div class="section-kicker">the simple version</div>
+      <h2>it’s always gonna be<br><em>you and me figuring shit out</em></h2>
+      <p>not because everything will always be easy<br>but because you're worth figuring it out for.</p>
+    </section>
+
+    <section class="bedtime section-shell reveal" id="bedtime">
+      <div class="moon-mark">☾</div>
+      <div class="section-kicker">for late nights</div>
+      <h2>bedtime story for ramroomti</h2>
+      <p>pick a little story.</p>
+      <div class="story-buttons">
+        <button data-story="the girl I couldn't stop thinking about">story of the girl I couldn't stop thinking about</button>
+        <button data-story="ramroomti and the boy who loved her">ramroomti and the boy who loved her</button>
+        <button data-story="the night they finally fell asleep together">the night they finally fell asleep together</button>
+      </div>
+      <div class="storybook" id="storybook" aria-live="polite">tap a story above ♡</div>
+    </section>
+
+    <section class="memory-jar section-shell reveal">
+      <div class="section-kicker">a tiny memory jar</div>
+      <h2>shake the jar</h2>
+      <p>one picture. one little thought. no telling what comes out.</p>
+      <button class="jar" id="jar-button" type="button" aria-label="Shake the memory jar"><span class="jar-glass">♡</span><span class="jar-lid"></span><span class="jar-label">our little things</span></button>
+      <div class="jar-note" id="jar-note">tap the jar ♡</div>
+    </section>
+
+    <section class="if-forget section-shell reveal">
+      <div class="section-kicker">if you ever forget</div>
+      <div class="forget-card">
+        <p>If you ever forget how much you mean to me<br>come back here.</p>
+        <p>Look at all these memories.<br>Look at all these stupid pictures.<br>Look at how much of my life has your name written all over it.</p>
+        <p class="strong-line">And remember<br>you’re loved here.</p>
+      </div>
     </section>
 
     <section class="closing reveal">
       <div class="closing-orbit" aria-hidden="true"><span>♡</span><span>♡</span><span>♡</span></div>
       <div class="section-kicker">for later</div>
-      <h2>more photos.<br><em>more stupid stories.</em><br>more us.</h2>
-      <p>Whatever comes next, I want the ordinary days with you too.</p>
-      <div class="closing-date">april 29 is still circled ♡ · november 21 is forever ours</div>
+      <h2>still you.</h2>
+      <p>after everything<br>through everything<br>somehow<br><em>still you.</em></p>
+      <div class="closing-date">april 29 is circled ♡ · november 21 is ours</div>
+      <div class="closing-sign">Zaid</div>
+      <small>made with way too much love for ramroomti</small>
     </section>
   </main>
 
-  <footer>
-    <p>made by zaid, for ramroomti <span>♡</span></p>
-  </footer>
+  <footer><p>made by zaid, for ramroomti <span>♡</span></p></footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
+  <div class="story-overlay" id="story-overlay" aria-hidden="true"><div class="night-sky"></div><button class="story-close" id="story-close">×</button><div class="story-overlay-content"><span>goodnight ramroomti ♡</span><h3 id="story-overlay-title"></h3><p id="story-overlay-text"></p></div></div>
   <div class="lightbox" id="lightbox" aria-hidden="true">
     <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close photo">×</button>
     <button class="lightbox-nav lightbox-nav--prev" id="lightbox-prev" type="button" aria-label="Previous photo">‹</button>
-    <div class="lightbox-inner">
-      <div class="lightbox-counter" id="lightbox-counter"></div>
-      <div class="lightbox-content" id="lightbox-content"></div>
-      <div class="lightbox-caption" id="lightbox-caption"></div>
-    </div>
+    <div class="lightbox-inner"><div class="lightbox-counter" id="lightbox-counter"></div><div class="lightbox-content" id="lightbox-content"></div><div class="lightbox-caption" id="lightbox-caption"></div></div>
     <button class="lightbox-nav lightbox-nav--next" id="lightbox-next" type="button" aria-label="Next photo">›</button>
   </div>
 

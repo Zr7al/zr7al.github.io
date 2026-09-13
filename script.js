@@ -1,370 +1,59 @@
 const START_DATE = new Date("2023-11-21T00:00:00");
 
 const MEDIA = [
-  { type: "image", src: "images/photo01.jpg", caption: "us, somewhere in between ordinary and special" },
-  { type: "image", src: "images/photo02.jpg", caption: "one of the good ones" },
-  { type: "image", src: "images/photo03.jpg", caption: "the kind of moment that stays" },
-  { type: "image", src: "images/photo04.jpg", caption: "just us" },
-  { type: "image", src: "images/photo05.jpg", caption: "too cute to leave in camera roll" },
-  { type: "image", src: "images/photo06.jpg", caption: "another little us" },
-  { type: "image", src: "images/photo07.jpg", caption: "my favourite view" },
-  { type: "image", src: "images/photo08.jpg", caption: "soft days" },
-  { type: "image", src: "images/photo09.jpg", caption: "same people, different day" },
-  { type: "image", src: "images/photo10.jpg", caption: "keep this one" },
-  { type: "image", src: "images/photo11.jpg", caption: "chaos but make it us" },
-  { type: "image", src: "images/photo12.jpg", caption: "little snapshots" },
-  { type: "image", src: "images/photo13.jpg", caption: "one more for the archive" },
-  { type: "image", src: "images/photo14.jpg", caption: "comfortable looks good on us" },
-  { type: "image", src: "images/photo15.jpg", caption: "okay this one is adorable" },
-  { type: "image", src: "images/photo16.jpg", caption: "ordinary day, favourite memory" },
-  { type: "image", src: "images/photo17.jpg", caption: "us being us" },
-  { type: "image", src: "images/photo18.jpg", caption: "one of those days" },
-  { type: "image", src: "images/photo19.jpg", caption: "a tiny time capsule" },
-  { type: "image", src: "images/photo20.jpg", caption: "close enough" },
-  { type: "image", src: "images/photo21.jpg", caption: "the good kind of familiar" },
-  { type: "image", src: "images/photo22.jpg", caption: "another one worth keeping" },
-  { type: "image", src: "images/photo23.jpg", caption: "same story, new frame" },
-  { type: "image", src: "images/photo24.jpg", caption: "tiny memory" },
-  { type: "image", src: "images/photo25.jpg", caption: "yeah, this one too" },
-  { type: "image", src: "images/photo26.jpg", caption: "camera roll evidence" },
-  { type: "image", src: "images/photo27.jpg", caption: "one for the lore" },
-  { type: "image", src: "images/photo28.jpg", caption: "this is us" },
-  { type: "image", src: "images/photo29.jpg", caption: "keep smiling" },
-  { type: "image", src: "images/photo30.jpg", caption: "a very specific kind of happiness" },
-  { type: "image", src: "images/photo31.jpg", caption: "proof we had fun" },
-  { type: "image", src: "images/photo32.jpg", caption: "another one for later" },
-  { type: "image", src: "images/photo33.jpg", caption: "good memories are messy" },
-  { type: "image", src: "images/photo34.jpg", caption: "one of my favourites" },
-  { type: "image", src: "images/photo35.jpg", caption: "ordinary moments hit different" },
-  { type: "image", src: "images/photo36.jpg", caption: "hold onto this" },
-  { type: "image", src: "images/photo37.jpg", caption: "one for the archive" },
-  { type: "image", src: "images/photo38.jpg", caption: "still us" },
-  { type: "image", src: "images/photo39.jpg", caption: "and we'd do it all again" }
+  {src:"images/photo01.jpg",caption:"this one still makes me smile"},{src:"images/photo02.jpg",caption:"look at us bro 😭"},{src:"images/photo03.jpg",caption:"one of my favorite memories"},{src:"images/photo04.jpg",caption:"you looked so pretty here"},{src:"images/photo05.jpg",caption:"keep this one"},{src:"images/photo06.jpg",caption:"i still think about this"},{src:"images/photo07.jpg",caption:"okay this one is adorable"},{src:"images/photo08.jpg",caption:"one for the lore"},{src:"images/photo09.jpg",caption:"just us"},{src:"images/photo10.jpg",caption:"another little piece of us"},{src:"images/photo11.jpg",caption:"chaos but make it us"},{src:"images/photo12.jpg",caption:"this one makes me happy"},{src:"images/photo13.jpg",caption:"one more for the archive"},{src:"images/photo14.jpg",caption:"comfortable looks good on us"},{src:"images/photo15.jpg",caption:"okay i love this one"},{src:"images/photo16.jpg",caption:"ordinary day favorite memory"},{src:"images/photo17.jpg",caption:"us being us"},{src:"images/photo18.jpg",caption:"one of those days"},{src:"images/photo19.jpg",caption:"a tiny time capsule"},{src:"images/photo20.jpg",caption:"close enough"},{src:"images/photo21.jpg",caption:"the good kind of familiar"},{src:"images/photo22.jpg",caption:"another one worth keeping"},{src:"images/photo23.jpg",caption:"same story new frame"},{src:"images/photo24.jpg",caption:"tiny memory"},{src:"images/photo25.jpg",caption:"yeah this one too"},{src:"images/photo26.jpg",caption:"camera roll evidence"},{src:"images/photo27.jpg",caption:"one for the lore"},{src:"images/photo28.jpg",caption:"this is us"},{src:"images/photo29.jpg",caption:"keep smiling"},{src:"images/photo30.jpg",caption:"a very specific kind of happiness"},{src:"images/photo31.jpg",caption:"proof we had fun"},{src:"images/photo32.jpg",caption:"another one for later"},{src:"images/photo33.jpg",caption:"good memories are messy"},{src:"images/photo34.jpg",caption:"one of my favorites"},{src:"images/photo35.jpg",caption:"ordinary moments hit different"},{src:"images/photo36.jpg",caption:"hold onto this"},{src:"images/photo37.jpg",caption:"one for the archive"},{src:"images/photo38.jpg",caption:"still us"},{src:"images/photo39.jpg",caption:"and we'd do it all again"}
 ];
 
-const $ = (selector) => document.querySelector(selector);
-const $$ = (selector) => [...document.querySelectorAll(selector)];
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const reduced = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 
-function daysSince(date) {
-  const now = new Date();
-  return Math.floor((now - date) / 86400000);
-}
+function daysSince(date){ return Math.floor((new Date()-date)/86400000); }
+function nextRecurringDate(month,day){ const now=new Date(); let d=new Date(now.getFullYear(),month-1,day,0,0,0,0); if(d<=now)d=new Date(now.getFullYear()+1,month-1,day,0,0,0,0); return d; }
+function splitCountdown(ms){ const s=Math.max(0,Math.floor(ms/1000)); return {days:Math.floor(s/86400),hours:Math.floor(s%86400/3600),minutes:Math.floor(s%3600/60),seconds:s%60}; }
+function setCountdown(prefix,target){ const v=splitCountdown(target-new Date()); const pad=n=>String(n).padStart(2,'0'); [`days`,`hours`,`minutes`,`seconds`].forEach(k=>{const el=$(`#${prefix}-${k}`); if(el)el.textContent=k==='days'?v[k].toLocaleString():pad(v[k]);}); }
+function renderCountdowns(){setCountdown('birthday',nextRecurringDate(4,29));setCountdown('anniversary',nextRecurringDate(11,21));}
+function renderCounter(){const el=$('#counter-number');if(el)el.textContent=daysSince(START_DATE).toLocaleString();}
 
-function nextRecurringDate(month, day) {
-  const now = new Date();
-  let target = new Date(now.getFullYear(), month - 1, day, 0, 0, 0, 0);
-  if (target <= now) target = new Date(now.getFullYear() + 1, month - 1, day, 0, 0, 0, 0);
-  return target;
-}
+function setupReveal(){ const items=$$('.reveal'); if(!('IntersectionObserver' in window)){items.forEach(x=>x.classList.add('is-visible'));return;} const ob=new IntersectionObserver((entries,o)=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');o.unobserve(e.target);}}),{threshold:.08}); items.forEach(x=>ob.observe(x)); }
 
-function splitCountdown(ms) {
-  const totalSeconds = Math.max(0, Math.floor(ms / 1000));
-  return {
-    days: Math.floor(totalSeconds / 86400),
-    hours: Math.floor((totalSeconds % 86400) / 3600),
-    minutes: Math.floor((totalSeconds % 3600) / 60),
-    seconds: totalSeconds % 60
-  };
-}
+function burstHearts(origin=null){ const holder=$('#floating-hearts'); if(!holder)return; const r=origin?.getBoundingClientRect(); const x=r?r.left+r.width/2:innerWidth/2; const y=r?innerHeight-r.top:innerHeight*.25; const count=innerWidth<600?12:18; for(let i=0;i<count;i++){const h=document.createElement('span');h.className='heart-float';h.textContent=['♡','♥','✦','❀'][i%4];h.style.left=`${x+(Math.random()*70-35)}px`;h.style.bottom=`${y}px`;h.style.setProperty('--size',`${10+Math.random()*17}px`);h.style.setProperty('--drift',`${Math.random()*150-75}px`);h.style.animationDelay=`${Math.random()*.3}s`;holder.appendChild(h);h.addEventListener('animationend',()=>h.remove(),{once:true});}}
+function showToast(message){const t=$('#toast');t.textContent=message;t.classList.add('show');clearTimeout(showToast.timer);showToast.timer=setTimeout(()=>t.classList.remove('show'),2100);}
 
-function setCountdown(prefix, target) {
-  const values = splitCountdown(target - new Date());
-  const pad = (n) => String(n).padStart(2, "0");
-  const days = document.getElementById(`${prefix}-days`);
-  const hours = document.getElementById(`${prefix}-hours`);
-  const minutes = document.getElementById(`${prefix}-minutes`);
-  const seconds = document.getElementById(`${prefix}-seconds`);
-  if (!days || !hours || !minutes || !seconds) return;
-  days.textContent = values.days.toLocaleString();
-  hours.textContent = pad(values.hours);
-  minutes.textContent = pad(values.minutes);
-  seconds.textContent = pad(values.seconds);
-}
+function buildMediaItem(item,index){ const wrap=document.createElement('figure'); wrap.className='media-item reveal'; wrap.style.setProperty('--i',index); wrap.tabIndex=0; wrap.setAttribute('role','button'); wrap.setAttribute('aria-label',`Open memory ${index+1}`); const el=document.createElement('img');el.src=item.src;el.alt=item.caption;el.loading=index<6?'eager':'lazy';el.decoding='async'; wrap.appendChild(el); const cap=document.createElement('figcaption');cap.textContent=item.caption;wrap.appendChild(cap); wrap.addEventListener('click',()=>openLightbox(index)); wrap.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openLightbox(index);}}); return wrap; }
+function renderGallery(){const g=$('#gallery-grid');g.innerHTML='';MEDIA.forEach((m,i)=>g.appendChild(buildMediaItem(m,i)));setupReveal();}
 
-function renderCountdowns() {
-  setCountdown("birthday", nextRecurringDate(4, 29));
-  setCountdown("anniversary", nextRecurringDate(11, 21));
-}
+let currentIndex=0;
+function openLightbox(index){currentIndex=index;updateLightbox();const b=$('#lightbox');b.classList.add('is-open');b.setAttribute('aria-hidden','false');document.body.classList.add('no-scroll');}
+function updateLightbox(){const item=MEDIA[currentIndex],c=$('#lightbox-content');c.innerHTML='';const img=document.createElement('img');img.src=item.src;img.alt=item.caption;c.appendChild(img);$('#lightbox-counter').textContent=`${currentIndex+1} / ${MEDIA.length}`;$('#lightbox-caption').textContent=item.caption;}
+function moveLightbox(delta){currentIndex=(currentIndex+delta+MEDIA.length)%MEDIA.length;updateLightbox();}
+function closeLightbox(){const b=$('#lightbox');b.classList.remove('is-open');b.setAttribute('aria-hidden','true');$('#lightbox-content').innerHTML='';document.body.classList.remove('no-scroll');}
+function randomMemory(){const i=Math.floor(Math.random()*MEDIA.length);burstHearts();showToast('this one found its way back to you ♡');setTimeout(()=>openLightbox(i),180);}
 
-function renderCounter() {
-  const el = $("#counter-number");
-  if (el) el.textContent = daysSince(START_DATE).toLocaleString();
-}
+let touchX=0,touchY=0;
+function setupLightboxGestures(){const box=$('#lightbox');box.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].clientX;touchY=e.changedTouches[0].clientY},{passive:true});box.addEventListener('touchend',e=>{const t=e.changedTouches[0],dx=t.clientX-touchX,dy=t.clientY-touchY;if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy))moveLightbox(dx<0?1:-1);},{passive:true});}
 
-let revealObserver;
-function setupReveal() {
-  const items = $$(".reveal");
-  if ("IntersectionObserver" in window) {
-    revealObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: .08 });
-    items.forEach((item) => revealObserver.observe(item));
-  } else {
-    items.forEach((item) => item.classList.add("is-visible"));
-  }
-}
+function setupLoveCards(){$$('.love-heart-card').forEach(card=>card.addEventListener('click',()=>{const text=card.dataset.love;$('#love-reveal').textContent=text;card.classList.remove('popped');requestAnimationFrame(()=>card.classList.add('popped'));burstHearts(card);showToast(text+' ♡');}));}
+function setupEnvelopes(){$$('.envelope').forEach(card=>card.addEventListener('click',()=>{const title=card.dataset.title,msg=card.dataset.message;showToast(title);burstHearts(card);const box=document.createElement('div');box.className='message-pop';box.innerHTML=`<button aria-label="close">×</button><span>for ramroomti ♡</span><h3>${title}</h3><p>${msg}</p>`;document.body.appendChild(box);requestAnimationFrame(()=>box.classList.add('show'));box.querySelector('button').onclick=()=>box.remove();setTimeout(()=>box.remove(),9000);}));}
 
-function burstHearts(origin = null) {
-  const holder = $("#floating-hearts");
-  const rect = origin?.getBoundingClientRect();
-  const centerX = rect ? rect.left + rect.width / 2 : window.innerWidth / 2;
-  const count = window.innerWidth < 600 ? 10 : 16;
+const stories={
+ "the girl I couldn't stop thinking about":"once there was a girl who somehow kept showing up in a boy's thoughts. in the middle of normal days. in songs. in random little moments. and eventually he stopped pretending it was just a coincidence. it was her. it was always her. ♡",
+ "ramroomti and the boy who loved her":"ramroomti met a boy who was still figuring himself out. he didn't have every answer. he still doesn't. but somewhere between the stupid conversations and the soft ones he realized he wanted to keep learning her. and keep being chosen by her too. ♡",
+ "the night they finally fell asleep together":"the night was quiet. no big speech. no perfect ending. just two tired people talking until the words got slower and the silence felt safe. eventually they fell asleep. and for once nobody needed to figure anything out. they were just there. together. ♡"
+};
+function setupStories(){$$('.story-buttons button').forEach(b=>b.addEventListener('click',()=>{const title=b.dataset.story;$('#story-overlay-title').textContent=title;$('#story-overlay-text').textContent=stories[title];$('#story-overlay').classList.add('is-open');$('#story-overlay').setAttribute('aria-hidden','false');document.body.classList.add('no-scroll');burstHearts();}));$('#story-close').onclick=()=>{$('#story-overlay').classList.remove('is-open');$('#story-overlay').setAttribute('aria-hidden','true');document.body.classList.remove('no-scroll');};}
 
-  for (let i = 0; i < count; i++) {
-    const heart = document.createElement("span");
-    heart.className = "heart-float";
-    heart.textContent = ["♡", "♥", "✦"][i % 3];
-    heart.style.left = `${centerX + (Math.random() * 50 - 25)}px`;
-    heart.style.bottom = `${rect ? window.innerHeight - rect.top : 90}px`;
-    heart.style.setProperty("--size", `${12 + Math.random() * 16}px`);
-    heart.style.setProperty("--drift", `${Math.random() * 130 - 65}px`);
-    heart.style.animationDelay = `${Math.random() * .22}s`;
-    holder.appendChild(heart);
-    heart.addEventListener("animationend", () => heart.remove(), { once: true });
-  }
-}
+function setupJar(){ $('#jar-button').addEventListener('click',()=>{const i=Math.floor(Math.random()*MEDIA.length);const item=MEDIA[i];$('#jar-button').classList.remove('shake');requestAnimationFrame(()=>$('#jar-button').classList.add('shake'));$('#jar-note').innerHTML=`<strong>${item.caption}</strong><button type="button" id="jar-photo">see it ♡</button>`;$('#jar-photo').onclick=()=>openLightbox(i);burstHearts($('#jar-button'));});}
+function setupEasterEgg(){let count=0;$('#brand-easter').addEventListener('click',e=>{count++;if(count<5)return;e.preventDefault();count=0;const pop=document.createElement('div');pop.className='secret-pop';pop.innerHTML='<span>you found the secret ♡</span><p>here’s something i probably won’t say enough</p><strong>I fucking love you ramroomti.</strong>';document.body.appendChild(pop);requestAnimationFrame(()=>pop.classList.add('show'));burstHearts();setTimeout(()=>pop.remove(),6500);});}
 
-function showToast(message) {
-  const toast = $("#toast");
-  toast.textContent = message;
-  toast.classList.add("show");
-  clearTimeout(showToast.timer);
-  showToast.timer = setTimeout(() => toast.classList.remove("show"), 1900);
-}
+function spawnAmbientHeart(){const h=document.createElement('span');h.className='heart-float heart-float--ambient';h.textContent=Math.random()>.3?'♡':'♥';h.style.left=`${5+Math.random()*90}vw`;h.style.bottom='-20px';h.style.setProperty('--size',`${10+Math.random()*14}px`);h.style.setProperty('--drift',`${Math.random()*140-70}px`);h.style.animationDuration=`${5+Math.random()*4}s`;$('#floating-hearts').appendChild(h);h.addEventListener('animationend',()=>h.remove(),{once:true});}
+function spawnSparkle(){const s=document.createElement('span');s.className='sparkle';s.textContent=Math.random()>.4?'✦':'·';s.style.left=`${Math.random()*100}vw`;s.style.top=`${Math.random()*100}vh`;s.style.setProperty('--size',`${6+Math.random()*10}px`);$('#sparkle-layer').appendChild(s);setTimeout(()=>s.remove(),3200);}
+function setupMotion(){if(reduced)return;setInterval(spawnAmbientHeart,1100);setInterval(spawnSparkle,650);for(let i=0;i<5;i++)setTimeout(spawnSparkle,i*350);let ticking=false;addEventListener('scroll',()=>{if(ticking)return;ticking=true;requestAnimationFrame(()=>{const y=scrollY;$$('.hero-glow').forEach((g,i)=>g.style.transform=`translate3d(${i?y*-.02:y*.015}px,${i?y*.025:y*-.012}px,0)`);ticking=false;});},{passive:true});}
 
-function pickClass(index) {
-  if (index === 0 || index === 11 || index === 24 || index === 38) return "is-tall";
-  if (index === 4 || index === 15 || index === 28 || index === 33) return "is-wide";
-  return "";
-}
-
-function buildMediaItem(item, index) {
-  const wrap = document.createElement("figure");
-  wrap.className = `media-item ${pickClass(index)}`;
-  wrap.style.setProperty("--i", index);
-  wrap.tabIndex = 0;
-  wrap.setAttribute("role", "button");
-  wrap.setAttribute("aria-label", `Open memory ${index + 1}`);
-
-  const el = document.createElement(item.type === "video" ? "video" : "img");
-  el.src = item.src;
-  el.loading = index < 6 ? "eager" : "lazy";
-  el.decoding = "async";
-  if (item.type === "video") {
-    el.muted = true;
-    el.playsInline = true;
-    el.preload = "metadata";
-  } else {
-    el.alt = item.caption || `Memory ${index + 1} of Zaid and Ramroomti`;
-  }
-
-  el.addEventListener("error", () => {
-    wrap.classList.add("media-item--empty");
-    el.remove();
-  });
-
-  wrap.appendChild(el);
-
-  if (item.type === "video") {
-    const badge = document.createElement("span");
-    badge.className = "video-badge";
-    badge.textContent = "video";
-    wrap.appendChild(badge);
-  }
-
-  const meta = document.createElement("div");
-  meta.className = "media-meta";
-  meta.innerHTML = `<span class="media-index">${String(index + 1).padStart(2, "0")}</span><span>♡</span>`;
-  wrap.appendChild(meta);
-
-  const open = () => openLightbox(index);
-  wrap.addEventListener("click", open);
-  wrap.addEventListener("keydown", (event) => {
-    if (event.key === "Enter" || event.key === " ") {
-      event.preventDefault();
-      open();
-    }
-  });
-
-  return wrap;
-}
-
-function renderGallery() {
-  const grid = $("#gallery-grid");
-  grid.innerHTML = "";
-  MEDIA.forEach((item, index) => grid.appendChild(buildMediaItem(item, index)));
-}
-
-let currentIndex = 0;
-function openLightbox(index) {
-  currentIndex = index;
-  updateLightbox();
-  $("#lightbox").classList.add("is-open");
-  $("#lightbox").setAttribute("aria-hidden", "false");
-  document.body.classList.add("no-scroll");
-}
-
-function updateLightbox() {
-  const item = MEDIA[currentIndex];
-  const content = $("#lightbox-content");
-  content.innerHTML = "";
-
-  const el = document.createElement(item.type === "video" ? "video" : "img");
-  el.src = item.src;
-  el.decoding = "async";
-  if (item.type === "video") {
-    el.controls = true;
-    el.autoplay = true;
-    el.playsInline = true;
-  } else {
-    el.alt = item.caption;
-  }
-  content.appendChild(el);
-
-  $("#lightbox-counter").textContent = `${String(currentIndex + 1).padStart(2, "0")} / ${MEDIA.length}`;
-  $("#lightbox-caption").textContent = item.caption || "♡";
-}
-
-function moveLightbox(delta) {
-  currentIndex = (currentIndex + delta + MEDIA.length) % MEDIA.length;
-  updateLightbox();
-}
-
-function closeLightbox() {
-  const box = $("#lightbox");
-  box.classList.remove("is-open");
-  box.setAttribute("aria-hidden", "true");
-  $("#lightbox-content").innerHTML = "";
-  document.body.classList.remove("no-scroll");
-}
-
-function randomMemory() {
-  const index = Math.floor(Math.random() * MEDIA.length);
-  burstHearts();
-  showToast(`memory ${String(index + 1).padStart(2, "0")} picked for you ♡`);
-  setTimeout(() => openLightbox(index), 180);
-}
-
-let touchStartX = 0;
-let touchStartY = 0;
-function setupLightboxGestures() {
-  const box = $("#lightbox");
-  box.addEventListener("touchstart", (event) => {
-    const touch = event.changedTouches[0];
-    touchStartX = touch.clientX;
-    touchStartY = touch.clientY;
-  }, { passive: true });
-
-  box.addEventListener("touchend", (event) => {
-    const touch = event.changedTouches[0];
-    const dx = touch.clientX - touchStartX;
-    const dy = touch.clientY - touchStartY;
-    if (Math.abs(dx) < 45 || Math.abs(dx) < Math.abs(dy)) return;
-    moveLightbox(dx < 0 ? 1 : -1);
-  }, { passive: true });
-}
-
-function spawnAmbientHeart() {
-  const holder = $("#floating-hearts");
-  if (!holder) return;
-  const heart = document.createElement("span");
-  heart.className = "heart-float heart-float--ambient";
-  heart.textContent = Math.random() > 0.35 ? "♡" : "♥";
-  heart.style.left = `${8 + Math.random() * 84}vw`;
-  heart.style.bottom = `${-20 + Math.random() * 10}px`;
-  heart.style.setProperty("--size", `${10 + Math.random() * 14}px`);
-  heart.style.setProperty("--drift", `${Math.random() * 140 - 70}px`);
-  heart.style.animationDuration = `${4.5 + Math.random() * 3}s`;
-  holder.appendChild(heart);
-  heart.addEventListener("animationend", () => heart.remove(), { once: true });
-}
-
-function spawnSparkle() {
-  const layer = $("#sparkle-layer");
-  if (!layer) return;
-  const sparkle = document.createElement("span");
-  sparkle.className = "sparkle";
-  sparkle.textContent = Math.random() > .45 ? "✦" : "·";
-  sparkle.style.left = `${Math.random() * 100}vw`;
-  sparkle.style.top = `${Math.random() * 100}vh`;
-  sparkle.style.setProperty("--delay", `${Math.random() * 1.4}s`);
-  sparkle.style.setProperty("--size", `${6 + Math.random() * 10}px`);
-  layer.appendChild(sparkle);
-  setTimeout(() => sparkle.remove(), 3200);
-}
-
-function setupRomanticMotion() {
-  const glows = $$(".hero-glow");
-  let ticking = false;
-  window.addEventListener("scroll", () => {
-    if (ticking) return;
-    ticking = true;
-    requestAnimationFrame(() => {
-      const y = window.scrollY;
-      glows.forEach((glow, index) => {
-        glow.style.transform = `translate3d(${index ? y * -.025 : y * .018}px, ${y * (index ? .03 : -.018)}px, 0)`;
-      });
-      ticking = false;
-    });
-  }, { passive: true });
-
-  const prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (!prefersReduced) {
-    setInterval(spawnAmbientHeart, 1700);
-    setInterval(spawnSparkle, 900);
-    for (let i = 0; i < 4; i++) setTimeout(spawnSparkle, i * 500);
-  }
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  renderCounter();
-  renderCountdowns();
-  renderGallery();
-  setupReveal();
-  setupLightboxGestures();
-  setupRomanticMotion();
-
-  $("#heart-button").addEventListener("click", (event) => {
-    event.currentTarget.classList.remove("is-pulsing");
-    requestAnimationFrame(() => event.currentTarget.classList.add("is-pulsing"));
-    burstHearts(event.currentTarget);
-    showToast("one little heart sent ♡");
-  });
-
-  $("#memory-button").addEventListener("click", randomMemory);
-  $("#lightbox-close").addEventListener("click", closeLightbox);
-  $("#lightbox-prev").addEventListener("click", () => moveLightbox(-1));
-  $("#lightbox-next").addEventListener("click", () => moveLightbox(1));
-  $("#lightbox").addEventListener("click", (event) => {
-    if (event.target.id === "lightbox") closeLightbox();
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (!(event.key === "Escape" || event.key === "ArrowLeft" || event.key === "ArrowRight")) return;
-    if (event.key === "Escape") closeLightbox();
-    if (event.key === "ArrowLeft") moveLightbox(-1);
-    if (event.key === "ArrowRight") moveLightbox(1);
-  });
-
-  document.addEventListener("pointerdown", (event) => {
-    if (event.target.closest("button, a, figure, nav")) return;
-    if (Math.random() > .32) return;
-    const heart = document.createElement("span");
-    heart.className = "heart-float";
-    heart.textContent = "♡";
-    heart.style.left = `${event.clientX}px`;
-    heart.style.bottom = `${window.innerHeight - event.clientY}px`;
-    heart.style.setProperty("--size", "12px");
-    heart.style.setProperty("--drift", `${Math.random() * 70 - 35}px`);
-    $("#floating-hearts").appendChild(heart);
-    heart.addEventListener("animationend", () => heart.remove(), { once: true });
-  });
+addEventListener('DOMContentLoaded',()=>{
+ renderCounter();renderCountdowns();renderGallery();setupReveal();setupLightboxGestures();setupLoveCards();setupEnvelopes();setupStories();setupJar();setupEasterEgg();setupMotion();
+ $('#heart-button').addEventListener('click',e=>{burstHearts(e.currentTarget);showToast('one little heart sent ♡');});
+ $('#memory-button').addEventListener('click',randomMemory);$('#lightbox-close').addEventListener('click',closeLightbox);$('#lightbox-prev').addEventListener('click',()=>moveLightbox(-1));$('#lightbox-next').addEventListener('click',()=>moveLightbox(1));$('#lightbox').addEventListener('click',e=>{if(e.target.id==='lightbox')closeLightbox();});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeLightbox();$('#story-overlay').classList.remove('is-open');document.body.classList.remove('no-scroll');}if($('#lightbox').classList.contains('is-open')){if(e.key==='ArrowLeft')moveLightbox(-1);if(e.key==='ArrowRight')moveLightbox(1);}});
 });
-
-setInterval(renderCounter, 60000);
-setInterval(renderCountdowns, 1000);
+setInterval(renderCounter,60000);setInterval(renderCountdowns,1000);
