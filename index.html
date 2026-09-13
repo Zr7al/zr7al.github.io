@@ -1,114 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zaid &amp; Rama</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff7f7">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>Zaid &amp; Rama ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="floating-hearts" id="floating-hearts" aria-hidden="true"></div>
 
-<svg class="rose-corner rose-corner--top" viewBox="0 0 200 200" aria-hidden="true">
-  <use href="#rose-white"></use>
-</svg>
+  <nav class="topbar">
+    <a class="brand" href="#top" aria-label="Back to top">z + r <span>♡</span></a>
+    <div class="nav-pill">
+      <a href="#letter">a note</a>
+      <a href="#moments">moments</a>
+      <a href="#gallery">memories</a>
+    </div>
+  </nav>
 
-<header class="hero">
-  <p class="hero-kicker">a page for the two of us</p>
-  <h1 class="hero-title">Zaid <span class="amp">&amp;</span> Rama</h1>
-  <div class="counter" id="counter">
-    <span class="counter-number" id="counter-number">0</span>
-    <span class="counter-label">days, and counting, since November 21, 2023</span>
+  <header class="hero" id="top">
+    <div class="hero-glow hero-glow--one"></div>
+    <div class="hero-glow hero-glow--two"></div>
+    <div class="hero-inner reveal">
+      <div class="eyebrow"><span></span> this little corner of the internet belongs to us <span></span></div>
+      <p class="hero-script">for my favourite person</p>
+      <h1 class="hero-title"><span>Zaid</span><i>&amp;</i><span>Rama</span></h1>
+      <p class="hero-subtitle">not perfect. not polished. just ours.</p>
+
+      <div class="hero-actions">
+        <a class="primary-button" href="#letter">read the note <span>↓</span></a>
+        <button class="heart-button" id="heart-button" type="button" aria-label="Send hearts">tap the heart <span>♡</span></button>
+      </div>
+
+      <div class="days-card">
+        <div class="days-number" id="counter-number">0</div>
+        <div class="days-copy">
+          <strong>days of us</strong>
+          <span>since november 21, 2023</span>
+        </div>
+        <div class="days-heart">♥</div>
+      </div>
+
+      <div class="scroll-hint"><span>keep going</span><i></i></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="letter section-shell reveal" id="letter">
+      <div class="section-kicker">01 / a note</div>
+      <div class="letter-card">
+        <div class="paper-tape tape-left" aria-hidden="true"></div>
+        <div class="paper-tape tape-right" aria-hidden="true"></div>
+        <div class="tiny-stamp">just us</div>
+        <p class="letter-script">dear rama,</p>
+        <div class="letter-copy">
+          <p>This is the part where I could try to make everything sound perfect.</p>
+          <p>But honestly, I like us better when it feels real. The stupid moments. The soft ones. The random pictures. The nights that become mornings. All the little things that somehow became <em>ours</em>.</p>
+          <p>So this page isn't trying to be fancy. It's just a place to keep a little piece of us in one spot.</p>
+        </div>
+        <p class="letter-signoff">love, zaid <span>♡</span></p>
+      </div>
+    </section>
+
+    <section class="moments section-shell reveal" id="moments">
+      <div class="section-heading">
+        <div>
+          <div class="section-kicker">02 / little things</div>
+          <h2>the things that make this <em>us</em></h2>
+        </div>
+        <p class="section-side-note">the best memories usually look ordinary from the outside.</p>
+      </div>
+
+      <div class="moment-grid">
+        <article class="moment-card moment-card--rose">
+          <div class="moment-top"><span>01</span><span>♡</span></div>
+          <div class="moment-icon">✿</div>
+          <h3>the beginning</h3>
+          <p>Somewhere between a normal day and everything changing, there was us.</p>
+          <div class="scribble">remember this</div>
+        </article>
+
+        <article class="moment-card moment-card--cream">
+          <div class="moment-top"><span>02</span><span>♡</span></div>
+          <div class="moment-icon">☻</div>
+          <h3>the dumb stuff</h3>
+          <p>The jokes nobody else gets. The faces. The tiny arguments. The screenshots that would be embarrassing to explain.</p>
+          <div class="scribble">our favourite chaos</div>
+        </article>
+
+        <article class="moment-card moment-card--lilac">
+          <div class="moment-top"><span>03</span><span>♡</span></div>
+          <div class="moment-icon">☼</div>
+          <h3>right now</h3>
+          <p>Whatever life looks like today, I still want the ordinary days to have your face in them.</p>
+          <div class="scribble">more of this</div>
+        </article>
+      </div>
+
+      <div class="quote-card">
+        <span class="quote-mark">“</span>
+        <p>i'd still choose the random little moments. every single time.</p>
+        <span class="quote-heart">♡</span>
+      </div>
+    </section>
+
+    <section class="gallery section-shell reveal" id="gallery">
+      <div class="section-heading gallery-heading">
+        <div>
+          <div class="section-kicker">03 / our archive</div>
+          <h2>39 little <em>proofs</em></h2>
+        </div>
+        <p class="section-side-note">scroll. smile. click the ones you want to keep staring at.</p>
+      </div>
+
+      <div class="gallery-grid" id="gallery-grid"></div>
+      <button class="memory-button" id="memory-button" type="button">show me a random memory <span>✦</span></button>
+    </section>
+
+    <section class="closing reveal">
+      <div class="closing-orbit" aria-hidden="true"><span>♡</span><span>♡</span><span>♡</span></div>
+      <div class="section-kicker">04 / for later</div>
+      <h2>more photos.<br><em>more stupid stories.</em><br>more us.</h2>
+      <p>Whatever comes next, I want the ordinary days with you too.</p>
+      <div class="closing-date">april 29 is still circled ♡</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>made by zaid, for rama <span>♡</span></p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close photo">×</button>
+    <button class="lightbox-nav lightbox-nav--prev" id="lightbox-prev" type="button" aria-label="Previous photo">‹</button>
+    <div class="lightbox-inner">
+      <div class="lightbox-counter" id="lightbox-counter"></div>
+      <div class="lightbox-content" id="lightbox-content"></div>
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+    <button class="lightbox-nav lightbox-nav--next" id="lightbox-next" type="button" aria-label="Next photo">›</button>
   </div>
-</header>
 
-<main>
-
-  <section class="letter">
-    <svg class="rose-inline" viewBox="0 0 100 100" aria-hidden="true"><use href="#rose-pink"></use></svg>
-    <!-- EDIT ME: write your own opening note to her here. Keep it short, keep it yours. -->
-    <p class="letter-line">This is the part where I'd usually write something clever. Instead I'll just say the truth —</p>
-    <p class="letter-line">every version of this page I tried felt too generic until I remembered it's not for everyone, it's for you.</p>
-    <p class="letter-signoff">— Zaid</p>
-  </section>
-
-  <section class="moments">
-    <h2 class="section-title">moments</h2>
-    <p class="section-note">EDIT: replace these three with real ones — how you met, a trip, an inside joke, whatever actually matters.</p>
-
-    <div class="moment-row">
-      <div class="moment-mark">one</div>
-      <div class="moment-body">
-        <h3>How it started</h3>
-        <p>Swap this for the real story. Where were you, what was said, who made the first move.</p>
-      </div>
-    </div>
-
-    <div class="moment-row">
-      <div class="moment-mark">two</div>
-      <div class="moment-body">
-        <h3>A day worth keeping</h3>
-        <p>A specific memory. The more specific, the better it'll read — a place, a smell, a stupid argument you both laugh about now.</p>
-      </div>
-    </div>
-
-    <div class="moment-row">
-      <div class="moment-mark">three</div>
-      <div class="moment-body">
-        <h3>Right now</h3>
-        <p>Where things stand today. What you're building, planning, or just enjoying.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="gallery">
-    <h2 class="section-title">us, in pictures and video</h2>
-    <p class="section-note">EDIT: this whole grid is built from one list in script.js. Open it, add a line per photo or video, save. You don't need to touch this HTML file at all.</p>
-    <div class="gallery-grid" id="gallery-grid">
-      <!-- filled in by script.js from the MEDIA array -->
-    </div>
-  </section>
-
-  <section class="closing">
-    <svg class="rose-inline rose-inline--closing" viewBox="0 0 100 100" aria-hidden="true"><use href="#rose-white"></use></svg>
-    <h2 class="section-title">for later</h2>
-    <p class="closing-text">
-      <!-- EDIT ME: last line, whatever you want it to say -->
-      Whatever comes next, I want it with you.
-    </p>
-    <p class="closing-date">April 29 is circled on my calendar too.</p>
-  </section>
-
-</main>
-
-<footer>
-  <p>made by Zaid, not a template</p>
-</footer>
-
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightbox-close" aria-label="Close">close</button>
-  <div class="lightbox-content" id="lightbox-content"></div>
-</div>
-
-<svg width="0" height="0" style="position:absolute">
-  <defs>
-    <g id="rose-pink">
-      <path d="M50 20 C40 10, 20 15, 22 32 C24 48, 40 55, 50 68 C60 55, 76 48, 78 32 C80 15, 60 10, 50 20 Z" fill="#E8A0AE"/>
-      <path d="M50 30 C46 26, 38 28, 39 36 C40 44, 46 47, 50 54 C54 47, 60 44, 61 36 C62 28, 54 26, 50 30 Z" fill="#C46B7E"/>
-      <path d="M48 66 Q44 82 50 96" stroke="#A9BCA0" stroke-width="3" fill="none" stroke-linecap="round"/>
-      <path d="M48 78 Q40 78 36 84" stroke="#A9BCA0" stroke-width="3" fill="none" stroke-linecap="round"/>
-    </g>
-    <g id="rose-white">
-      <path d="M50 20 C40 10, 20 15, 22 32 C24 48, 40 55, 50 68 C60 55, 76 48, 78 32 C80 15, 60 10, 50 20 Z" fill="#FDF3F5" stroke="#EBC9D1" stroke-width="1.5"/>
-      <path d="M50 30 C46 26, 38 28, 39 36 C40 44, 46 47, 50 54 C54 47, 60 44, 61 36 C62 28, 54 26, 50 30 Z" fill="#F3D8DE"/>
-      <path d="M48 66 Q44 82 50 96" stroke="#A9BCA0" stroke-width="3" fill="none" stroke-linecap="round"/>
-      <path d="M48 78 Q40 78 36 84" stroke="#A9BCA0" stroke-width="3" fill="none" stroke-linecap="round"/>
-    </g>
-  </defs>
-</svg>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
