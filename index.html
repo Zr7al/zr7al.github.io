@@ -1,314 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Rama</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        /* Base Variables & Styles */
-        :root {
-            --primary: #ff4d6d;
-            --bg: #fff0f3;
-            --text: #590d22;
-            --card-bg: #ffffff;
-        }
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            overflow-x: hidden;
-        }
-        h1, h2, .script {
-            font-family: 'Dancing Script', cursive;
-            margin: 0;
-        }
-        section {
-            padding: 60px 20px;
-            max-width: 800px;
-            margin: auto;
-        }
-
-        /* Animations */
-        .hidden {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s ease-out;
-        }
-        .show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            position: relative;
-        }
-        .hero h1 {
-            font-size: 4rem;
-            color: var(--primary);
-            animation: heartbeat 2s infinite;
-        }
-        @keyframes heartbeat {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
-        /* Timeline Section */
-        .timeline {
-            border-left: 3px solid var(--primary);
-            padding-left: 20px;
-            margin-top: 30px;
-        }
-        .event {
-            margin-bottom: 30px;
-            position: relative;
-        }
-        .event::before {
-            content: '';
-            width: 15px;
-            height: 15px;
-            background: var(--primary);
-            border-radius: 50%;
-            position: absolute;
-            left: -29px;
-            top: 5px;
-        }
-
-        /* Filterable Gallery */
-        .gallery-nav {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-        }
-        .filter-btn {
-            background: var(--card-bg);
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-family: 'Poppins', sans-serif;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .filter-btn.active, .filter-btn:hover {
-            background: var(--primary);
-            color: white;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 15px;
-        }
-        .grid img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        .grid img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Flip Cards (Reasons Why) */
-        .cards-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 20px;
-        }
-        .card {
-            height: 180px;
-            perspective: 1000px;
-            cursor: pointer;
-        }
-        .card-inner {
-            width: 100%;
-            height: 100%;
-            transition: transform 0.6s;
-            transform-style: preserve-3d;
-            position: relative;
-        }
-        .card.flipped .card-inner {
-            transform: rotateY(180deg);
-        }
-        .card-front, .card-back {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            backface-visibility: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            padding: 15px;
-            box-sizing: border-box;
-            text-align: center;
-        }
-        .card-front {
-            background: var(--card-bg);
-            font-size: 3rem;
-        }
-        .card-back {
-            background: var(--primary);
-            color: white;
-            transform: rotateY(180deg);
-            font-size: 0.9rem;
-        }
-
-        /* Time Capsule */
-        .capsule {
-            text-align: center;
-            background: var(--card-bg);
-            padding: 40px 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        #capsule-message {
-            display: none;
-            margin-top: 20px;
-            font-style: italic;
-            color: var(--primary);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zaid &amp; Rama</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Dancing+Script:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1 class="hidden">Zaid & Rama</h1>
-        <p class="hidden">Every moment with you is my favorite.</p>
-    </section>
+<!-- ambient falling petals, low opacity, runs the whole page -->
+<div class="petals" id="petals" aria-hidden="true"></div>
 
-    <!-- Timeline Section -->
-    <section>
-        <h2 class="hidden" style="font-size: 2.5rem; text-align: center;">Our Story</h2>
-        <div class="timeline">
-            <div class="event hidden">
-                <h3>The Day We Met</h3>
-                <p>Add your memory of how it all started right here.</p>
-            </div>
-            <div class="event hidden">
-                <h3>Our First Adventure</h3>
-                <p>Describe where you went and what made it special.</p>
-            </div>
-            <div class="event hidden">
-                <h3>Right Now</h3>
-                <p>Still falling for you more every day.</p>
-            </div>
+<header class="hero">
+  <div class="hero-vine hero-vine--left" aria-hidden="true"></div>
+  <div class="hero-vine hero-vine--right" aria-hidden="true"></div>
+
+  <p class="hero-kicker reveal" style="--delay:0s">a page for the two of us</p>
+  <h1 class="hero-title">
+    <span class="reveal" style="--delay:0.1s">Zaid</span>
+    <span class="amp reveal" style="--delay:0.25s">&amp;</span>
+    <span class="reveal" style="--delay:0.4s">Rama</span>
+  </h1>
+
+  <div class="counter reveal" style="--delay:0.6s">
+    <span class="counter-heart" id="counter-heart">&#10084;</span>
+    <span class="counter-number" id="counter-number">0</span>
+    <span class="counter-label">days of us, and still counting</span>
+  </div>
+
+  <div class="scroll-cue reveal" style="--delay:0.9s">keep going</div>
+</header>
+
+<main>
+
+  <section class="letter">
+    <div class="letter-card">
+      <div class="wax-seal" aria-hidden="true">
+        <svg viewBox="0 0 60 60"><use href="#rose-pink"></use></svg>
+      </div>
+      <!-- EDIT ME: write your own opening note to her here. Keep it short, keep it yours. -->
+      <p class="letter-line">This is the part where I'd usually write something clever.</p>
+      <p class="letter-line">Instead I'll just say the truth —</p>
+      <p class="letter-line">every version of this page felt too generic until I remembered it's not for everyone, it's for you.</p>
+      <p class="letter-signoff">forever yours,<br>Zaid</p>
+    </div>
+  </section>
+
+  <section class="moments">
+    <h2 class="section-title">our moments</h2>
+    <p class="section-note">EDIT: swap these for the real ones — how you met, a trip, an inside joke, whatever actually matters to you two.</p>
+
+    <div class="timeline">
+      <div class="timeline-vine" aria-hidden="true"></div>
+
+      <div class="moment-row">
+        <div class="moment-bloom" aria-hidden="true"><svg viewBox="0 0 60 60"><use href="#rose-pink"></use></svg></div>
+        <div class="moment-body">
+          <h3>How it started</h3>
+          <p>Swap this for the real story. Where were you, what was said, who made the first move.</p>
         </div>
-    </section>
+      </div>
 
-    <!-- Filterable Gallery Section -->
-    <section>
-        <h2 class="hidden" style="font-size: 2.5rem; text-align: center;">Our Memories</h2>
-        <div class="gallery-nav hidden">
-            <button class="filter-btn active" onclick="filterGallery('all')">All</button>
-            <button class="filter-btn" onclick="filterGallery('adventures')">Adventures</button>
-            <button class="filter-btn" onclick="filterGallery('goofy')">Goofy</button>
+      <div class="moment-row">
+        <div class="moment-bloom" aria-hidden="true"><svg viewBox="0 0 60 60"><use href="#rose-white"></use></svg></div>
+        <div class="moment-body">
+          <h3>A day worth keeping</h3>
+          <p>A specific memory. The more specific, the better it reads — a place, a smell, a stupid argument you both laugh about now.</p>
         </div>
-        <div class="grid hidden" id="gallery-grid">
-            <!-- Ensure these match your actual folder structure -->
-            <img src="images/photo01.jpg" class="pic adventures" alt="Us">
-            <img src="images/photo02.jpg" class="pic goofy" alt="Us">
-            <img src="images/photo03.jpg" class="pic adventures" alt="Us">
-            <img src="images/photo04.jpg" class="pic goofy" alt="Us">
+      </div>
+
+      <div class="moment-row">
+        <div class="moment-bloom" aria-hidden="true"><svg viewBox="0 0 60 60"><use href="#rose-pink"></use></svg></div>
+        <div class="moment-body">
+          <h3>Right now</h3>
+          <p>Where things stand today. What you're building, planning, or just enjoying together.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Reasons Why Flip Cards Section -->
-    <section>
-        <h2 class="hidden" style="font-size: 2.5rem; text-align: center;">Reasons I Love You</h2>
-        <p class="hidden" style="text-align: center; margin-bottom: 30px;">Tap to reveal</p>
-        <div class="cards-container">
-            <div class="card hidden" onclick="this.classList.toggle('flipped')">
-                <div class="card-inner">
-                    <div class="card-front">❤️</div>
-                    <div class="card-back">Your smile literally brightens my worst days.</div>
-                </div>
-            </div>
-            <div class="card hidden" onclick="this.classList.toggle('flipped')">
-                <div class="card-inner">
-                    <div class="card-front">✨</div>
-                    <div class="card-back">How you always know exactly what to say to me.</div>
-                </div>
-            </div>
-            <div class="card hidden" onclick="this.classList.toggle('flipped')">
-                <div class="card-inner">
-                    <div class="card-front">🌎</div>
-                    <div class="card-back">You are my favorite person to do nothing with.</div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section class="gallery">
+    <h2 class="section-title">us, in pictures</h2>
+    <p class="section-note">Every photo here is from your own folder. This whole grid is built from one list in script.js — add more anytime.</p>
+    <div class="gallery-grid" id="gallery-grid">
+      <!-- filled in by script.js from the MEDIA array -->
+    </div>
+  </section>
 
-    <!-- Digital Time Capsule -->
-    <section class="hidden">
-        <div class="capsule">
-            <h2 style="font-size: 2.5rem;">Digital Time Capsule</h2>
-            <p>A message locked until our next anniversary.</p>
-            <button class="filter-btn" onclick="checkDate()">Unlock Message</button>
-            <div id="capsule-message">
-                "If you're reading this, it means we made it to another milestone. I love you more today than I did yesterday."
-            </div>
-            <p id="error-message" style="color: red; display: none; margin-top: 10px;">Nice try! It's not time yet. 🔒</p>
-        </div>
-    </section>
+  <section class="closing">
+    <svg class="closing-rose" viewBox="0 0 100 100" aria-hidden="true"><use href="#rose-white"></use></svg>
+    <h2 class="section-title">for later</h2>
+    <p class="closing-text">
+      <!-- EDIT ME: last line, whatever you want it to say -->
+      Whatever comes next, I want it with you.
+    </p>
+    <p class="closing-date">April 29 is circled on my calendar too.</p>
 
-    <script>
-        // Scroll Reveal Animation Logic
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                }
-            });
-        });
+    <button class="love-button" id="love-button" aria-label="Send love">
+      send love <span aria-hidden="true">&#10084;</span>
+    </button>
+  </section>
 
-        const hiddenElements = document.querySelectorAll('.hidden');
-        hiddenElements.forEach((el) => observer.observe(el));
+</main>
 
-        // Gallery Filter Logic
-        function filterGallery(category) {
-            // Update active button state
-            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
+<footer>
+  <p>made by Zaid, not a template</p>
+</footer>
 
-            // Filter images
-            const images = document.querySelectorAll('.pic');
-            images.forEach(img => {
-                if (category === 'all' || img.classList.contains(category)) {
-                    img.style.display = 'block';
-                } else {
-                    img.style.display = 'none';
-                }
-            });
-        }
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">close</button>
+  <div class="lightbox-content" id="lightbox-content"></div>
+</div>
 
-        // Time Capsule Logic
-        function checkDate() {
-            // Set the date you want this to unlock (YYYY-MM-DD)
-            const targetDate = new Date('2026-12-31'); 
-            const today = new Date();
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <g id="rose-pink">
+      <path d="M50 20 C40 10, 20 15, 22 32 C24 48, 40 55, 50 68 C60 55, 76 48, 78 32 C80 15, 60 10, 50 20 Z" fill="#E8A0AE"/>
+      <path d="M50 30 C46 26, 38 28, 39 36 C40 44, 46 47, 50 54 C54 47, 60 44, 61 36 C62 28, 54 26, 50 30 Z" fill="#C46B7E"/>
+      <path d="M48 66 Q44 82 50 96" stroke="#A9BCA0" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M48 78 Q40 78 36 84" stroke="#A9BCA0" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </g>
+    <g id="rose-white">
+      <path d="M50 20 C40 10, 20 15, 22 32 C24 48, 40 55, 50 68 C60 55, 76 48, 78 32 C80 15, 60 10, 50 20 Z" fill="#FDF3F5" stroke="#EBC9D1" stroke-width="1.5"/>
+      <path d="M50 30 C46 26, 38 28, 39 36 C40 44, 46 47, 50 54 C54 47, 60 44, 61 36 C62 28, 54 26, 50 30 Z" fill="#F3D8DE"/>
+      <path d="M48 66 Q44 82 50 96" stroke="#A9BCA0" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M48 78 Q40 78 36 84" stroke="#A9BCA0" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </g>
+    <g id="petal-shape">
+      <path d="M10 0 C16 4, 16 14, 10 20 C4 14, 4 4, 10 0 Z"/>
+    </g>
+  </defs>
+</svg>
 
-            if (today >= targetDate) {
-                document.getElementById('capsule-message').style.display = 'block';
-                document.getElementById('error-message').style.display = 'none';
-            } else {
-                document.getElementById('error-message').style.display = 'block';
-            }
-        }
-    </script>
+<script src="script.js"></script>
 </body>
 </html>
