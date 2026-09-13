@@ -136,22 +136,38 @@ const stories={
 };
 function setupStories(){$$('.story-buttons button').forEach(b=>b.addEventListener('click',()=>{const title=b.dataset.story;$('#story-overlay-title').textContent=title;$('#story-overlay-text').textContent=stories[title];$('#story-overlay').classList.add('is-open');$('#story-overlay').setAttribute('aria-hidden','false');document.body.classList.add('no-scroll');burstHearts();}));$('#story-close').onclick=()=>{$('#story-overlay').classList.remove('is-open');$('#story-overlay').setAttribute('aria-hidden','true');document.body.classList.remove('no-scroll');};}
 
-function setupJar(){$('#jar-button').addEventListener('click',()=>{const i=Math.floor(Math.random()*MEDIA.length);const item=MEDIA[i];$('#jar-button').classList.remove('shake');requestAnimationFrame(()=>$('#jar-button').classList.add('shake'));$('#jar-note').innerHTML=`<span class="jar-date">${item.date}</span><strong>${item.caption}</strong><em>${item.note||'one of those tiny memories i never want to lose.'}</em><button type="button" id="jar-photo">see it ♡</button>`;$('#jar-photo').onclick=()=>openLightbox(i);burstHearts($('#jar-button'));});}
+function setupJar(){
+  const jar=$('#jar-button');
+  if(!jar)return;
+  const shake=()=>{
+    const i=Math.floor(Math.random()*MEDIA.length);
+    const item=MEDIA[i];
+    jar.classList.remove('shake');
+    void jar.offsetWidth;
+    jar.classList.add('shake');
+    setTimeout(()=>jar.classList.remove('shake'),800);
+    $('#jar-note').innerHTML=`<span class="jar-date">${item.date}</span><strong>${item.caption}</strong><em>${item.note||'one of those tiny memories i never want to lose.'}</em><button type="button" id="jar-photo">see it ♡</button>`;
+    $('#jar-photo').onclick=()=>openLightbox(i);
+    burstHearts(jar);
+  };
+  jar.addEventListener('click',shake);
+  jar.addEventListener('pointerdown',()=>jar.classList.add('jar-press'));
+  jar.addEventListener('pointerup',()=>jar.classList.remove('jar-press'));
+  jar.addEventListener('pointercancel',()=>jar.classList.remove('jar-press'));
+}
 function setupEasterEgg(){let count=0;$('#brand-easter').addEventListener('click',e=>{count++;if(count<5)return;e.preventDefault();count=0;const pop=document.createElement('div');pop.className='secret-pop';pop.innerHTML='<span>you found the secret ♡</span><p>here’s something i probably won’t say enough</p><strong>I fucking love you ramroomti.</strong>';document.body.appendChild(pop);requestAnimationFrame(()=>pop.classList.add('show'));burstHearts();setTimeout(()=>pop.remove(),6500);});}
 
 function setupMusic(){
-  const audio=$('#our-song'),button=$('#music-button'),label=$('#music-label'),hint=$('#music-hint');
-  button.addEventListener('click',async()=>{
-    if(audio.paused){
-      try{await audio.play();}catch(err){
-        hint.textContent='add song.mp3 beside index.html to play it here ♡';
-        showToast("drop song.mp3 into the site folder ♡");
-        return;
-      }
-    }else audio.pause();
-  });
-  audio.addEventListener('play',()=>{document.body.classList.add('music-on');label.textContent='pause our song';hint.textContent="nothing's gonna hurt you baby · cigarettes after sex";});
-  audio.addEventListener('pause',()=>{document.body.classList.remove('music-on');label.textContent='play our song';});
+  const audio=$('#our-song'),button=$('#music-button'),label=$('#music-label'),hint=$('#music-hint'),entry=$('#music-entry');
+  if(!audio)return;
+  const startSong=async()=>{
+    try{await audio.play(); if(entry){entry.classList.add('entered');setTimeout(()=>entry.remove(),700);}}
+    catch(err){if(hint)hint.textContent='add song.mp3 beside index.html to play it here ♡';showToast("drop song.mp3 into the site folder ♡");}
+  };
+  if(entry)entry.addEventListener('click',startSong,{once:true});
+  if(button)button.addEventListener('click',async()=>{if(audio.paused)await startSong();else audio.pause();});
+  audio.addEventListener('play',()=>{document.body.classList.add('music-on');if(label)label.textContent='pause our song';if(hint)hint.textContent="nothing's gonna hurt you baby · cigarettes after sex";});
+  audio.addEventListener('pause',()=>{document.body.classList.remove('music-on');if(label)label.textContent='play our song';});
 }
 
 function setupFinale(){
