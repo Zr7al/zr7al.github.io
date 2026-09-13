@@ -160,7 +160,7 @@ function buildMediaItem(item, index) {
     el.playsInline = true;
     el.preload = "metadata";
   } else {
-    el.alt = item.caption || `Memory ${index + 1} of Zaid and Rama`;
+    el.alt = item.caption || `Memory ${index + 1} of Zaid and Ramroomti`;
   }
 
   el.addEventListener("error", () => {
