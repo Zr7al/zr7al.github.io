@@ -1,0 +1,37 @@
+[
+  {
+    "x": 14,
+    "y": 65,
+    "date": "November 21, 2023",
+    "id": "beginning",
+    "captionKey": "timeline.beginning"
+  },
+  {
+    "x": 31,
+    "y": 32,
+    "date": "2024",
+    "id": "first-year",
+    "captionKey": "timeline.2024"
+  },
+  {
+    "x": 52,
+    "y": 58,
+    "date": "2025",
+    "id": "second-year",
+    "captionKey": "timeline.2025"
+  },
+  {
+    "x": 71,
+    "y": 26,
+    "date": "2026",
+    "id": "third-year",
+    "captionKey": "timeline.2026"
+  },
+  {
+    "x": 87,
+    "y": 48,
+    "date": "today",
+    "id": "today",
+    "captionKey": "timeline.today"
+  }
+]

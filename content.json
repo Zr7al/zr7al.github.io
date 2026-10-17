@@ -1,0 +1,801 @@
+{
+  "copy": {
+    "page.title": "for my ramroomti ♡ — a small archive",
+    "gallery.open": "Open photograph:",
+    "jar.see": "see this photo ♡",
+    "scratch.instruction": "✦ rub here to reveal ✦",
+    "scratch.revealed": "The hidden message is revealed.",
+    "history.days": "days since the beginning on November 21, 2023 ♡",
+    "theme.midnight": "☾ after hours",
+    "theme.daylight": "☀ daylight",
+    "whisper.last": "last whisper kept safe in this browser",
+    "whisper.sending": "Sending your thought to Zaid…",
+    "whisper.sent": "Sent to Zaid · saved in this browser ♡",
+    "whisper.sent.noLocal": "Sent to Zaid ♡",
+    "whisper.error.local": "Saved here · Discord could not send it. You can try again.",
+    "whisper.error": "Discord could not send it. Your thought is still here to copy or retry.",
+    "whisper.limit": "Please keep your thought under 1,800 characters.",
+    "candle.lit": "a quiet light is glowing here ♡",
+    "candle.lit.sent": "candle lit · signal sent to Zaid ♡",
+    "candle.lit.error": "candle lit here · Discord signal could not be delivered",
+    "candle.sending": "candle lit · sending your signal…",
+    "candle.prompt": "tap the candle to light it",
+    "vinyl.play": "tap to spin ♪",
+    "vinyl.paused": "paused · tap ♪",
+    "vinyl.playing": "our melody ♪",
+    "vinyl.label": "soundtrack",
+    "audio.play": "play soundtrack",
+    "audio.pause": "pause soundtrack",
+    "audio.error": "The song could not play. Try again.",
+    "timeline.beginning": "where it all began",
+    "timeline.2024": "a year of firsts and favorites",
+    "timeline.2025": "the ordinary things worth keeping",
+    "timeline.2026": "more moments together",
+    "timeline.today": "the years we keep with us",
+    "timeline.firstCue": "Start at the beginning of the timeline.",
+    "timeline.reducedCue": "Each point is a year in the archive.",
+    "timeline.legend": "A few dates in the story",
+    "years.title": "our years in a few numbers",
+    "years.caption": "39 photographs. Four chapters. The beginning: November 21, 2023.",
+    "years.item": "photographs",
+    "keepsake.link": "open the keepsake",
+    "keepsake.print": "print this page",
+    "keepsake.back": "back to the archive",
+    "keepsake.title": "a few things worth keeping",
+    "keepsake.date": "November 21, 2023",
+    "keepsake.signature": "— Zaid",
+    "keepsake.note": "A small record of a story that mattered.",
+    "keepsake.lead": "the beginning",
+    "keepsake.story": "Every photograph holds something different. Here are a few of the moments I want to remember.",
+    "keepsake.memory1": "the small things",
+    "keepsake.memory2": "the days we shared",
+    "keepsake.memory3": "what i will keep",
+    "keepsake.closing": "some stories stay with us.",
+    "keepsake.lastline": "whatever comes next, i’m glad ours happened.",
+    "print.instructions": "A little page to keep. Choose “Print this page” to save or print it.",
+    "markup": {
+      "attribute.0152": "Zaid and Rama",
+      "attribute.0153": "Toggle ambient music",
+      "attribute.0154": "Toggle music box",
+      "attribute.0155": "Toggle theme",
+      "attribute.0156": "Switch atmosphere",
+      "attribute.0157": "Shake the memory jar",
+      "attribute.0158": "Scratch to reveal, or press Enter",
+      "attribute.0159": "Your thought",
+      "attribute.0160": "type anything you never said...",
+      "attribute.0161": "Light a candle and notify Zaid",
+      "attribute.0162": "The two of us smiling inside a car",
+      "attribute.0163": "End of the archive",
+      "attribute.0164": "Photo viewer",
+      "attribute.0165": "Close photo",
+      "attribute.0166": "Previous photo",
+      "attribute.0167": "Next photo",
+      "attribute.0168": "Open when letter",
+      "attribute.0169": "Close letter",
+      "attribute.0170": "Close story",
+      "attribute.0171": "A quiet reminder",
+      "attribute.0172": "Close reminder",
+      "attribute.0173": "Play or pause song",
+      "document.1": "html",
+      "title.1": "for my ramroomti ♡ — always here",
+      "skip-link.1": "skip to the memories",
+      "body.1": " Film Grain Overlay ",
+      "body.2": " Entry Gate Curtain ",
+      "small-label.1": "zaidrahhal.me · archive",
+      "gatetitle.1": "I had a feeling you might check back here one day.",
+      "gate-sub.1": "I didn’t take it down. Some things are too real to just delete.",
+      "gate-sub.2": "Take your time. There’s no hurry.",
+      "enterwithmusic.1": "enter with soft melody ♪",
+      "entersilent.1": "enter quietly",
+      "secretlogo.1": "z + r",
+      "nav-links.1": "unsent",
+      "nav-links.2": "archive",
+      "nav-links.3": "open when",
+      "musictoggle.1": "♪ off",
+      "themetoggle.1": "☾ after hours",
+      "hero-flower-flower-a.1": "✿",
+      "hero-flower-flower-b.1": "✿",
+      "status-pill.1": " this page is still here for you",
+      "liveclocknote.1": "checking the time...",
+      "eyebrow.1": "for my ramroomti ♡",
+      "herotitle.1": "Even in the quiet,",
+      "herotitle.2": "it’s still you.",
+      "hero-lines.1": "I didn’t build this just for when things were easy",
+      "hero-lines.2": "I built it because what we had mattered",
+      "hero-lines.3": "every laugh, every late night, every version of us",
+      "hero-lines.4": "and a door that never really locked",
+      "scroll.1": "read what’s new ↓",
+      "main.1": " NEW: Unsent Letters Typewriter Section ",
+      "small-label.2": "added after the silence",
+      "section-head.1": "things I didn’t text you",
+      "section-head.2": "because I wanted to respect your space, not because I stopped caring.",
+      "unsent-tab-active.1": "if you’re here late at night",
+      "unsent-tab.1": "about the distance",
+      "unsent-tab.2": "what I don’t regret",
+      "unsent-tab.3": "where I stand",
+      "letterdate.1": "late night thought",
+      "letter-meta.1": "from: zaid",
+      "letter-sign.1": "always in your corner, ",
+      "script.1": "Zaid",
+      "small-label.3": "still true",
+      "intro-section-reveal.1": "you never had to be perfect with me",
+      "intro-section-reveal.2": "Distance changes a lot of things, and heavy days make everything feel complicated. Look back through this page whenever the world gets loud—none of the care that built this disappeared just because things got hard.",
+      "intro-section-reveal.3": "I loved you as you were. Not just when everything was easy. ",
+      "script.2": "all of you.",
+      "small-label.4": "the time capsule",
+      "section-head-reveal.1": "39 little pieces of us",
+      "section-head-reveal.2": "four years, in small moments. open any photograph to stay a little longer.",
+      "year-title.1": "2023",
+      "year-title.2": "where it all started",
+      "year-title.3": "2024",
+      "year-title.4": "look at us bro 😭",
+      "year-title.5": "2025",
+      "year-title.6": "more memories somehow",
+      "year-title.7": "2026",
+      "year-title.8": "every chapter we wrote",
+      "small-label.5": "tap a heart",
+      "section-head.3": "things i still love about you",
+      "small-label.6": "for whenever you need me",
+      "section-head-reveal.3": "open when…",
+      "small-label.7": "no dramatic speeches",
+      "promises-section-reveal.1": "what still holds true",
+      "promise-list.1": "I still hope your days are gentle and your mind is quiet at night.",
+      "promise-list.2": "I still listen if you ever feel like talking—without ego or blame.",
+      "promise-list.3": "I still don’t believe one hard chapter erases years of real love.",
+      "promise-list.4": "I still value the person you are, even from afar.",
+      "promise-list.5": "I still wouldn’t trade our memories for anything else.",
+      "small-label.8": "the honest truth",
+      "us-section-reveal.1": "some people aren’t replaceable",
+      "us-section-reveal.2": "and no matter how much time passes",
+      "us-section-reveal.3": "you’ll always be my favorite chapter.",
+      "date-icon.1": "♡",
+      "small-label.9": "ramroomti’s birthday",
+      "date-card.1": "April 29",
+      "date-icon.2": "♡",
+      "small-label.10": "where our story began",
+      "date-card.2": "November 21, 2023",
+      "history-note.1": "a beginning worth remembering.",
+      "history-note.2": "whatever came after.",
+      "small-label.11": "for nights when sleep is avoiding you",
+      "story-section-reveal.1": "bedtime story for ramroomti",
+      "story-section-reveal.2": "pick one. I’ll tell it like a tiny storybook.",
+      "story-buttons.1": "the girl I couldn’t stop thinking about",
+      "story-buttons.2": "ramroomti and the boy who loved her",
+      "story-buttons.3": "the night they finally fell asleep together",
+      "story-buttons.4": "the two people who grew and found their way back",
+      "small-label.12": "you found the jar",
+      "jar-section-reveal.1": "shake for a memory",
+      "jarbutton.1": "♡",
+      "jarbutton.2": "shake it",
+      "jarresult.1": "tap it and I’ll pull one out.",
+      "main.2": " UPGRADE 1: What Still Reminds Me of You (Interactive Triggers) ",
+      "small-label.13": "muscle memory",
+      "section-head.4": "things that still remind me of you",
+      "section-head.5": "tap any of them. habits don’t just disappear overnight.",
+      "script.3": "tap a pill above ♡",
+      "main.3": " UPGRADE 2: Interactive Constellation Map ",
+      "small-label.14": "written in the quiet",
+      "section-head.6": "connect the stars",
+      "section-head.7": "tap each glowing star in the sky to trace our timeline.",
+      "starcaption.1": "tap the first pulsing star to begin ✦",
+      "main.4": " UPGRADE 3: Scratch-Off Foil Card ",
+      "small-label.15": "hidden underneath",
+      "section-head.8": "scratch the gold layer",
+      "section-head.9": "use your finger or cursor to rub away the foil.",
+      "small-label.16": "if nobody else tells you today",
+      "scratch-secret.1": "You are still the softest part of my memories.",
+      "script.4": "No matter where life takes us, I’m always proud of you.",
+      "main.5": " UPGRADE 4: Whisper in a Bottle ",
+      "small-label.17": "a thought for Zaid",
+      "section-head.10": "leave a thought in the dark",
+      "section-head.11": "If there’s something sitting heavy on your chest that you don’t want to text, write it here and release it into the stars.",
+      "releasewhisper.1": "send to Zaid ✦",
+      "main.6": " NEW: Interactive Candle / Signal Section ",
+      "small-label.18": "no pressure · no expectations",
+      "candle-section-section-reveal.1": "leave a quiet light",
+      "candle-desc.1": "If you made it down here and you don’t know what to say, tap the candle. You don’t have to text me until you’re ready—just let it glow for a second.",
+      "candlestatus.1": "tap the candle to light it",
+      "main.7": " Editable final letter draft. Personalize the wording here before publishing. ",
+      "small-label.19": "a moment, kept.",
+      "small-label.20": "one last note",
+      "finallettertitle.1": "ramroomti,",
+      "final-letter-body.1": "i know things aren't the way i wanted them to be.",
+      "final-letter-body.2": "and i know love alone doesn't mean two people can make everything work.",
+      "final-letter-body.3": "but i still believe the good parts of us were real.",
+      "final-letter-body.4": "i still smile at things that remind me of you.",
+      "final-letter-body.5": "sometimes without even realizing why.",
+      "final-letter-body.6": "i can't tell you what the future holds.",
+      "final-letter-body.7": "and i won't pretend i know what you feel.",
+      "final-letter-body.8": "but if someday we both find ourselves wanting to try again,",
+      "final-letter-body.9": "i'd want us to do it differently.",
+      "final-letter-body.10": "with more understanding, more patience, and more care.",
+      "final-letter-body.11": "until then, i respect the space between us.",
+      "final-letter-body.12": "i'm thankful for every beautiful little memory we made.",
+      "final-signature.1": "— Zaid",
+      "end-mark.1": "♡",
+      "end-screen-inner-reveal.1": "some stories",
+      "end-screen-inner-reveal.2": "stay with us.",
+      "end-screen-inner-reveal.3": "whatever comes next, i'm glad ours happened.",
+      "lbclose.1": "×",
+      "lbprev.1": "‹",
+      "lbnext.1": "›",
+      "messageclose.1": "×",
+      "storyclose.1": "×",
+      "secretclose.1": "×",
+      "modal-sheet.1": "you’re always cared for here.",
+      "body.3": " Floating Vinyl Player HUD ",
+      "vinyl-center.1": "♡",
+      "vinyl-label.1": "soundtrack",
+      "vinylstatus.1": "tap to spin ♪",
+      "noscript-note.1": "Enable JavaScript to open the interactive photo archive and letters.",
+      "privacy.whisper": "Sending shares your thought with Zaid through Discord and saves a copy in this browser.",
+      "privacy.candle": "Lighting this candle sends a signal to Zaid through Discord.",
+      "archive.noScript": "Enable JavaScript to open the interactive archive.",
+      "years.aria": "Photographs grouped by year",
+      "keepsake.gallery.aria": "A selection of photographs",
+      "final.image.alt": "Two people smiling inside a car"
+    },
+    "photos": {
+      "2023.webp": {
+        "caption": "where this little archive begins",
+        "alt": "Two people smiling beside a railing in daylight",
+        "featured": true,
+        "width": 1080,
+        "height": 720,
+        "src": "images/2023.webp"
+      },
+      "2023 (2).webp": {
+        "caption": "three faces, one frame",
+        "alt": "three faces, one frame — photograph from 2023",
+        "featured": false,
+        "width": 886,
+        "height": 1183,
+        "src": "images/2023 (2).webp"
+      },
+      "2023 (3).webp": {
+        "caption": "the lights behind us",
+        "alt": "the lights behind us — photograph from 2023",
+        "featured": false,
+        "width": 1336,
+        "height": 1920,
+        "src": "images/2023 (3).webp"
+      },
+      "2024.webp": {
+        "caption": "a quiet corner",
+        "alt": "a quiet corner — photograph from 2024",
+        "featured": false,
+        "width": 1308,
+        "height": 1755,
+        "src": "images/2024.webp"
+      },
+      "2024 (2).webp": {
+        "caption": "a laptop, a blanket, and us",
+        "alt": "a laptop, a blanket, and us — photograph from 2024",
+        "featured": false,
+        "width": 1280,
+        "height": 960,
+        "src": "images/2024 (2).webp"
+      },
+      "2024 (3).webp": {
+        "caption": "the food made it into the photo too",
+        "alt": "the food made it into the photo too — photograph from 2024",
+        "featured": false,
+        "width": 1242,
+        "height": 1656,
+        "src": "images/2024 (3).webp"
+      },
+      "2024 (4).webp": {
+        "caption": "both in yellow",
+        "alt": "both in yellow — photograph from 2024",
+        "featured": false,
+        "width": 720,
+        "height": 960,
+        "src": "images/2024 (4).webp"
+      },
+      "2024 (5).webp": {
+        "caption": "this close",
+        "alt": "this close — photograph from 2024",
+        "featured": false,
+        "width": 1170,
+        "height": 1560,
+        "src": "images/2024 (5).webp"
+      },
+      "2024 (6).webp": {
+        "caption": "a moment in the low light",
+        "alt": "a moment in the low light — photograph from 2024",
+        "featured": false,
+        "width": 1080,
+        "height": 1920,
+        "src": "images/2024 (6).webp"
+      },
+      "2024 (7).webp": {
+        "caption": "a kiss, caught on camera",
+        "alt": "a kiss, caught on camera — photograph from 2024",
+        "featured": false,
+        "width": 886,
+        "height": 496,
+        "src": "images/2024 (7).webp"
+      },
+      "2024 (8).webp": {
+        "caption": "a little blurry, still here",
+        "alt": "a little blurry, still here — photograph from 2024",
+        "featured": false,
+        "width": 886,
+        "height": 1920,
+        "src": "images/2024 (8).webp"
+      },
+      "2024 (9).webp": {
+        "caption": "flowers in the frame",
+        "alt": "Two people standing together with a bouquet of flowers",
+        "featured": true,
+        "width": 1440,
+        "height": 1920,
+        "src": "images/2024 (9).webp"
+      },
+      "2025.webp": {
+        "caption": "standing close",
+        "alt": "standing close — photograph from 2025",
+        "featured": false,
+        "width": 660,
+        "height": 496,
+        "src": "images/2025.webp"
+      },
+      "2025 (2).webp": {
+        "caption": "out in the daylight",
+        "alt": "out in the daylight — photograph from 2025",
+        "featured": false,
+        "width": 1920,
+        "height": 1440,
+        "src": "images/2025 (2).webp"
+      },
+      "2025 (3).webp": {
+        "caption": "under the same blanket",
+        "alt": "under the same blanket — photograph from 2025",
+        "featured": false,
+        "width": 1920,
+        "height": 1080,
+        "src": "images/2025 (3).webp"
+      },
+      "2025 (4).webp": {
+        "caption": "one more photo together",
+        "alt": "one more photo together — photograph from 2025",
+        "featured": false,
+        "width": 1920,
+        "height": 1440,
+        "src": "images/2025 (4).webp"
+      },
+      "2025 (5).webp": {
+        "caption": "a shoulder to lean on",
+        "alt": "a shoulder to lean on — photograph from 2025",
+        "featured": false,
+        "width": 1920,
+        "height": 1440,
+        "src": "images/2025 (5).webp"
+      },
+      "2025 (6).webp": {
+        "caption": "from the passenger seat",
+        "alt": "from the passenger seat — photograph from 2025",
+        "featured": false,
+        "width": 1920,
+        "height": 1440,
+        "src": "images/2025 (6).webp"
+      },
+      "2025 (7).webp": {
+        "caption": "that smile",
+        "alt": "Two people smiling for a close-up photograph",
+        "featured": true,
+        "width": 1920,
+        "height": 1080,
+        "src": "images/2025 (7).webp"
+      },
+      "2025 (8).webp": {
+        "caption": "not much light, but enough",
+        "alt": "not much light, but enough — photograph from 2025",
+        "featured": false,
+        "width": 1080,
+        "height": 1920,
+        "src": "images/2025 (8).webp"
+      },
+      "2025 (9).webp": {
+        "caption": "just a photo of us",
+        "alt": "just a photo of us — photograph from 2025",
+        "featured": false,
+        "width": 1920,
+        "height": 1080,
+        "src": "images/2025 (9).webp"
+      },
+      "2026.webp": {
+        "caption": "the two of us in the mirror",
+        "alt": "Two people reflected in a tall mirror inside a bright room",
+        "featured": true,
+        "width": 1080,
+        "height": 1920,
+        "src": "images/2026.webp"
+      },
+      "2026 (2).webp": {
+        "caption": "looking at the same little screen",
+        "alt": "looking at the same little screen — photograph from 2026",
+        "featured": false,
+        "width": 1080,
+        "height": 1920,
+        "src": "images/2026 (2).webp"
+      },
+      "2026 (3).webp": {
+        "caption": "another frame of that reflection",
+        "alt": "another frame of that reflection — photograph from 2026",
+        "featured": false,
+        "width": 1080,
+        "height": 1920,
+        "src": "images/2026 (3).webp"
+      },
+      "2026 (4).webp": {
+        "caption": "sunlight through the window",
+        "alt": "sunlight through the window — photograph from 2026",
+        "featured": false,
+        "width": 1324,
+        "height": 744,
+        "src": "images/2026 (4).webp"
+      },
+      "2026 (5).webp": {
+        "caption": "closer to the camera",
+        "alt": "closer to the camera — photograph from 2026",
+        "featured": false,
+        "width": 1324,
+        "height": 744,
+        "src": "images/2026 (5).webp"
+      },
+      "2026 (6).webp": {
+        "caption": "another photo worth keeping",
+        "alt": "another photo worth keeping — photograph from 2026",
+        "featured": false,
+        "width": 1324,
+        "height": 744,
+        "src": "images/2026 (6).webp"
+      },
+      "2026 (7).webp": {
+        "caption": "arms around you",
+        "alt": "arms around you — photograph from 2026",
+        "featured": false,
+        "width": 1080,
+        "height": 1920,
+        "src": "images/2026 (7).webp"
+      },
+      "2026 (8).webp": {
+        "caption": "a face for the camera",
+        "alt": "a face for the camera — photograph from 2026",
+        "featured": false,
+        "width": 1281,
+        "height": 720,
+        "src": "images/2026 (8).webp"
+      },
+      "2026 (9).webp": {
+        "caption": "a sideways kind of photo",
+        "alt": "a sideways kind of photo — photograph from 2026",
+        "featured": false,
+        "width": 1080,
+        "height": 1920,
+        "src": "images/2026 (9).webp"
+      },
+      "2026 (10).webp": {
+        "caption": "sunglasses on",
+        "alt": "sunglasses on — photograph from 2026",
+        "featured": false,
+        "width": 1324,
+        "height": 744,
+        "src": "images/2026 (10).webp"
+      },
+      "2026 (11).webp": {
+        "caption": "the space between our smiles",
+        "alt": "the space between our smiles — photograph from 2026",
+        "featured": false,
+        "width": 1324,
+        "height": 744,
+        "src": "images/2026 (11).webp"
+      },
+      "2026 (12).webp": {
+        "caption": "one more, before we put the phone down",
+        "alt": "one more, before we put the phone down — photograph from 2026",
+        "featured": false,
+        "width": 1324,
+        "height": 744,
+        "src": "images/2026 (12).webp"
+      },
+      "2026 (13).webp": {
+        "caption": "caught smiling",
+        "alt": "caught smiling — photograph from 2026",
+        "featured": false,
+        "width": 1560,
+        "height": 878,
+        "src": "images/2026 (13).webp"
+      },
+      "2026 (14).webp": {
+        "caption": "almost too dark for a photo",
+        "alt": "almost too dark for a photo — photograph from 2026",
+        "featured": false,
+        "width": 1080,
+        "height": 1920,
+        "src": "images/2026 (14).webp"
+      },
+      "2026 (15).webp": {
+        "caption": "a table by the window",
+        "alt": "Two people smiling at a table by a window",
+        "featured": true,
+        "width": 1920,
+        "height": 1080,
+        "src": "images/2026 (15).webp"
+      },
+      "2026 (16).webp": {
+        "caption": "in the crowd, together",
+        "alt": "in the crowd, together — photograph from 2026",
+        "featured": false,
+        "width": 878,
+        "height": 1560,
+        "src": "images/2026 (16).webp"
+      },
+      "2026 (17).webp": {
+        "caption": "both of us smiling",
+        "alt": "Two people smiling inside a car",
+        "featured": true,
+        "width": 1920,
+        "height": 1440,
+        "src": "images/2026 (17).webp"
+      },
+      "2026 (18).webp": {
+        "caption": "kept, just like the others",
+        "alt": "kept, just like the others — photograph from 2026",
+        "featured": false,
+        "width": 1080,
+        "height": 1920,
+        "src": "images/2026 (18).webp"
+      }
+    },
+    "chapters": {
+      "2023": [
+        "2023.webp",
+        "2023 (2).webp",
+        "2023 (3).webp"
+      ],
+      "2024": [
+        "2024.webp",
+        "2024 (2).webp",
+        "2024 (3).webp",
+        "2024 (4).webp",
+        "2024 (5).webp",
+        "2024 (6).webp",
+        "2024 (7).webp",
+        "2024 (8).webp",
+        "2024 (9).webp"
+      ],
+      "2025": [
+        "2025.webp",
+        "2025 (2).webp",
+        "2025 (3).webp",
+        "2025 (4).webp",
+        "2025 (5).webp",
+        "2025 (6).webp",
+        "2025 (7).webp",
+        "2025 (8).webp",
+        "2025 (9).webp"
+      ],
+      "2026": [
+        "2026.webp",
+        "2026 (2).webp",
+        "2026 (3).webp",
+        "2026 (4).webp",
+        "2026 (5).webp",
+        "2026 (6).webp",
+        "2026 (7).webp",
+        "2026 (8).webp",
+        "2026 (9).webp",
+        "2026 (10).webp",
+        "2026 (11).webp",
+        "2026 (12).webp",
+        "2026 (13).webp",
+        "2026 (14).webp",
+        "2026 (15).webp",
+        "2026 (16).webp",
+        "2026 (17).webp",
+        "2026 (18).webp"
+      ]
+    },
+    "years": [
+      {
+        "year": "2023",
+        "count": 3
+      },
+      {
+        "year": "2024",
+        "count": 9
+      },
+      {
+        "year": "2025",
+        "count": 9
+      },
+      {
+        "year": "2026",
+        "count": 18
+      }
+    ],
+    "letters": {
+      "tonight": {
+        "date": "for the quiet hours",
+        "text": "ramroomti,\n\ni don't have anything clever to say tonight. i just hope you're okay.\n\ni like that these photos still exist. even the blurry ones. they remind me of ordinary moments i wouldn't want to lose.\n\nyou don't have to reply to any of this."
+      },
+      "silence": {
+        "date": "about the distance",
+        "text": "i miss talking to you. the small things as much as the big ones.\n\ni don't know what this space feels like for you, and i don't want to guess. i can care about you and leave you room at the same time."
+      },
+      "regret": {
+        "date": "looking back at us",
+        "text": "there are things i wish had gone differently. i don't want to cover that up with a nice sentence.\n\nbut the good days were part of us too. i still smile at these pictures. i'm glad we have them."
+      },
+      "door": {
+        "date": "where i stand",
+        "text": "i can't promise what comes next. and i can't speak for you.\n\nif we ever both wanted to try again, i'd want there to be room for the difficult conversations too. not just the things we miss.\n\nfor now, this is a place to keep the memories. it doesn't ask you for an answer."
+      }
+    },
+    "love": [
+      [
+        "♡",
+        "the way you say my name",
+        "because somehow you could make the most normal sentence sound different just by saying my name."
+      ],
+      [
+        "♡",
+        "your random moods",
+        "the sudden switches, the chaos, the little versions of you that appeared out of nowhere."
+      ],
+      [
+        "♡",
+        "the way you could completely change the vibe of my day",
+        "one message from you could genuinely flip my whole mood."
+      ],
+      [
+        "♡",
+        "your little messages",
+        "even the dumb ones. especially the dumb ones."
+      ],
+      [
+        "♡",
+        "when you randomly became affectionate",
+        "you never warned me and somehow that made it even better."
+      ],
+      [
+        "♡",
+        "the way you made me miss you even when we literally just talked",
+        "still unfair btw."
+      ]
+    ],
+    "messages": [
+      [
+        "open when we aren’t talking",
+        "It feels strange not knowing every little detail of your day anymore. I hope you’re eating well, sleeping on time, and not letting your brain convince you that you’re alone in this world. Even from a distance, I’m rooting for your happiness.",
+        true
+      ],
+      [
+        "open if you’re wondering if I still care",
+        "Of course I do. People don’t just un-love someone who meant this much to them overnight. This whole website is still standing here for a reason.",
+        true
+      ],
+      [
+        "open when you’re missing me",
+        "I miss you too. And no, you’re not being dramatic for feeling it. Go look at one of the pictures above and remember there’s a real person on the other side of that screen who cares about you so fucking much."
+      ],
+      [
+        "open when you’re overthinking",
+        "Come back to what is actually true, not every scary possibility your brain can invent. Breathe. You don’t have to solve everything tonight."
+      ],
+      [
+        "open when you feel like you’re bothering me",
+        "You were never a burden to me. Even now, if something is heavy on your mind, you never have to hesitate."
+      ],
+      [
+        "open when you’re mad at me",
+        "Okay. Be mad. I’d always rather honesty than silence. When the dust settles, grace is always waiting here."
+      ],
+      [
+        "open when you can’t sleep",
+        "Put the phone down for a second, breathe slowly, unclench your jaw. You’re safe, and you can rest now."
+      ],
+      [
+        "open when you want to smile",
+        "Look at the pictures where we clearly had no idea what we were doing 😭 you’re welcome."
+      ]
+    ],
+    "stories": {
+      "girl": [
+        "the girl I couldn’t stop thinking about",
+        "There was a girl who kept appearing in a boy’s thoughts at the most inconvenient times. While he was eating. While he was trying to sleep. While he was pretending to pay attention. He eventually realized the problem wasn’t that he couldn’t stop thinking about her. It was that he didn’t want to."
+      ],
+      "boy": [
+        "ramroomti and the boy who loved her",
+        "Once there was a girl named ramroomti and a boy who somehow got very attached to her. They laughed at stupid things, annoyed each other, missed each other, and kept finding their way back to the same little corner of the world. The boy never needed a perfect ending. He just wanted more chapters with her."
+      ],
+      "night": [
+        "the night they finally fell asleep together",
+        "One night, after all the talking and overthinking and pretending they weren’t tired, they finally went quiet. No fixing anything. No figuring anything out. Just two people close enough to hear each other breathe. And for once, that was enough."
+      ],
+      "bridge": [
+        "the two people who grew and found their way back",
+        "Sometimes two people who love each other deeply hit a season where the world gets too loud and they have to step back to breathe. The boy didn’t burn the bridge—he just left a lantern on it. Because real stories don’t always end when a chapter closes; sometimes they just pause until both hearts are ready for the next page."
+      ]
+    },
+    "triggers": [
+      [
+        "seeing a random reel",
+        "I still catch my thumb hovering over the share button before I remember—and I just smile and hope you’d have laughed at it too."
+      ],
+      [
+        "late night drives",
+        "Certain songs come on the aux and for three minutes it feels like no time has passed at all."
+      ],
+      [
+        "when something good happens",
+        "You’re still the first person my brain wants to tell whenever something random or exciting happens in my day."
+      ],
+      [
+        "passing our old spots",
+        "Amman feels a little different when every other street has a memory attached to it."
+      ],
+      [
+        "2:00 AM quiet",
+        "That hour when the whole house is asleep and we used to talk about everything and nothing."
+      ],
+      [
+        "coffee & little cravings",
+        "Still remembering your exact order by heart without even trying."
+      ]
+    ],
+    "webhook": "https://discord.com/api/webhooks/1560572526466301974/UeGeI84xW2G1WAf7PXIFlf6Qmjjn2FjT9sGLKDMGBAcQG3Y6eKYXLGQtHTFvYb31RNgK",
+    "privacy.whisper": "Sending shares your thought with Zaid through Discord and saves a copy in this browser.",
+    "privacy.candle": "Lighting this candle sends a signal to Zaid through Discord.",
+    "archive.total": 39,
+    "history.date": "November 21, 2023",
+    "startup.error": "The archive could not load. Please refresh the page.",
+    "notifications.whisper": "**New whisper from a site visitor:**\n> {message}\n*{time}*",
+    "notifications.candle": "🕯️ **Signal Alert:** A visitor lit the quiet candle on {host} at {time}.",
+    "keepsake.label1": "school days",
+    "keepsake.label2": "flowers",
+    "keepsake.label3": "car rides",
+    "keepsake.label4": "a quiet afternoon",
+    "keepsake.label5": "small familiar things",
+    "keepsake.label6": "one more photograph",
+    "clock.late": "It’s {time}. You’re up late—if your mind is racing tonight, take a slow breath.",
+    "clock.morning": "It’s {time}. Good morning—I hope today treats you gently.",
+    "clock.afternoon": "It’s {time}. Checking in during the middle of the day? I hope it’s going well.",
+    "clock.evening": "It’s {time}. Winding down for the night—glad you stopped by here.",
+    "drafts.label": "unsent drafts",
+    "drafts.title": "the texts I typed and deleted",
+    "drafts.description": "because I didn’t want to crowd your phone, even when you were on my mind.",
+    "drafts.contact": "ramroomti ♡",
+    "drafts.time": "2:14 AM",
+    "drafts.timestamp": "late night · draft history",
+    "drafts.placeholder": "iMessage...",
+    "drafts.next": "next draft ↻",
+    "drafts.announcement": "Draft preview: {message}",
+    "drafts.items": [
+      "I saw something today that made me think of you. I hope your day was gentle.",
+      "Some days I miss our little conversations. No need to reply—I just hope you’re doing okay.",
+      "I hope you’ve found a little quiet tonight. I’m giving you space, and I still wish you well."
+    ],
+    "breathe.label": "if your mind is loud tonight",
+    "breathe.title": "breathe with me for 30 seconds",
+    "breathe.description": "tap the circle whenever you feel overwhelmed or overthinking.",
+    "breathe.start": "tap to breathe",
+    "breathe.inhale": "breathe in gently",
+    "breathe.exhale": "breathe out slowly",
+    "breathe.complete": "that’s 30 seconds · thank yourself for pausing",
+    "breathe.stopped": "paused · tap whenever you’re ready",
+    "breathe.note": "Keep a comfortable pace. Stop whenever you like.",
+    "breathe.ariaStart": "Start 30-second breathing exercise",
+    "breathe.ariaStop": "Stop breathing exercise",
+    "audio.fallback": "The local song could not play. A quiet melody will play instead.",
+    "time.units": [
+      "days",
+      "hrs",
+      "min",
+      "sec"
+    ],
+    "notifications.failure": "Discord could not deliver the notification."
+  }
+}

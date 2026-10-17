@@ -1,108 +1,466 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="midnight">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#fff7f8">
-<title>for my ramroomti ♡</title>
+<meta name="theme-color" content="#0f0a10">
+<title>for my ramroomti ♡ — always here</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<div class="film-grain" aria-hidden="true"></div>
 <div class="ambient" id="ambient" aria-hidden="true"></div>
-<header class="hero" id="top">
-  <div class="hero-flower flower-a">✿</div><div class="hero-flower flower-b">✿</div>
-  <div class="hero-inner">
-    <p class="eyebrow">for my ramroomti ♡</p>
-    <h1>I don’t need a perfect story</h1>
-    <div class="hero-lines">
-      <p>I just want ours</p><p>every version of you</p><p>every version of me</p><p>and everything we’re still becoming</p>
+
+<!-- Entry Gate Curtain -->
+<div class="entry-gate" id="entryGate">
+  <div class="gate-inner">
+    <p class="small-label">zaidrahhal.me · archive</p>
+    <h2>I had a feeling you might check back here one day.</h2>
+    <p class="gate-sub">I didn’t take it down. Some things are too real to just delete.<br>Take your time. There’s no hurry.</p>
+    <div class="gate-actions">
+      <button type="button" class="gate-btn primary" id="enterWithMusic" onclick="window.enterSite(true)">enter with soft melody ♪</button>
+      <button type="button" class="gate-btn secondary" id="enterSilent" onclick="window.enterSite(false)">enter quietly</button>
     </div>
-    <a class="scroll" href="#journey">keep going ↓</a>
   </div>
-</header>
+</div>
 
 <nav class="nav">
   <a href="#top" class="logo" id="secretLogo" aria-label="Zaid and Rama">z + r</a>
-  <div><a href="#journey">memories</a><a href="#open-when">open when</a></div>
+  <div class="nav-links">
+    <a href="#unsent">unsent</a>
+    <a href="#movie">our movie</a>
+    <a href="#journey">archive</a>
+    <a href="#open-when">open when</a>
+    <button type="button" class="icon-toggle" id="musicToggle" aria-label="Toggle ambient music">♪ off</button>
+    <button type="button" class="icon-toggle" id="themeToggle" aria-label="Toggle theme">☾ after hours</button>
+  </div>
 </nav>
 
-<main>
-<section class="intro section reveal">
-  <p class="small-label">just so you know</p>
-  <h2>you don’t have to be perfect with me</h2>
-  <p>You don’t have to be okay all the time. You don’t have to hide when you’re scared, or pretend you’re not overthinking, or become some perfect version of yourself just because things got difficult.</p>
-  <p>I want you as you are. Not just when everything is easy. Not just when you’re happy. <span class="script">all of you.</span></p>
-</section>
-
-<section class="journey section" id="journey">
-  <div class="section-head reveal"><p class="small-label">the little archive</p><h2>39 little pieces of us</h2><p>not a perfect timeline. just moments I’m glad I got to keep.</p></div>
-  <div class="year-block" data-year="2023"><div class="year-title"><span>2023</span><i>where it started</i></div><div class="gallery" id="gallery-2023"></div></div>
-  <div class="year-block" data-year="2024"><div class="year-title"><span>2024</span><i>look at us bro 😭</i></div><div class="gallery" id="gallery-2024"></div></div>
-  <div class="year-block" data-year="2025"><div class="year-title"><span>2025</span><i>more memories somehow</i></div><div class="gallery" id="gallery-2025"></div></div>
-  <div class="year-block" data-year="2026"><div class="year-title"><span>2026</span><i>still us</i></div><div class="gallery" id="gallery-2026"></div></div>
-</section>
-
-<section class="love section reveal">
-  <div class="section-head"><p class="small-label">tap a heart</p><h2>things i love about you</h2></div>
-  <div class="love-grid" id="loveGrid"></div>
-</section>
-
-<section class="open-when section" id="open-when">
-  <div class="section-head reveal"><p class="small-label">for whenever you need me</p><h2>open when…</h2></div>
-  <div class="envelopes" id="envelopes"></div>
-</section>
-
-<section class="promises section reveal">
-  <p class="small-label">no dramatic promises</p><h2>what i promise</h2>
-  <div class="promise-list">
-    <p>I promise I’ll keep trying.</p><p>I promise I’ll listen when you tell me something hurts.</p><p>I promise I won’t stop choosing communication when things get difficult.</p><p>I promise I’ll keep learning how to love you better.</p><p>I promise I won’t only love the easy versions of you.</p>
+<header class="hero" id="top">
+  <div class="hero-flower flower-a">✿</div><div class="hero-flower flower-b">✿</div>
+  <div class="hero-inner">
+    <span class="status-pill"><span class="pulse-dot"></span> this page is still here for you</span>
+    <p class="live-clock-note" id="liveClockNote">checking the time...</p>
+    <p class="eyebrow">for my ramroomti ♡</p>
+    <h1>Even in the quiet,<br>it’s still you.</h1>
+    <div class="hero-lines">
+      <p>I didn’t build this just for when things were easy</p>
+      <p>I built it because what we had mattered</p>
+      <p>every laugh, every late night, every version of us</p>
+      <p>and a door that never really locked</p>
+    </div>
+    <a class="scroll" href="#unsent">read what’s new ↓</a>
   </div>
-</section>
+</header>
 
-<section class="us section reveal">
-  <p class="small-label">the simple version</p><h2>it’s always gonna be you and me figuring shit out</h2>
-  <p>not because everything will always be easy</p><p>but because you’re worth figuring it out for.</p>
-</section>
+<main id="main">
+  <!-- LIVE TYPING UNSENT SECTION -->
+  <section class="unsent section reveal" id="unsent">
+    <div class="section-head">
+      <p class="small-label">added after the silence</p>
+      <h2>things I didn’t text you</h2>
+      <p>because I wanted to respect your space, not because I stopped caring.</p>
+    </div>
+    <div class="unsent-tabs" id="unsentTabs">
+      <button type="button" class="unsent-tab active" data-letter="tonight">if you’re here late at night</button>
+      <button type="button" class="unsent-tab" data-letter="silence">about the distance</button>
+      <button type="button" class="unsent-tab" data-letter="regret">what I don’t regret</button>
+      <button type="button" class="unsent-tab" data-letter="door">where I stand</button>
+    </div>
+    <div class="letter-paper">
+      <div class="letter-meta">
+        <span class="typing-indicator"><span class="typing-dot"></span> <span id="letterDate">typing a late night thought...</span></span>
+        <span>from: zaid</span>
+      </div>
+      <div class="typewriter-wrap">
+        <span class="typewriter-box" id="typewriterText"></span><span class="typewriter-cursor" id="typeCursor">|</span>
+      </div>
+      <div class="letter-footer-actions">
+        <button type="button" class="replay-type-btn" id="replayTypeBtn">↻ type again</button>
+        <div class="letter-sign">always in your corner, <span class="script">Zaid</span></div>
+      </div>
+    </div>
+  </section>
 
-<section class="dates section reveal">
-  <div class="date-card"><span class="date-icon">♡</span><p class="small-label">ramroomti’s birthday</p><h3>April 29</h3><div class="countdown" id="birthday"></div></div>
-  <div class="date-card"><span class="date-icon">♡</span><p class="small-label">our day</p><h3>November 21, 2023</h3><div class="countdown" id="anniversary"></div><p class="days-together" id="daysTogether"></p></div>
-</section>
+  <!-- 2:14 AM Phone Drafts -->
+  <section class="drafts-section section reveal" id="drafts">
+    <div class="section-head">
+      <p class="small-label">unsent drafts</p>
+      <h2>the texts I typed and deleted</h2>
+      <p>because I didn’t want to crowd your phone, even when you were on my mind.</p>
+    </div>
+    <div class="phone-frame">
+      <div class="phone-top">
+        <span class="phone-contact">ramroomti ♡</span>
+        <span class="phone-time" id="phoneDraftTime">2:14 AM</span>
+      </div>
+      <div class="chat-stream" id="chatStream">
+        <div class="chat-timestamp">late night · draft history</div>
+        <div class="chat-bubble sent-draft" id="draftBubble" aria-hidden="true"></div>
+        <div class="typing-dots-bubble" id="typingBubble" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+      <p class="sr-only" id="draftAnnouncement" aria-live="polite" aria-atomic="true"></p>
+      <div class="phone-input-bar">
+        <span class="fake-input" id="fakeInputBar">iMessage...</span>
+        <button type="button" class="draft-next-btn" id="nextDraftBtn">next draft ↻</button>
+      </div>
+    </div>
+  </section>
 
-<section class="story section reveal">
-  <p class="small-label">for nights when sleep is avoiding us</p><h2>bedtime story for ramroomti</h2>
-  <p>pick one. I’ll tell it like a tiny storybook.</p>
-  <div class="story-buttons">
-    <button data-story="girl">the girl I couldn’t stop thinking about</button>
-    <button data-story="boy">ramroomti and the boy who loved her</button>
-    <button data-story="night">the night they finally fell asleep together</button>
-  </div>
-</section>
+  <!-- REAL VOICE NOTE FROM ZAID -->
+  <section class="voicenote-section section reveal" id="voicenote">
+    <div class="section-head">
+      <p class="small-label">recorded in the quiet · real voice note</p>
+      <h2>if you called me at 2:00 AM</h2>
+      <p>tap play to hear my actual voice note for you.</p>
+    </div>
+    <div class="cassette-card">
+      <audio id="realVoiceAudio" preload="metadata">
+        <source src="voicenote.mp3" type="audio/mpeg">
+        <source src="voicenote.m4a" type="audio/mp4">
+      </audio>
+      <div class="cassette-top">
+        <span class="cassette-title"><span class="vn-rec-dot"></span> VOICE MEMO · FROM ZAID</span>
+        <span class="cassette-timer" id="vnTimer">0:00 / --:--</span>
+      </div>
+      <div class="vn-player-row">
+        <button type="button" class="vn-play-btn" id="vnPlayBtn" aria-label="Play voice note">▶</button>
+        <div class="vn-waveform" id="vnWaveform" title="Tap to seek"></div>
+      </div>
+      <p class="vn-subtitle" id="vnSubtitle">“tap play whenever you’re ready to listen...”</p>
+    </div>
+  </section>
 
-<section class="jar section reveal">
-  <p class="small-label">you found the jar</p><h2>shake for a memory</h2>
-  <button class="jar-button" id="jarButton" aria-label="Shake the memory jar"><span>♡</span><b>shake it</b></button>
-  <p class="jar-result" id="jarResult">tap it and I’ll pull one out.</p>
-</section>
+  <!-- Interactive Overthinking Breathing Orb -->
+  <section class="breathe-section section reveal" id="breathe">
+    <div class="section-head">
+      <p class="small-label">if your mind is loud tonight</p>
+      <h2>breathe with me for 30 seconds</h2>
+      <p>tap the circle whenever you feel overwhelmed or overthinking.</p>
+    </div>
+    <div class="breathe-stage">
+      <button type="button" class="breathe-orb" id="breatheOrb" aria-label="Start breathing exercise" aria-pressed="false">
+        <span id="breatheText" aria-live="polite" aria-atomic="true">tap to breathe</span>
+      </button>
+    </div>
+    <p class="breathe-note">Keep a comfortable pace. Stop whenever you like.</p>
+  </section>
 
-<section class="forget section reveal">
-  <p class="small-label">if you ever forget</p><h2>If you ever forget how much you mean to me / come back here.</h2>
-  <div class="forget-lines"><p>Look at all these memories.</p><p>Look at all these stupid pictures.</p><p>Look at how much of my life has your name written all over it.</p><p>And remember / <span>you’re loved here.</span></p></div>
-</section>
+  <section class="intro section reveal">
+    <p class="small-label">still true</p>
+    <h2>you never had to be perfect with me</h2>
+    <p>Distance changes a lot of things, and heavy days make everything feel complicated. Look back through this page whenever the world gets loud—none of the care that built this disappeared just because things got hard.</p>
+    <p>I loved you as you were. Not just when everything was easy. <span class="script">all of you.</span></p>
+  </section>
 
-<section class="ending section reveal">
-  <div class="ending-heart">♡</div><h2>still you.</h2><p>after everything<br>through everything<br>somehow<br><strong>still you.</strong></p><div class="signature">Zaid</div><small>made with way too much love for ramroomti</small>
-</section>
+  <!-- OUR LITTLE MOVIE — PRIVATE SCREENING ROOM -->
+  <section class="movie-section section reveal" id="movie">
+    <div class="section-head">
+      <p class="small-label">feature reel · 02:50</p>
+      <h2>our little movie.</h2>
+      <p>out of all the little moments life gave me, some of my favorites were with you.</p>
+    </div>
+
+    <div class="cinema-frame" id="cinemaFrame">
+      <div class="cinema-topbar">
+        <span class="cinema-badge"><span class="pulse-dot"></span> zaid &amp; rama · reel</span>
+        <button type="button" class="lights-btn" id="theaterLightsBtn">☾ dim lights</button>
+      </div>
+
+      <div class="video-container">
+        <video id="ourMovieVideo" controls playsinline preload="metadata" poster="images/2026 (17).jpg">
+          <source src="Zaid_Rama_Our_Little_Movie_Final.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="movie-chapters" id="movieChapters">
+        <button type="button" class="chapter-pill" data-seek="0">0:00 · our little movie</button>
+        <button type="button" class="chapter-pill" data-seek="24">0:24 · the way we laughed</button>
+        <button type="button" class="chapter-pill" data-seek="59">0:59 · our little world</button>
+        <button type="button" class="chapter-pill" data-seek="100">1:40 · birthday sparklers</button>
+        <button type="button" class="chapter-pill" data-seek="111">1:51 · moments i’d keep forever</button>
+        <button type="button" class="chapter-pill" data-seek="146">2:26 · some of my favorites</button>
+      </div>
+      <p class="movie-caption" id="movieStatusNote">press play · background music will pause automatically so you can hear the film ♡</p>
+    </div>
+  </section>
+
+  <!-- Archive with 3D Flip + Heart Buttons -->
+  <section class="journey section" id="journey">
+    <div class="section-head reveal">
+      <p class="small-label">the time capsule</p>
+      <h2 id="archiveMainHeading">39 little pieces of us</h2>
+      <p>four years, in small moments. tap <b>↻</b> on any corner to flip the Polaroid over, tap <b>♡</b> to save a favorite, or tap the photo to enlarge.</p>
+    </div>
+    <div class="year-block" data-year="2023"><div class="year-title"><span>2023</span><i>where it all started</i></div><div class="gallery" id="gallery-2023"></div></div>
+    <div class="year-block" data-year="2024"><div class="year-title"><span>2024</span><i>look at us bro 😭</i></div><div class="gallery" id="gallery-2024"></div></div>
+    <div class="year-block" data-year="2025"><div class="year-title"><span>2025</span><i>more memories somehow</i></div><div class="gallery" id="gallery-2025"></div></div>
+    <div class="year-block" data-year="2026"><div class="year-title"><span>2026</span><i>every chapter we wrote</i></div><div class="gallery" id="gallery-2026"></div></div>
+  </section>
+
+  <!-- Darkroom Hold-to-Develop Polaroid -->
+  <section class="darkroom-section section reveal">
+    <div class="section-head">
+      <p class="small-label">unexposed memory · bonus frame</p>
+      <h2>develop the hidden Polaroid</h2>
+      <p>press and hold the dark frame below to slowly bring the memory into the light.</p>
+    </div>
+    <div class="darkroom-frame" id="darkroomCard" role="button" tabindex="0" aria-label="Press and hold to develop photo">
+      <div class="darkroom-img-wrap">
+        <img id="darkroomImg" src="images/2026 (17).jpg" onerror="this.src='images/2026 (17).webp'" alt="Hidden memory">
+        <div class="darkroom-overlay" id="darkroomOverlay">
+          <span class="darkroom-prompt" id="darkroomPrompt">press & hold to develop ✦</span>
+          <div class="darkroom-bar"><div class="darkroom-fill" id="darkroomFill"></div></div>
+        </div>
+      </div>
+      <p class="darkroom-caption" id="darkroomCaption">developing... keep holding</p>
+    </div>
+  </section>
+
+  <section class="open-when section" id="open-when">
+    <div class="section-head reveal"><p class="small-label">for whenever you need me</p><h2>open when…</h2></div>
+    <div class="envelopes" id="envelopes"></div>
+  </section>
+
+  <section class="promises section reveal">
+    <p class="small-label">no dramatic speeches</p><h2>what still holds true</h2>
+    <div class="promise-list">
+      <p>I still hope your days are gentle and your mind is quiet at night.</p>
+      <p>I still listen if you ever feel like talking—without ego or blame.</p>
+      <p>I still don’t believe one hard chapter erases years of real love.</p>
+      <p>I still value the person you are, even from afar.</p>
+      <p>I still wouldn’t trade our memories for anything else.</p>
+    </div>
+  </section>
+
+  <!-- FIXED: Red String / Two Orbits Distance Slider -->
+  <section class="orbit-slider-section section reveal">
+    <div class="section-head">
+      <p class="small-label">the invisible thread</p>
+      <h2>two orbits</h2>
+      <p>drag the slider to bring the two stars closer together.</p>
+    </div>
+    <div class="orbit-card">
+      <div class="orbit-stage" id="orbitStage">
+        <div class="orbit-thread">
+          <div class="orbit-thread-glow" id="orbitGlow"></div>
+        </div>
+        <div class="orbit-node orbit-left" id="orbitLeft"><span>z</span></div>
+        <div class="orbit-node orbit-right" id="orbitRight"><span>r</span></div>
+      </div>
+      <input type="range" min="0" max="100" value="15" class="orbit-range" id="orbitRange" aria-label="Bring orbits closer">
+      <p class="orbit-status" id="orbitStatus">giving you all the space you need, without ever turning cold.</p>
+    </div>
+  </section>
+
+  <!-- Dates + Parallel Clock with Freeze Button -->
+  <section class="dates section reveal">
+    <div class="date-card">
+      <span class="date-icon">♡</span>
+      <p class="small-label">ramroomti’s birthday</p>
+      <h3>April 29</h3>
+      <div class="countdown" id="birthday"></div>
+    </div>
+    <div class="date-card">
+      <span class="date-icon">♡</span>
+      <p class="small-label">where our story began</p>
+      <h3>November 21, 2023</h3>
+      <div class="countdown" id="parallelClock"></div>
+      <p class="days-together" id="daysTogether"></p>
+      <button type="button" class="freeze-btn" id="freezeClockBtn">⏸ freeze this second</button>
+    </div>
+  </section>
+
+  <!-- Under the Same Sky (Live Amman Moon Phase) -->
+  <section class="moon-section section reveal">
+    <div class="moon-card">
+      <div class="moon-visual" id="moonVisual" aria-hidden="true"></div>
+      <div class="moon-info">
+        <p class="small-label">amman · tonight’s sky</p>
+        <h3 id="moonPhaseName">Calculating tonight’s moon...</h3>
+        <p id="moonPhaseDesc">Different routines right now, still looking up at the exact same sky.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="story section reveal">
+    <p class="small-label">for nights when sleep is avoiding you</p><h2>bedtime story for ramroomti</h2>
+    <p>pick one. I’ll tell it like a tiny storybook.</p>
+    <div class="story-buttons">
+      <button type="button" data-story="girl">the girl I couldn’t stop thinking about</button>
+      <button type="button" data-story="boy">ramroomti and the boy who loved her</button>
+      <button type="button" data-story="night">the night they finally fell asleep together</button>
+      <button type="button" data-story="bridge">the two people who grew and found their way back</button>
+    </div>
+  </section>
+
+  <section class="triggers-section section reveal">
+    <div class="section-head">
+      <p class="small-label">muscle memory</p>
+      <h2>things that still remind me of you</h2>
+      <p>tap any of them. habits don’t just disappear overnight.</p>
+    </div>
+    <div class="trigger-pills" id="triggerPills"></div>
+    <div class="trigger-display" id="triggerDisplay">
+      <span class="script">tap a pill above ♡</span>
+    </div>
+  </section>
+
+  <section class="constellation-section section reveal">
+    <div class="section-head">
+      <p class="small-label">written in the quiet</p>
+      <h2>connect the stars</h2>
+      <p>tap each glowing star in the sky to trace our timeline.</p>
+    </div>
+    <div class="sky-box">
+      <canvas id="starCanvas" width="800" height="360"></canvas>
+      <div class="star-nodes" id="starNodes"></div>
+    </div>
+    <p class="star-caption" id="starCaption">tap the first pulsing star to begin ✦</p>
+  </section>
+
+  <section class="scratch-section section reveal">
+    <div class="section-head">
+      <p class="small-label">hidden underneath</p>
+      <h2>scratch the gold layer</h2>
+      <p>use your finger or cursor to rub away the foil.</p>
+    </div>
+    <div class="scratch-card">
+      <div class="scratch-secret">
+        <p class="small-label">if nobody else tells you today</p>
+        <h3>You are still the softest part of my memories.</h3>
+        <p class="script">No matter where life takes us, I’m always proud of you.</p>
+      </div>
+      <canvas id="scratchCanvas" width="420" height="230"></canvas>
+    </div>
+  </section>
+
+  <!-- 1-Tap Mood Check-In Pills -->
+  <section class="checkin-section section reveal">
+    <div class="section-head">
+      <p class="small-label">if you don’t feel like typing</p>
+      <h2>leave a 1-tap check-in</h2>
+      <p>tap how you’re feeling tonight—no words needed.</p>
+    </div>
+    <div class="mood-pills" id="moodPills">
+      <button type="button" class="mood-pill" data-mood="just passing through 🌙">just passing through 🌙</button>
+      <button type="button" class="mood-pill" data-mood="couldn’t sleep tonight 💭">couldn’t sleep tonight 💭</button>
+      <button type="button" class="mood-pill" data-mood="missed these memories ♡">missed these memories ♡</button>
+      <button type="button" class="mood-pill" data-mood="having a heavy day 🌧️">having a heavy day 🌧️</button>
+      <button type="button" class="mood-pill" data-mood="hoping you’re okay ✦">hoping you’re okay ✦</button>
+    </div>
+    <p class="mood-Ack" id="moodAck"></p>
+  </section>
+
+  <section class="whisper-section section reveal">
+    <div class="section-head">
+      <p class="small-label">a thought for Zaid</p>
+      <h2>leave a thought in the dark</h2>
+      <p>If there’s something sitting heavy on your chest that you don’t want to text, write it here and release it into the stars.</p>
+    </div>
+    <div class="whisper-box">
+      <textarea id="whisperInput" rows="3" maxlength="1800" placeholder="type anything you never said..."></textarea>
+      <div class="whisper-actions">
+        <button type="button" class="gate-btn primary" id="releaseWhisper">release into the sky ✦</button>
+      </div>
+      <p class="whisper-saved" id="whisperSaved"></p>
+    </div>
+  </section>
+
+  <section class="candle-section section reveal">
+    <p class="small-label">no pressure · no expectations</p>
+    <h2>leave a quiet light</h2>
+    <p class="candle-desc">If you made it down here and you don’t know what to say, tap the candle. You don’t have to text me until you’re ready—just let it glow for a second.</p>
+    <button type="button" class="candle-wrap" id="candleBtn" aria-label="Light a candle">
+      <div class="flame" id="candleFlame"></div>
+      <div class="wick"></div>
+      <div class="wax"></div>
+    </button>
+    <p class="candle-status" id="candleStatus">tap the candle to light it</p>
+  </section>
+
+  <section class="final-scene section reveal" id="finalLetterSection">
+    <article class="final-letter">
+      <p class="small-label">one last note</p>
+      <h2>ramroomti,</h2>
+      <div class="final-letter-body">
+        <p>i know things aren't the way i wanted them to be.</p>
+        <p>and i know love alone doesn't mean two people can make everything work.</p>
+        <p>but i still believe the good parts of us were real.</p>
+        <p>i still smile at things that remind me of you.<br>sometimes without even realizing why.</p>
+        <p>i can't tell you what the future holds.<br>and i won't pretend i know what you feel.</p>
+        <p>but if someday we both find ourselves wanting to try again,<br>i'd want us to do it differently.<br>with more understanding, more patience, and more care.</p>
+        <p>until then, i respect the space between us.</p>
+        <p>i'm thankful for every beautiful little memory we made.</p>
+        <p class="final-signature">— Zaid</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="ending section reveal">
+    <div class="ending-heart">♡</div>
+    <h2>still you.</h2>
+    <p>some stories stay with us.<br>whatever comes next, <strong>i’m glad ours happened.</strong></p>
+    <div class="signature">Zaid</div>
+    <small>kept alive with love for ramroomti</small>
+  </section>
 </main>
 
-<div class="lightbox" id="lightbox"><button id="lbClose" aria-label="Close">×</button><button id="lbPrev" aria-label="Previous">‹</button><div id="lbContent"></div><button id="lbNext" aria-label="Next">›</button><div class="lb-caption" id="lbCaption"></div></div>
-<div class="story-overlay" id="storyOverlay"><button class="story-close" id="storyClose">close ×</button><div class="stars"></div><div class="story-book"><p class="small-label">bedtime story for ramroomti</p><h2 id="storyTitle"></h2><div id="storyText"></div></div></div>
-<div class="message-modal" id="messageModal"><button id="messageClose">×</button><div id="messageBody"></div></div>
-<div class="secret-modal" id="secretModal"><button id="secretClose">×</button><p>you found the secret</p><h2>here’s something i probably won’t say enough</h2><strong>I fucking love you ramroomti.</strong></div>
+<div class="lightbox" id="lightbox">
+  <button type="button" id="lbClose" aria-label="Close">×</button>
+  <button type="button" id="lbPrev" aria-label="Previous">‹</button>
+  <div id="lbContent"></div>
+  <button type="button" id="lbNext" aria-label="Next">›</button>
+  <div class="lb-caption" id="lbCaption"></div>
+</div>
 
+<div class="story-overlay" id="storyOverlay">
+  <button type="button" class="story-close" id="storyClose">close ×</button>
+  <div class="stars"></div>
+  <div class="story-book">
+    <p class="small-label">bedtime story for ramroomti</p>
+    <h2 id="storyTitle"></h2>
+    <div id="storyText"></div>
+  </div>
+</div>
+
+<div class="message-modal" id="messageModal">
+  <div class="modal-card">
+    <button type="button" id="messageClose">×</button>
+    <div id="messageBody"></div>
+  </div>
+</div>
+
+<div class="secret-modal" id="secretModal">
+  <div class="modal-card">
+    <button type="button" id="secretClose">×</button>
+    <p>you still remember the secret</p>
+    <h2>even when things are quiet between us</h2>
+    <strong>I still fucking love you, ramroomti. Take care of yourself.</strong>
+  </div>
+</div>
+
+<div class="vinyl-hud" id="vinylHud">
+  <button type="button" class="vinyl-disc" id="vinylDisc" aria-label="Play or pause song">
+    <span class="vinyl-center">♡</span>
+  </button>
+  <div class="vinyl-info">
+    <span class="vinyl-label">soundtrack</span>
+    <strong id="vinylStatus">tap to spin ♪</strong>
+  </div>
+  <div class="eq-bars" id="eqBars">
+    <i></i><i></i><i></i><i></i>
+  </div>
+</div>
+
+<script src="archive-data.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

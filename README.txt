@@ -1,8 +1,7 @@
-Zaid + Rama — personal memory site
+Zaid and Rama archive
 
-39 photos are grouped by the year encoded in their filenames:
-2023 = 3, 2024 = 9, 2025 = 9, 2026 = 18.
+This is a static HTML, CSS, and JavaScript site with no build step. Serve the directory over HTTP (for example with XAMPP or GitHub Pages); opening index.html directly as a file may prevent media and data requests from working. Keep CNAME at the site root for the custom domain.
 
-Open index.html in a browser or deploy the whole us-site folder.
+Before uploading to any public repository, remove and rotate the Discord webhook in script.js. The webhook is a credential embedded in a client-side file, so visitors can copy it. The page currently sends notifications for multiple visitor actions. Do not publish that credential; use a server-side endpoint if notifications need to continue.
 
-The site intentionally does not autoplay a copyrighted song because browsers commonly block autoplay and no audio file was supplied. If you want music, add your own licensed/local audio file and wire it to a user tap.
+Run the focused section checks described in TESTING.md before publishing. Publishing to GitHub Pages is a separate step from uploading the source.
